@@ -1,0 +1,61 @@
+{
+  "findings": [],
+  "positions": [
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "quantity": 1.0,
+      "entry_price": 15.0,
+      "sessions_held": 2,
+      "adopted": false,
+      "adopted_on": null,
+      "last_fill_on": "2026-07-30",
+      "last_fill_price": 15.0,
+      "open_lot_count": 1,
+      "high_since_entry": 15.0,
+      "shares_available_for_sells": null,
+      "shares_held_for_sells": null,
+      "entry_price_source": "tax_lots",
+      "entry_anchored_on": "2026-07-30",
+      "entry_price_disputed": false
+    }
+  ],
+  "cancels": [],
+  "control_updates": {
+    "positions_held": 1,
+    "has_whole_share_position": true,
+    "unreconciled": false,
+    "pending_events": false,
+    "high_water_mark": 236.42,
+    "high_water_mark_equity": 236.42,
+    "high_water_mark_as_of": "2026-08-03",
+    "entries_blocked": false,
+    "entries_blocked_reason": null,
+    "entries_blocked_until_cleared": false,
+    "divergence_streak": 0,
+    "open_order_cycles": {},
+    "retired_order_ids": [],
+    "resubmit_candidates": {
+      "trading_day": "2026-08-03",
+      "triggers": []
+    }
+  },
+  "loss_closes": [],
+  "play_state_updates": {},
+  "symbol_lock_claims": [
+    "F"
+  ],
+  "symbol_lock_releases": [],
+  "fills_quality": [],
+  "protection_plan": {
+    "place": [],
+    "replace": [],
+    "keep": [],
+    "notes": [
+      "F: no resting stop — entry price or ATR is missing (or the entry price is disputed between the broker's average and its tax lots), and §10.1's protection is not a number to guess at"
+    ],
+    "desired": []
+  },
+  "realized_trades": [],
+  "reason": "1 position reconciled, 0 findings, 0 cancels"
+}

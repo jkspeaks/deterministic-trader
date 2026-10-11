@@ -1,0 +1,39 @@
+{
+  "as_of": "2026-10-10",
+  "generated_at": "2026-10-10T01:40:46-04:00",
+  "releases": [
+    {
+      "first_seen": "2026-09-11",
+      "observed": "2026-08-01",
+      "series": "CPI",
+      "sessions_ago": 20,
+      "surprise_pct": 0.1138,
+      "value": 334.131
+    },
+    {
+      "first_seen": "2026-10-09",
+      "observed": "2026-10-09",
+      "series": "FOMC",
+      "sessions_ago": 0,
+      "surprise_pct": null,
+      "value": 4.0
+    },
+    {
+      "first_seen": "2026-10-02",
+      "observed": "2026-09-01",
+      "series": "NFP",
+      "sessions_ago": 5,
+      "surprise_pct": -0.7073,
+      "value": 159044.0
+    },
+    {
+      "first_seen": "2026-09-30",
+      "observed": "2026-08-01",
+      "series": "PCE",
+      "sessions_ago": 7,
+      "surprise_pct": 0.0767,
+      "value": 131.579
+    }
+  ],
+  "surprise_basis": "trailing-trend deviation, not consensus (see module docstring)"
+}

@@ -1,0 +1,60 @@
+{
+  "candidates": [
+    {
+      "symbol": "XLF",
+      "play_id": "MACRO",
+      "conviction": 1.0,
+      "conviction_raw": 1.0,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.0,
+      "expected_holding_days": 15,
+      "notional_multiplier": 1.0,
+      "detail": "NFP printed +30.0% against consensus; \u00a76.4's map tilts above",
+      "full_deployment": false
+    },
+    {
+      "symbol": "XLI",
+      "play_id": "MACRO",
+      "conviction": 1.0,
+      "conviction_raw": 1.0,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.0,
+      "expected_holding_days": 15,
+      "notional_multiplier": 1.0,
+      "detail": "NFP printed +30.0% against consensus; \u00a76.4's map tilts above",
+      "full_deployment": false
+    },
+    {
+      "symbol": "BAC",
+      "play_id": "CATALYST",
+      "conviction": 0.6,
+      "conviction_raw": 0.6,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.0,
+      "expected_holding_days": 7,
+      "notional_multiplier": 0.75,
+      "detail": "event confirmed by a +6.0% move on 2.0x average volume",
+      "full_deployment": false
+    },
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "conviction": 0.2,
+      "conviction_raw": 0.2,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.2,
+      "expected_holding_days": 8,
+      "notional_multiplier": 1.0,
+      "detail": "RSI 27, 1.5% below the 20-day mean, holding within 3% of the 200-day",
+      "full_deployment": false
+    }
+  ],
+  "skipped": [
+    {
+      "symbol": "PFE",
+      "play_id": "PEAD",
+      "code": "REGIME_DARK",
+      "message": "PEAD is disabled today: drift has stopped paying"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "candidates": [
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "conviction": 0.7,
+      "conviction_raw": 0.7,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.0,
+      "expected_holding_days": 8,
+      "notional_multiplier": 1.0,
+      "detail": "RSI 27, 7.0% below the 20-day mean, holding within 3% of the 200-day",
+      "full_deployment": false
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,17 @@
+{
+  "_fixture": "Hand-written from Twelve Data's documented /sma response shape for a SINGLE symbol (a flat block, not a {symbol: block} map). [V] field spelling unconfirmed against a live Basic-grade key. outputsize=1 so `values` holds only the most recent point.",
+  "meta": {
+    "symbol": "SPY",
+    "interval": "1day",
+    "currency": "USD",
+    "exchange_timezone": "America/New_York",
+    "exchange": "NYSE",
+    "mic_code": "ARCX",
+    "type": "ETF",
+    "indicator": {"name": "SMA - Simple Moving Average", "series_type": "close", "time_period": 200}
+  },
+  "values": [
+    {"datetime": "2026-09-10", "sma": "571.284350"}
+  ],
+  "status": "ok"
+}

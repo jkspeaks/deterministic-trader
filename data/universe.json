@@ -1,0 +1,5535 @@
+{
+  "as_of": "2026-10-08",
+  "cross_check": [
+    {
+      "cik": "0001090872",
+      "sector": "Health Care",
+      "sub_industry": "Life Sciences Tools & Services",
+      "symbol": "A"
+    },
+    {
+      "cik": "0000320193",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "AAPL"
+    },
+    {
+      "cik": "0001551152",
+      "sector": "Health Care",
+      "sub_industry": "Biotechnology",
+      "symbol": "ABBV"
+    },
+    {
+      "cik": "0001559720",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Hotels, Resorts & Cruise Lines",
+      "symbol": "ABNB"
+    },
+    {
+      "cik": "0000001800",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "ABT"
+    },
+    {
+      "cik": "0000947484",
+      "sector": "Financials",
+      "sub_industry": "Property & Casualty Insurance",
+      "symbol": "ACGL"
+    },
+    {
+      "cik": "0001467373",
+      "sector": "Information Technology",
+      "sub_industry": "IT Consulting & Other Services",
+      "symbol": "ACN"
+    },
+    {
+      "cik": "0000796343",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "ADBE"
+    },
+    {
+      "cik": "0000006281",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "ADI"
+    },
+    {
+      "cik": "0000007084",
+      "sector": "Consumer Staples",
+      "sub_industry": "Agricultural Products & Services",
+      "symbol": "ADM"
+    },
+    {
+      "cik": "0000008670",
+      "sector": "Industrials",
+      "sub_industry": "Human Resource & Employment Services",
+      "symbol": "ADP"
+    },
+    {
+      "cik": "0000769397",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "ADSK"
+    },
+    {
+      "cik": "0001002910",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "AEE"
+    },
+    {
+      "cik": "0000004904",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "AEP"
+    },
+    {
+      "cik": "0000874761",
+      "sector": "Utilities",
+      "sub_industry": "Independent Power Producers & Energy Traders",
+      "symbol": "AES"
+    },
+    {
+      "cik": "0000004977",
+      "sector": "Financials",
+      "sub_industry": "Life & Health Insurance",
+      "symbol": "AFL"
+    },
+    {
+      "cik": "0000005272",
+      "sector": "Financials",
+      "sub_industry": "Multi-line Insurance",
+      "symbol": "AIG"
+    },
+    {
+      "cik": "0001267238",
+      "sector": "Financials",
+      "sub_industry": "Multi-line Insurance",
+      "symbol": "AIZ"
+    },
+    {
+      "cik": "0000354190",
+      "sector": "Financials",
+      "sub_industry": "Insurance Brokers",
+      "symbol": "AJG"
+    },
+    {
+      "cik": "0001086222",
+      "sector": "Information Technology",
+      "sub_industry": "Internet Services & Infrastructure",
+      "symbol": "AKAM"
+    },
+    {
+      "cik": "0000915913",
+      "sector": "Materials",
+      "sub_industry": "Specialty Chemicals",
+      "symbol": "ALB"
+    },
+    {
+      "cik": "0001097149",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Supplies",
+      "symbol": "ALGN"
+    },
+    {
+      "cik": "0000899051",
+      "sector": "Financials",
+      "sub_industry": "Property & Casualty Insurance",
+      "symbol": "ALL"
+    },
+    {
+      "cik": "0001579241",
+      "sector": "Industrials",
+      "sub_industry": "Building Products",
+      "symbol": "ALLE"
+    },
+    {
+      "cik": "0000006951",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductor Materials & Equipment",
+      "symbol": "AMAT"
+    },
+    {
+      "cik": "0001748790",
+      "sector": "Materials",
+      "sub_industry": "Paper & Plastic Packaging Products & Materials",
+      "symbol": "AMCR"
+    },
+    {
+      "cik": "0000002488",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "AMD"
+    },
+    {
+      "cik": "0001037868",
+      "sector": "Industrials",
+      "sub_industry": "Electrical Components & Equipment",
+      "symbol": "AME"
+    },
+    {
+      "cik": "0000318154",
+      "sector": "Health Care",
+      "sub_industry": "Biotechnology",
+      "symbol": "AMGN"
+    },
+    {
+      "cik": "0000820027",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "AMP"
+    },
+    {
+      "cik": "0001053507",
+      "sector": "Real Estate",
+      "sub_industry": "Telecom Tower REITs",
+      "symbol": "AMT"
+    },
+    {
+      "cik": "0001018724",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Broadline Retail",
+      "symbol": "AMZN"
+    },
+    {
+      "cik": "0001596532",
+      "sector": "Information Technology",
+      "sub_industry": "Communications Equipment",
+      "symbol": "ANET"
+    },
+    {
+      "cik": "0000315293",
+      "sector": "Financials",
+      "sub_industry": "Insurance Brokers",
+      "symbol": "AON"
+    },
+    {
+      "cik": "0000091142",
+      "sector": "Industrials",
+      "sub_industry": "Building Products",
+      "symbol": "AOS"
+    },
+    {
+      "cik": "0001841666",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Exploration & Production",
+      "symbol": "APA"
+    },
+    {
+      "cik": "0000002969",
+      "sector": "Materials",
+      "sub_industry": "Industrial Gases",
+      "symbol": "APD"
+    },
+    {
+      "cik": "0000820313",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Components",
+      "symbol": "APH"
+    },
+    {
+      "cik": "0001858681",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "APO"
+    },
+    {
+      "cik": "0001751008",
+      "sector": "Communication Services",
+      "sub_industry": "Advertising",
+      "symbol": "APP"
+    },
+    {
+      "cik": "0001521332",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Automotive Parts & Equipment",
+      "symbol": "APTV"
+    },
+    {
+      "cik": "0001035443",
+      "sector": "Real Estate",
+      "sub_industry": "Office REITs",
+      "symbol": "ARE"
+    },
+    {
+      "cik": "0001176948",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "ARES"
+    },
+    {
+      "cik": "0000731802",
+      "sector": "Utilities",
+      "sub_industry": "Gas Utilities",
+      "symbol": "ATO"
+    },
+    {
+      "cik": "0001730168",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "AVGO"
+    },
+    {
+      "cik": "0000008818",
+      "sector": "Materials",
+      "sub_industry": "Paper & Plastic Packaging Products & Materials",
+      "symbol": "AVY"
+    },
+    {
+      "cik": "0001410636",
+      "sector": "Utilities",
+      "sub_industry": "Water Utilities",
+      "symbol": "AWK"
+    },
+    {
+      "cik": "0001069183",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "AXON"
+    },
+    {
+      "cik": "0000004962",
+      "sector": "Financials",
+      "sub_industry": "Consumer Finance",
+      "symbol": "AXP"
+    },
+    {
+      "cik": "0000866787",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Automotive Retail",
+      "symbol": "AZO"
+    },
+    {
+      "cik": "0000012927",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "BA"
+    },
+    {
+      "cik": "0000070858",
+      "sector": "Financials",
+      "sub_industry": "Diversified Banks",
+      "symbol": "BAC"
+    },
+    {
+      "cik": "0000009389",
+      "sector": "Materials",
+      "sub_industry": "Metal, Glass & Plastic Containers",
+      "symbol": "BALL"
+    },
+    {
+      "cik": "0000010456",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "BAX"
+    },
+    {
+      "cik": "0000764478",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Computer & Electronics Retail",
+      "symbol": "BBY"
+    },
+    {
+      "cik": "0000010795",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "BDX"
+    },
+    {
+      "cik": "0001664703",
+      "sector": "Industrials",
+      "sub_industry": "Electrical Components & Equipment",
+      "symbol": "BE"
+    },
+    {
+      "cik": "0000038777",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "BEN"
+    },
+    {
+      "cik": "0000014693",
+      "sector": "Consumer Staples",
+      "sub_industry": "Distillers & Vintners",
+      "symbol": "BF.B"
+    },
+    {
+      "cik": "0001996862",
+      "sector": "Consumer Staples",
+      "sub_industry": "Agricultural Products & Services",
+      "symbol": "BG"
+    },
+    {
+      "cik": "0000875045",
+      "sector": "Health Care",
+      "sub_industry": "Biotechnology",
+      "symbol": "BIIB"
+    },
+    {
+      "cik": "0001075531",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Hotels, Resorts & Cruise Lines",
+      "symbol": "BKNG"
+    },
+    {
+      "cik": "0001701605",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Equipment & Services",
+      "symbol": "BKR"
+    },
+    {
+      "cik": "0002012383",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "BLK"
+    },
+    {
+      "cik": "0000014272",
+      "sector": "Health Care",
+      "sub_industry": "Pharmaceuticals",
+      "symbol": "BMY"
+    },
+    {
+      "cik": "0001390777",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "BNY"
+    },
+    {
+      "cik": "0001383312",
+      "sector": "Industrials",
+      "sub_industry": "Data Processing & Outsourced Services",
+      "symbol": "BR"
+    },
+    {
+      "cik": "0001067983",
+      "sector": "Financials",
+      "sub_industry": "Multi-Sector Holdings",
+      "symbol": "BRK.B"
+    },
+    {
+      "cik": "0000079282",
+      "sector": "Financials",
+      "sub_industry": "Insurance Brokers",
+      "symbol": "BRO"
+    },
+    {
+      "cik": "0000885725",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "BSX"
+    },
+    {
+      "cik": "0001393818",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "BX"
+    },
+    {
+      "cik": "0001037540",
+      "sector": "Real Estate",
+      "sub_industry": "Office REITs",
+      "symbol": "BXP"
+    },
+    {
+      "cik": "0000831001",
+      "sector": "Financials",
+      "sub_industry": "Diversified Banks",
+      "symbol": "C"
+    },
+    {
+      "cik": "0000721371",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Distributors",
+      "symbol": "CAH"
+    },
+    {
+      "cik": "0001783180",
+      "sector": "Industrials",
+      "sub_industry": "Building Products",
+      "symbol": "CARR"
+    },
+    {
+      "cik": "0000726958",
+      "sector": "Consumer Staples",
+      "sub_industry": "Food Retail",
+      "symbol": "CASY"
+    },
+    {
+      "cik": "0000018230",
+      "sector": "Industrials",
+      "sub_industry": "Construction Machinery & Heavy Transportation Equipment",
+      "symbol": "CAT"
+    },
+    {
+      "cik": "0000896159",
+      "sector": "Financials",
+      "sub_industry": "Property & Casualty Insurance",
+      "symbol": "CB"
+    },
+    {
+      "cik": "0001138118",
+      "sector": "Real Estate",
+      "sub_industry": "Real Estate Services",
+      "symbol": "CBRE"
+    },
+    {
+      "cik": "0001051470",
+      "sector": "Real Estate",
+      "sub_industry": "Telecom Tower REITs",
+      "symbol": "CCI"
+    },
+    {
+      "cik": "0000815097",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Hotels, Resorts & Cruise Lines",
+      "symbol": "CCL"
+    },
+    {
+      "cik": "0000813672",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "CDNS"
+    },
+    {
+      "cik": "0001402057",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Distributors",
+      "symbol": "CDW"
+    },
+    {
+      "cik": "0001868275",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "CEG"
+    },
+    {
+      "cik": "0001324404",
+      "sector": "Materials",
+      "sub_industry": "Fertilizers & Agricultural Chemicals",
+      "symbol": "CF"
+    },
+    {
+      "cik": "0000759944",
+      "sector": "Financials",
+      "sub_industry": "Regional Banks",
+      "symbol": "CFG"
+    },
+    {
+      "cik": "0000313927",
+      "sector": "Consumer Staples",
+      "sub_industry": "Household Products",
+      "symbol": "CHD"
+    },
+    {
+      "cik": "0001043277",
+      "sector": "Industrials",
+      "sub_industry": "Air Freight & Logistics",
+      "symbol": "CHRW"
+    },
+    {
+      "cik": "0001091667",
+      "sector": "Communication Services",
+      "sub_industry": "Cable & Satellite",
+      "symbol": "CHTR"
+    },
+    {
+      "cik": "0001739940",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Services",
+      "symbol": "CI"
+    },
+    {
+      "cik": "0000936395",
+      "sector": "Information Technology",
+      "sub_industry": "Communications Equipment",
+      "symbol": "CIEN"
+    },
+    {
+      "cik": "0000020286",
+      "sector": "Financials",
+      "sub_industry": "Property & Casualty Insurance",
+      "symbol": "CINF"
+    },
+    {
+      "cik": "0000021665",
+      "sector": "Consumer Staples",
+      "sub_industry": "Household Products",
+      "symbol": "CL"
+    },
+    {
+      "cik": "0000021076",
+      "sector": "Consumer Staples",
+      "sub_industry": "Household Products",
+      "symbol": "CLX"
+    },
+    {
+      "cik": "0001166691",
+      "sector": "Communication Services",
+      "sub_industry": "Cable & Satellite",
+      "symbol": "CMCSA"
+    },
+    {
+      "cik": "0001156375",
+      "sector": "Financials",
+      "sub_industry": "Financial Exchanges & Data",
+      "symbol": "CME"
+    },
+    {
+      "cik": "0001058090",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Restaurants",
+      "symbol": "CMG"
+    },
+    {
+      "cik": "0000026172",
+      "sector": "Industrials",
+      "sub_industry": "Construction Machinery & Heavy Transportation Equipment",
+      "symbol": "CMI"
+    },
+    {
+      "cik": "0000811156",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "CMS"
+    },
+    {
+      "cik": "0001071739",
+      "sector": "Health Care",
+      "sub_industry": "Managed Health Care",
+      "symbol": "CNC"
+    },
+    {
+      "cik": "0001130310",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "CNP"
+    },
+    {
+      "cik": "0000927628",
+      "sector": "Financials",
+      "sub_industry": "Consumer Finance",
+      "symbol": "COF"
+    },
+    {
+      "cik": "0000820318",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Components",
+      "symbol": "COHR"
+    },
+    {
+      "cik": "0001679788",
+      "sector": "Financials",
+      "sub_industry": "Financial Exchanges & Data",
+      "symbol": "COIN"
+    },
+    {
+      "cik": "0000711404",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Supplies",
+      "symbol": "COO"
+    },
+    {
+      "cik": "0001163165",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Exploration & Production",
+      "symbol": "COP"
+    },
+    {
+      "cik": "0001140859",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Distributors",
+      "symbol": "COR"
+    },
+    {
+      "cik": "0000909832",
+      "sector": "Consumer Staples",
+      "sub_industry": "Consumer Staples Merchandise Retail",
+      "symbol": "COST"
+    },
+    {
+      "cik": "0001175454",
+      "sector": "Financials",
+      "sub_industry": "Transaction & Payment Processing Services",
+      "symbol": "CPAY"
+    },
+    {
+      "cik": "0000900075",
+      "sector": "Industrials",
+      "sub_industry": "Diversified Support Services",
+      "symbol": "CPRT"
+    },
+    {
+      "cik": "0000906345",
+      "sector": "Real Estate",
+      "sub_industry": "Multi-Family Residential REITs",
+      "symbol": "CPT"
+    },
+    {
+      "cik": "0000849395",
+      "sector": "Materials",
+      "sub_industry": "Construction Materials",
+      "symbol": "CRH"
+    },
+    {
+      "cik": "0001100682",
+      "sector": "Health Care",
+      "sub_industry": "Life Sciences Tools & Services",
+      "symbol": "CRL"
+    },
+    {
+      "cik": "0001108524",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "CRM"
+    },
+    {
+      "cik": "0001535527",
+      "sector": "Information Technology",
+      "sub_industry": "Systems Software",
+      "symbol": "CRWD"
+    },
+    {
+      "cik": "0000858877",
+      "sector": "Information Technology",
+      "sub_industry": "Communications Equipment",
+      "symbol": "CSCO"
+    },
+    {
+      "cik": "0001057352",
+      "sector": "Real Estate",
+      "sub_industry": "Real Estate Services",
+      "symbol": "CSGP"
+    },
+    {
+      "cik": "0000277948",
+      "sector": "Industrials",
+      "sub_industry": "Rail Transportation",
+      "symbol": "CSX"
+    },
+    {
+      "cik": "0000723254",
+      "sector": "Industrials",
+      "sub_industry": "Diversified Support Services",
+      "symbol": "CTAS"
+    },
+    {
+      "cik": "0001058290",
+      "sector": "Information Technology",
+      "sub_industry": "IT Consulting & Other Services",
+      "symbol": "CTSH"
+    },
+    {
+      "cik": "0001690820",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Automotive Retail",
+      "symbol": "CVNA"
+    },
+    {
+      "cik": "0000064803",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Services",
+      "symbol": "CVS"
+    },
+    {
+      "cik": "0000093410",
+      "sector": "Energy",
+      "sub_industry": "Integrated Oil & Gas",
+      "symbol": "CVX"
+    },
+    {
+      "cik": "0000715957",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "D"
+    },
+    {
+      "cik": "0000027904",
+      "sector": "Industrials",
+      "sub_industry": "Passenger Airlines",
+      "symbol": "DAL"
+    },
+    {
+      "cik": "0001792789",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Specialized Consumer Services",
+      "symbol": "DASH"
+    },
+    {
+      "cik": "0001666700",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Conglomerates",
+      "symbol": "DD"
+    },
+    {
+      "cik": "0001561550",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "DDOG"
+    },
+    {
+      "cik": "0000315189",
+      "sector": "Industrials",
+      "sub_industry": "Agricultural & Farm Machinery",
+      "symbol": "DE"
+    },
+    {
+      "cik": "0000910521",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Footwear",
+      "symbol": "DECK"
+    },
+    {
+      "cik": "0001571996",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "DELL"
+    },
+    {
+      "cik": "0000029534",
+      "sector": "Consumer Staples",
+      "sub_industry": "Consumer Staples Merchandise Retail",
+      "symbol": "DG"
+    },
+    {
+      "cik": "0001022079",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Services",
+      "symbol": "DGX"
+    },
+    {
+      "cik": "0000882184",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Homebuilding",
+      "symbol": "DHI"
+    },
+    {
+      "cik": "0000313616",
+      "sector": "Health Care",
+      "sub_industry": "Life Sciences Tools & Services",
+      "symbol": "DHR"
+    },
+    {
+      "cik": "0001744489",
+      "sector": "Communication Services",
+      "sub_industry": "Movies & Entertainment",
+      "symbol": "DIS"
+    },
+    {
+      "cik": "0001297996",
+      "sector": "Real Estate",
+      "sub_industry": "Data Center REITs",
+      "symbol": "DLR"
+    },
+    {
+      "cik": "0000935703",
+      "sector": "Consumer Staples",
+      "sub_industry": "Consumer Staples Merchandise Retail",
+      "symbol": "DLTR"
+    },
+    {
+      "cik": "0000765880",
+      "sector": "Real Estate",
+      "sub_industry": "Health Care REITs",
+      "symbol": "DOC"
+    },
+    {
+      "cik": "0000029905",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "DOV"
+    },
+    {
+      "cik": "0001751788",
+      "sector": "Materials",
+      "sub_industry": "Commodity Chemicals",
+      "symbol": "DOW"
+    },
+    {
+      "cik": "0001286681",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Restaurants",
+      "symbol": "DPZ"
+    },
+    {
+      "cik": "0000940944",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Restaurants",
+      "symbol": "DRI"
+    },
+    {
+      "cik": "0000936340",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "DTE"
+    },
+    {
+      "cik": "0001326160",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "DUK"
+    },
+    {
+      "cik": "0000927066",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Services",
+      "symbol": "DVA"
+    },
+    {
+      "cik": "0001090012",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Exploration & Production",
+      "symbol": "DVN"
+    },
+    {
+      "cik": "0001093557",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "DXCM"
+    },
+    {
+      "cik": "0001065088",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Broadline Retail",
+      "symbol": "EBAY"
+    },
+    {
+      "cik": "0001415404",
+      "sector": "Communication Services",
+      "sub_industry": "Wireless Telecommunication Services",
+      "symbol": "ECHO"
+    },
+    {
+      "cik": "0000031462",
+      "sector": "Materials",
+      "sub_industry": "Specialty Chemicals",
+      "symbol": "ECL"
+    },
+    {
+      "cik": "0001047862",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "ED"
+    },
+    {
+      "cik": "0000033185",
+      "sector": "Industrials",
+      "sub_industry": "Research & Consulting Services",
+      "symbol": "EFX"
+    },
+    {
+      "cik": "0001095073",
+      "sector": "Financials",
+      "sub_industry": "Reinsurance",
+      "symbol": "EG"
+    },
+    {
+      "cik": "0000827052",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "EIX"
+    },
+    {
+      "cik": "0001001250",
+      "sector": "Consumer Staples",
+      "sub_industry": "Personal Care Products",
+      "symbol": "EL"
+    },
+    {
+      "cik": "0001156039",
+      "sector": "Health Care",
+      "sub_industry": "Managed Health Care",
+      "symbol": "ELV"
+    },
+    {
+      "cik": "0000105634",
+      "sector": "Industrials",
+      "sub_industry": "Construction & Engineering",
+      "symbol": "EME"
+    },
+    {
+      "cik": "0000032604",
+      "sector": "Industrials",
+      "sub_industry": "Electrical Components & Equipment",
+      "symbol": "EMR"
+    },
+    {
+      "cik": "0000821189",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Exploration & Production",
+      "symbol": "EOG"
+    },
+    {
+      "cik": "0001101239",
+      "sector": "Real Estate",
+      "sub_industry": "Data Center REITs",
+      "symbol": "EQIX"
+    },
+    {
+      "cik": "0000033213",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Exploration & Production",
+      "symbol": "EQT"
+    },
+    {
+      "cik": "0000922621",
+      "sector": "Financials",
+      "sub_industry": "Insurance Brokers",
+      "symbol": "ERIE"
+    },
+    {
+      "cik": "0000072741",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "ES"
+    },
+    {
+      "cik": "0000920522",
+      "sector": "Real Estate",
+      "sub_industry": "Multi-Family Residential REITs",
+      "symbol": "ESS"
+    },
+    {
+      "cik": "0001551182",
+      "sector": "Industrials",
+      "sub_industry": "Electrical Components & Equipment",
+      "symbol": "ETN"
+    },
+    {
+      "cik": "0000065984",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "ETR"
+    },
+    {
+      "cik": "0001711269",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "EVRG"
+    },
+    {
+      "cik": "0001099800",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "EW"
+    },
+    {
+      "cik": "0001109357",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "EXC"
+    },
+    {
+      "cik": "0000895126",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Exploration & Production",
+      "symbol": "EXE"
+    },
+    {
+      "cik": "0000746515",
+      "sector": "Industrials",
+      "sub_industry": "Air Freight & Logistics",
+      "symbol": "EXPD"
+    },
+    {
+      "cik": "0001324424",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Hotels, Resorts & Cruise Lines",
+      "symbol": "EXPE"
+    },
+    {
+      "cik": "0001289490",
+      "sector": "Real Estate",
+      "sub_industry": "Self-Storage REITs",
+      "symbol": "EXR"
+    },
+    {
+      "cik": "0000037996",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Automobile Manufacturers",
+      "symbol": "F"
+    },
+    {
+      "cik": "0001539838",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Exploration & Production",
+      "symbol": "FANG"
+    },
+    {
+      "cik": "0000815556",
+      "sector": "Industrials",
+      "sub_industry": "Trading Companies & Distributors",
+      "symbol": "FAST"
+    },
+    {
+      "cik": "0000831259",
+      "sector": "Materials",
+      "sub_industry": "Copper",
+      "symbol": "FCX"
+    },
+    {
+      "cik": "0001013237",
+      "sector": "Financials",
+      "sub_industry": "Financial Exchanges & Data",
+      "symbol": "FDS"
+    },
+    {
+      "cik": "0001048911",
+      "sector": "Industrials",
+      "sub_industry": "Air Freight & Logistics",
+      "symbol": "FDX"
+    },
+    {
+      "cik": "0002082247",
+      "sector": "Industrials",
+      "sub_industry": "Cargo Ground Transportation",
+      "symbol": "FDXF"
+    },
+    {
+      "cik": "0001031296",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "FE"
+    },
+    {
+      "cik": "0002011641",
+      "sector": "Industrials",
+      "sub_industry": "Trading Companies & Distributors",
+      "symbol": "FERG"
+    },
+    {
+      "cik": "0001048695",
+      "sector": "Information Technology",
+      "sub_industry": "Communications Equipment",
+      "symbol": "FFIV"
+    },
+    {
+      "cik": "0000814547",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "FICO"
+    },
+    {
+      "cik": "0001136893",
+      "sector": "Financials",
+      "sub_industry": "Transaction & Payment Processing Services",
+      "symbol": "FIS"
+    },
+    {
+      "cik": "0000798354",
+      "sector": "Financials",
+      "sub_industry": "Transaction & Payment Processing Services",
+      "symbol": "FISV"
+    },
+    {
+      "cik": "0000035527",
+      "sector": "Financials",
+      "sub_industry": "Regional Banks",
+      "symbol": "FITB"
+    },
+    {
+      "cik": "0001035983",
+      "sector": "Industrials",
+      "sub_industry": "Construction & Engineering",
+      "symbol": "FIX"
+    },
+    {
+      "cik": "0000866374",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Manufacturing Services",
+      "symbol": "FLEX"
+    },
+    {
+      "cik": "0001754301",
+      "sector": "Communication Services",
+      "sub_industry": "Broadcasting",
+      "symbol": "FOX"
+    },
+    {
+      "cik": "0001754301",
+      "sector": "Communication Services",
+      "sub_industry": "Broadcasting",
+      "symbol": "FOXA"
+    },
+    {
+      "cik": "0000034903",
+      "sector": "Real Estate",
+      "sub_industry": "Retail REITs",
+      "symbol": "FRT"
+    },
+    {
+      "cik": "0001274494",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "FSLR"
+    },
+    {
+      "cik": "0001262039",
+      "sector": "Information Technology",
+      "sub_industry": "Systems Software",
+      "symbol": "FTNT"
+    },
+    {
+      "cik": "0001659166",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "FTV"
+    },
+    {
+      "cik": "0000040533",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "GD"
+    },
+    {
+      "cik": "0001609711",
+      "sector": "Information Technology",
+      "sub_industry": "Internet Services & Infrastructure",
+      "symbol": "GDDY"
+    },
+    {
+      "cik": "0000040545",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "GE"
+    },
+    {
+      "cik": "0001932393",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "GEHC"
+    },
+    {
+      "cik": "0000849399",
+      "sector": "Information Technology",
+      "sub_industry": "Systems Software",
+      "symbol": "GEN"
+    },
+    {
+      "cik": "0001996810",
+      "sector": "Industrials",
+      "sub_industry": "Heavy Electrical Equipment",
+      "symbol": "GEV"
+    },
+    {
+      "cik": "0000882095",
+      "sector": "Health Care",
+      "sub_industry": "Biotechnology",
+      "symbol": "GILD"
+    },
+    {
+      "cik": "0000040704",
+      "sector": "Consumer Staples",
+      "sub_industry": "Packaged Foods & Meats",
+      "symbol": "GIS"
+    },
+    {
+      "cik": "0000320335",
+      "sector": "Financials",
+      "sub_industry": "Life & Health Insurance",
+      "symbol": "GL"
+    },
+    {
+      "cik": "0000024741",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Components",
+      "symbol": "GLW"
+    },
+    {
+      "cik": "0001467858",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Automobile Manufacturers",
+      "symbol": "GM"
+    },
+    {
+      "cik": "0001474735",
+      "sector": "Industrials",
+      "sub_industry": "Heavy Electrical Equipment",
+      "symbol": "GNRC"
+    },
+    {
+      "cik": "0001652044",
+      "sector": "Communication Services",
+      "sub_industry": "Interactive Media & Services",
+      "symbol": "GOOG"
+    },
+    {
+      "cik": "0001652044",
+      "sector": "Communication Services",
+      "sub_industry": "Interactive Media & Services",
+      "symbol": "GOOGL"
+    },
+    {
+      "cik": "0000040987",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Distributors",
+      "symbol": "GPC"
+    },
+    {
+      "cik": "0001123360",
+      "sector": "Financials",
+      "sub_industry": "Transaction & Payment Processing Services",
+      "symbol": "GPN"
+    },
+    {
+      "cik": "0001121788",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Consumer Electronics",
+      "symbol": "GRMN"
+    },
+    {
+      "cik": "0000886982",
+      "sector": "Financials",
+      "sub_industry": "Investment Banking & Brokerage",
+      "symbol": "GS"
+    },
+    {
+      "cik": "0000277135",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "GWW"
+    },
+    {
+      "cik": "0000045012",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Equipment & Services",
+      "symbol": "HAL"
+    },
+    {
+      "cik": "0000046080",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Leisure Products",
+      "symbol": "HAS"
+    },
+    {
+      "cik": "0000049196",
+      "sector": "Financials",
+      "sub_industry": "Regional Banks",
+      "symbol": "HBAN"
+    },
+    {
+      "cik": "0000860730",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Facilities",
+      "symbol": "HCA"
+    },
+    {
+      "cik": "0000354950",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Home Improvement Retail",
+      "symbol": "HD"
+    },
+    {
+      "cik": "0000874766",
+      "sector": "Financials",
+      "sub_industry": "Property & Casualty Insurance",
+      "symbol": "HIG"
+    },
+    {
+      "cik": "0001501585",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "HII"
+    },
+    {
+      "cik": "0001585689",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Hotels, Resorts & Cruise Lines",
+      "symbol": "HLT"
+    },
+    {
+      "cik": "0000773840",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Conglomerates",
+      "symbol": "HON"
+    },
+    {
+      "cik": "0002089271",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "HONA"
+    },
+    {
+      "cik": "0001783879",
+      "sector": "Financials",
+      "sub_industry": "Investment Banking & Brokerage",
+      "symbol": "HOOD"
+    },
+    {
+      "cik": "0001645590",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "HPE"
+    },
+    {
+      "cik": "0000047217",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "HPQ"
+    },
+    {
+      "cik": "0000048465",
+      "sector": "Consumer Staples",
+      "sub_industry": "Packaged Foods & Meats",
+      "symbol": "HRL"
+    },
+    {
+      "cik": "0001000228",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Distributors",
+      "symbol": "HSIC"
+    },
+    {
+      "cik": "0001070750",
+      "sector": "Real Estate",
+      "sub_industry": "Hotel & Resort REITs",
+      "symbol": "HST"
+    },
+    {
+      "cik": "0000047111",
+      "sector": "Consumer Staples",
+      "sub_industry": "Packaged Foods & Meats",
+      "symbol": "HSY"
+    },
+    {
+      "cik": "0000048898",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "HUBB"
+    },
+    {
+      "cik": "0000049071",
+      "sector": "Health Care",
+      "sub_industry": "Managed Health Care",
+      "symbol": "HUM"
+    },
+    {
+      "cik": "0000004281",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "HWM"
+    },
+    {
+      "cik": "0001381197",
+      "sector": "Financials",
+      "sub_industry": "Investment Banking & Brokerage",
+      "symbol": "IBKR"
+    },
+    {
+      "cik": "0000051143",
+      "sector": "Information Technology",
+      "sub_industry": "IT Consulting & Other Services",
+      "symbol": "IBM"
+    },
+    {
+      "cik": "0001571949",
+      "sector": "Financials",
+      "sub_industry": "Financial Exchanges & Data",
+      "symbol": "ICE"
+    },
+    {
+      "cik": "0000874716",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "IDXX"
+    },
+    {
+      "cik": "0000832101",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "IEX"
+    },
+    {
+      "cik": "0000051253",
+      "sector": "Materials",
+      "sub_industry": "Specialty Chemicals",
+      "symbol": "IFF"
+    },
+    {
+      "cik": "0001110803",
+      "sector": "Health Care",
+      "sub_industry": "Life Sciences Tools & Services",
+      "symbol": "ILMN"
+    },
+    {
+      "cik": "0000879169",
+      "sector": "Health Care",
+      "sub_industry": "Biotechnology",
+      "symbol": "INCY"
+    },
+    {
+      "cik": "0000050863",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "INTC"
+    },
+    {
+      "cik": "0000896878",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "INTU"
+    },
+    {
+      "cik": "0001687229",
+      "sector": "Real Estate",
+      "sub_industry": "Single-Family Residential REITs",
+      "symbol": "INVH"
+    },
+    {
+      "cik": "0000051434",
+      "sector": "Materials",
+      "sub_industry": "Paper & Plastic Packaging Products & Materials",
+      "symbol": "IP"
+    },
+    {
+      "cik": "0001478242",
+      "sector": "Health Care",
+      "sub_industry": "Life Sciences Tools & Services",
+      "symbol": "IQV"
+    },
+    {
+      "cik": "0001699150",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "IR"
+    },
+    {
+      "cik": "0001020569",
+      "sector": "Real Estate",
+      "sub_industry": "Other Specialized REITs",
+      "symbol": "IRM"
+    },
+    {
+      "cik": "0001035267",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "ISRG"
+    },
+    {
+      "cik": "0000749251",
+      "sector": "Information Technology",
+      "sub_industry": "IT Consulting & Other Services",
+      "symbol": "IT"
+    },
+    {
+      "cik": "0000049826",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "ITW"
+    },
+    {
+      "cik": "0000914208",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "IVZ"
+    },
+    {
+      "cik": "0000052988",
+      "sector": "Industrials",
+      "sub_industry": "Construction & Engineering",
+      "symbol": "J"
+    },
+    {
+      "cik": "0000728535",
+      "sector": "Industrials",
+      "sub_industry": "Cargo Ground Transportation",
+      "symbol": "JBHT"
+    },
+    {
+      "cik": "0000898293",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Manufacturing Services",
+      "symbol": "JBL"
+    },
+    {
+      "cik": "0000833444",
+      "sector": "Industrials",
+      "sub_industry": "Building Products",
+      "symbol": "JCI"
+    },
+    {
+      "cik": "0000779152",
+      "sector": "Financials",
+      "sub_industry": "Transaction & Payment Processing Services",
+      "symbol": "JKHY"
+    },
+    {
+      "cik": "0000200406",
+      "sector": "Health Care",
+      "sub_industry": "Pharmaceuticals",
+      "symbol": "JNJ"
+    },
+    {
+      "cik": "0000019617",
+      "sector": "Financials",
+      "sub_industry": "Diversified Banks",
+      "symbol": "JPM"
+    },
+    {
+      "cik": "0001418135",
+      "sector": "Consumer Staples",
+      "sub_industry": "Soft Drinks & Non-alcoholic Beverages",
+      "symbol": "KDP"
+    },
+    {
+      "cik": "0000091576",
+      "sector": "Financials",
+      "sub_industry": "Regional Banks",
+      "symbol": "KEY"
+    },
+    {
+      "cik": "0001601046",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Equipment & Instruments",
+      "symbol": "KEYS"
+    },
+    {
+      "cik": "0001637459",
+      "sector": "Consumer Staples",
+      "sub_industry": "Packaged Foods & Meats",
+      "symbol": "KHC"
+    },
+    {
+      "cik": "0000879101",
+      "sector": "Real Estate",
+      "sub_industry": "Retail REITs",
+      "symbol": "KIM"
+    },
+    {
+      "cik": "0001404912",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "KKR"
+    },
+    {
+      "cik": "0000319201",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductor Materials & Equipment",
+      "symbol": "KLAC"
+    },
+    {
+      "cik": "0000055785",
+      "sector": "Consumer Staples",
+      "sub_industry": "Household Products",
+      "symbol": "KMB"
+    },
+    {
+      "cik": "0001506307",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Storage & Transportation",
+      "symbol": "KMI"
+    },
+    {
+      "cik": "0000021344",
+      "sector": "Consumer Staples",
+      "sub_industry": "Soft Drinks & Non-alcoholic Beverages",
+      "symbol": "KO"
+    },
+    {
+      "cik": "0000056873",
+      "sector": "Consumer Staples",
+      "sub_industry": "Food Retail",
+      "symbol": "KR"
+    },
+    {
+      "cik": "0001944048",
+      "sector": "Consumer Staples",
+      "sub_industry": "Personal Care Products",
+      "symbol": "KVUE"
+    },
+    {
+      "cik": "0000060086",
+      "sector": "Financials",
+      "sub_industry": "Multi-line Insurance",
+      "symbol": "L"
+    },
+    {
+      "cik": "0001336920",
+      "sector": "Industrials",
+      "sub_industry": "Diversified Support Services",
+      "symbol": "LDOS"
+    },
+    {
+      "cik": "0000920760",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Homebuilding",
+      "symbol": "LEN"
+    },
+    {
+      "cik": "0000920148",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Services",
+      "symbol": "LH"
+    },
+    {
+      "cik": "0000202058",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "LHX"
+    },
+    {
+      "cik": "0001069202",
+      "sector": "Industrials",
+      "sub_industry": "Building Products",
+      "symbol": "LII"
+    },
+    {
+      "cik": "0001707925",
+      "sector": "Materials",
+      "sub_industry": "Industrial Gases",
+      "symbol": "LIN"
+    },
+    {
+      "cik": "0001633978",
+      "sector": "Information Technology",
+      "sub_industry": "Communications Equipment",
+      "symbol": "LITE"
+    },
+    {
+      "cik": "0000059478",
+      "sector": "Health Care",
+      "sub_industry": "Pharmaceuticals",
+      "symbol": "LLY"
+    },
+    {
+      "cik": "0000936468",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "LMT"
+    },
+    {
+      "cik": "0000352541",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "LNT"
+    },
+    {
+      "cik": "0000060667",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Home Improvement Retail",
+      "symbol": "LOW"
+    },
+    {
+      "cik": "0000707549",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductor Materials & Equipment",
+      "symbol": "LRCX"
+    },
+    {
+      "cik": "0001397187",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Apparel, Accessories & Luxury Goods",
+      "symbol": "LULU"
+    },
+    {
+      "cik": "0000092380",
+      "sector": "Industrials",
+      "sub_industry": "Passenger Airlines",
+      "symbol": "LUV"
+    },
+    {
+      "cik": "0001300514",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Casinos & Gaming",
+      "symbol": "LVS"
+    },
+    {
+      "cik": "0001489393",
+      "sector": "Materials",
+      "sub_industry": "Specialty Chemicals",
+      "symbol": "LYB"
+    },
+    {
+      "cik": "0001335258",
+      "sector": "Communication Services",
+      "sub_industry": "Movies & Entertainment",
+      "symbol": "LYV"
+    },
+    {
+      "cik": "0001141391",
+      "sector": "Financials",
+      "sub_industry": "Transaction & Payment Processing Services",
+      "symbol": "MA"
+    },
+    {
+      "cik": "0000912595",
+      "sector": "Real Estate",
+      "sub_industry": "Multi-Family Residential REITs",
+      "symbol": "MAA"
+    },
+    {
+      "cik": "0001048286",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Hotels, Resorts & Cruise Lines",
+      "symbol": "MAR"
+    },
+    {
+      "cik": "0000062996",
+      "sector": "Industrials",
+      "sub_industry": "Building Products",
+      "symbol": "MAS"
+    },
+    {
+      "cik": "0000063908",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Restaurants",
+      "symbol": "MCD"
+    },
+    {
+      "cik": "0000827054",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "MCHP"
+    },
+    {
+      "cik": "0000927653",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Distributors",
+      "symbol": "MCK"
+    },
+    {
+      "cik": "0001059556",
+      "sector": "Financials",
+      "sub_industry": "Financial Exchanges & Data",
+      "symbol": "MCO"
+    },
+    {
+      "cik": "0001103982",
+      "sector": "Consumer Staples",
+      "sub_industry": "Packaged Foods & Meats",
+      "symbol": "MDLZ"
+    },
+    {
+      "cik": "0001613103",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "MDT"
+    },
+    {
+      "cik": "0001099219",
+      "sector": "Financials",
+      "sub_industry": "Life & Health Insurance",
+      "symbol": "MET"
+    },
+    {
+      "cik": "0001326801",
+      "sector": "Communication Services",
+      "sub_industry": "Interactive Media & Services",
+      "symbol": "META"
+    },
+    {
+      "cik": "0000789570",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Casinos & Gaming",
+      "symbol": "MGM"
+    },
+    {
+      "cik": "0000063754",
+      "sector": "Consumer Staples",
+      "sub_industry": "Packaged Foods & Meats",
+      "symbol": "MKC"
+    },
+    {
+      "cik": "0000916076",
+      "sector": "Materials",
+      "sub_industry": "Construction Materials",
+      "symbol": "MLM"
+    },
+    {
+      "cik": "0000066740",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Conglomerates",
+      "symbol": "MMM"
+    },
+    {
+      "cik": "0000865752",
+      "sector": "Consumer Staples",
+      "sub_industry": "Soft Drinks & Non-alcoholic Beverages",
+      "symbol": "MNST"
+    },
+    {
+      "cik": "0000764180",
+      "sector": "Consumer Staples",
+      "sub_industry": "Tobacco",
+      "symbol": "MO"
+    },
+    {
+      "cik": "0001285785",
+      "sector": "Materials",
+      "sub_industry": "Fertilizers & Agricultural Chemicals",
+      "symbol": "MOS"
+    },
+    {
+      "cik": "0001510295",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Refining & Marketing",
+      "symbol": "MPC"
+    },
+    {
+      "cik": "0001280452",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "MPWR"
+    },
+    {
+      "cik": "0000310158",
+      "sector": "Health Care",
+      "sub_industry": "Pharmaceuticals",
+      "symbol": "MRK"
+    },
+    {
+      "cik": "0001682852",
+      "sector": "Health Care",
+      "sub_industry": "Biotechnology",
+      "symbol": "MRNA"
+    },
+    {
+      "cik": "0000062709",
+      "sector": "Financials",
+      "sub_industry": "Insurance Brokers",
+      "symbol": "MRSH"
+    },
+    {
+      "cik": "0001835632",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "MRVL"
+    },
+    {
+      "cik": "0000895421",
+      "sector": "Financials",
+      "sub_industry": "Investment Banking & Brokerage",
+      "symbol": "MS"
+    },
+    {
+      "cik": "0001408198",
+      "sector": "Financials",
+      "sub_industry": "Financial Exchanges & Data",
+      "symbol": "MSCI"
+    },
+    {
+      "cik": "0000789019",
+      "sector": "Information Technology",
+      "sub_industry": "Systems Software",
+      "symbol": "MSFT"
+    },
+    {
+      "cik": "0000068505",
+      "sector": "Information Technology",
+      "sub_industry": "Communications Equipment",
+      "symbol": "MSI"
+    },
+    {
+      "cik": "0000036270",
+      "sector": "Financials",
+      "sub_industry": "Regional Banks",
+      "symbol": "MTB"
+    },
+    {
+      "cik": "0001037646",
+      "sector": "Health Care",
+      "sub_industry": "Life Sciences Tools & Services",
+      "symbol": "MTD"
+    },
+    {
+      "cik": "0000723125",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "MU"
+    },
+    {
+      "cik": "0001513761",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Hotels, Resorts & Cruise Lines",
+      "symbol": "NCLH"
+    },
+    {
+      "cik": "0001120193",
+      "sector": "Financials",
+      "sub_industry": "Financial Exchanges & Data",
+      "symbol": "NDAQ"
+    },
+    {
+      "cik": "0000072331",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "NDSN"
+    },
+    {
+      "cik": "0000753308",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "NEE"
+    },
+    {
+      "cik": "0001164727",
+      "sector": "Materials",
+      "sub_industry": "Gold",
+      "symbol": "NEM"
+    },
+    {
+      "cik": "0001065280",
+      "sector": "Communication Services",
+      "sub_industry": "Movies & Entertainment",
+      "symbol": "NFLX"
+    },
+    {
+      "cik": "0001111711",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "NI"
+    },
+    {
+      "cik": "0000320187",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Apparel, Accessories & Luxury Goods",
+      "symbol": "NKE"
+    },
+    {
+      "cik": "0001133421",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "NOC"
+    },
+    {
+      "cik": "0001373715",
+      "sector": "Information Technology",
+      "sub_industry": "Systems Software",
+      "symbol": "NOW"
+    },
+    {
+      "cik": "0001013871",
+      "sector": "Utilities",
+      "sub_industry": "Independent Power Producers & Energy Traders",
+      "symbol": "NRG"
+    },
+    {
+      "cik": "0000702165",
+      "sector": "Industrials",
+      "sub_industry": "Rail Transportation",
+      "symbol": "NSC"
+    },
+    {
+      "cik": "0001002047",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "NTAP"
+    },
+    {
+      "cik": "0000073124",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "NTRS"
+    },
+    {
+      "cik": "0000073309",
+      "sector": "Materials",
+      "sub_industry": "Steel",
+      "symbol": "NUE"
+    },
+    {
+      "cik": "0001045810",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "NVDA"
+    },
+    {
+      "cik": "0000906163",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Homebuilding",
+      "symbol": "NVR"
+    },
+    {
+      "cik": "0001564708",
+      "sector": "Communication Services",
+      "sub_industry": "Publishing",
+      "symbol": "NWS"
+    },
+    {
+      "cik": "0001564708",
+      "sector": "Communication Services",
+      "sub_industry": "Publishing",
+      "symbol": "NWSA"
+    },
+    {
+      "cik": "0001413447",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "NXPI"
+    },
+    {
+      "cik": "0000726728",
+      "sector": "Real Estate",
+      "sub_industry": "Retail REITs",
+      "symbol": "O"
+    },
+    {
+      "cik": "0000878927",
+      "sector": "Industrials",
+      "sub_industry": "Cargo Ground Transportation",
+      "symbol": "ODFL"
+    },
+    {
+      "cik": "0001039684",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Storage & Transportation",
+      "symbol": "OKE"
+    },
+    {
+      "cik": "0000029989",
+      "sector": "Communication Services",
+      "sub_industry": "Advertising",
+      "symbol": "OMC"
+    },
+    {
+      "cik": "0001097864",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "ON"
+    },
+    {
+      "cik": "0001341439",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "ORCL"
+    },
+    {
+      "cik": "0000898173",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Automotive Retail",
+      "symbol": "ORLY"
+    },
+    {
+      "cik": "0001781335",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "OTIS"
+    },
+    {
+      "cik": "0000797468",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Exploration & Production",
+      "symbol": "OXY"
+    },
+    {
+      "cik": "0001474432",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "P"
+    },
+    {
+      "cik": "0001327567",
+      "sector": "Information Technology",
+      "sub_industry": "Systems Software",
+      "symbol": "PANW"
+    },
+    {
+      "cik": "0000723531",
+      "sector": "Industrials",
+      "sub_industry": "Human Resource & Employment Services",
+      "symbol": "PAYX"
+    },
+    {
+      "cik": "0000075362",
+      "sector": "Industrials",
+      "sub_industry": "Construction Machinery & Heavy Transportation Equipment",
+      "symbol": "PCAR"
+    },
+    {
+      "cik": "0001004980",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "PCG"
+    },
+    {
+      "cik": "0000788784",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "PEG"
+    },
+    {
+      "cik": "0000077476",
+      "sector": "Consumer Staples",
+      "sub_industry": "Soft Drinks & Non-alcoholic Beverages",
+      "symbol": "PEP"
+    },
+    {
+      "cik": "0000078003",
+      "sector": "Health Care",
+      "sub_industry": "Pharmaceuticals",
+      "symbol": "PFE"
+    },
+    {
+      "cik": "0001126328",
+      "sector": "Financials",
+      "sub_industry": "Life & Health Insurance",
+      "symbol": "PFG"
+    },
+    {
+      "cik": "0000080424",
+      "sector": "Consumer Staples",
+      "sub_industry": "Personal Care Products",
+      "symbol": "PG"
+    },
+    {
+      "cik": "0000080661",
+      "sector": "Financials",
+      "sub_industry": "Property & Casualty Insurance",
+      "symbol": "PGR"
+    },
+    {
+      "cik": "0000076334",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "PH"
+    },
+    {
+      "cik": "0000822416",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Homebuilding",
+      "symbol": "PHM"
+    },
+    {
+      "cik": "0000075677",
+      "sector": "Materials",
+      "sub_industry": "Paper & Plastic Packaging Products & Materials",
+      "symbol": "PKG"
+    },
+    {
+      "cik": "0001045609",
+      "sector": "Real Estate",
+      "sub_industry": "Industrial REITs",
+      "symbol": "PLD"
+    },
+    {
+      "cik": "0001321655",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "PLTR"
+    },
+    {
+      "cik": "0001413329",
+      "sector": "Consumer Staples",
+      "sub_industry": "Tobacco",
+      "symbol": "PM"
+    },
+    {
+      "cik": "0000713676",
+      "sector": "Financials",
+      "sub_industry": "Diversified Banks",
+      "symbol": "PNC"
+    },
+    {
+      "cik": "0000077360",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "PNR"
+    },
+    {
+      "cik": "0000764622",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "PNW"
+    },
+    {
+      "cik": "0001145197",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "PODD"
+    },
+    {
+      "cik": "0000079879",
+      "sector": "Materials",
+      "sub_industry": "Specialty Chemicals",
+      "symbol": "PPG"
+    },
+    {
+      "cik": "0000922224",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "PPL"
+    },
+    {
+      "cik": "0001137774",
+      "sector": "Financials",
+      "sub_industry": "Life & Health Insurance",
+      "symbol": "PRU"
+    },
+    {
+      "cik": "0001393311",
+      "sector": "Real Estate",
+      "sub_industry": "Self-Storage REITs",
+      "symbol": "PSA"
+    },
+    {
+      "cik": "0001534701",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Refining & Marketing",
+      "symbol": "PSX"
+    },
+    {
+      "cik": "0000857005",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "PTC"
+    },
+    {
+      "cik": "0001050915",
+      "sector": "Industrials",
+      "sub_industry": "Construction & Engineering",
+      "symbol": "PWR"
+    },
+    {
+      "cik": "0001633917",
+      "sector": "Financials",
+      "sub_industry": "Transaction & Payment Processing Services",
+      "symbol": "PYPL"
+    },
+    {
+      "cik": "0002058873",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductor Materials & Equipment",
+      "symbol": "Q"
+    },
+    {
+      "cik": "0000804328",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "QCOM"
+    },
+    {
+      "cik": "0000884887",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Hotels, Resorts & Cruise Lines",
+      "symbol": "RCL"
+    },
+    {
+      "cik": "0001713445",
+      "sector": "Communication Services",
+      "sub_industry": "Interactive Media & Services",
+      "symbol": "RDDT"
+    },
+    {
+      "cik": "0000910606",
+      "sector": "Real Estate",
+      "sub_industry": "Retail REITs",
+      "symbol": "REG"
+    },
+    {
+      "cik": "0000872589",
+      "sector": "Health Care",
+      "sub_industry": "Biotechnology",
+      "symbol": "REGN"
+    },
+    {
+      "cik": "0001281761",
+      "sector": "Financials",
+      "sub_industry": "Regional Banks",
+      "symbol": "RF"
+    },
+    {
+      "cik": "0000720005",
+      "sector": "Financials",
+      "sub_industry": "Investment Banking & Brokerage",
+      "symbol": "RJF"
+    },
+    {
+      "cik": "0001037038",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Apparel, Accessories & Luxury Goods",
+      "symbol": "RL"
+    },
+    {
+      "cik": "0000943819",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "RMD"
+    },
+    {
+      "cik": "0001024478",
+      "sector": "Industrials",
+      "sub_industry": "Electrical Components & Equipment",
+      "symbol": "ROK"
+    },
+    {
+      "cik": "0000084839",
+      "sector": "Industrials",
+      "sub_industry": "Environmental & Facilities Services",
+      "symbol": "ROL"
+    },
+    {
+      "cik": "0000882835",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Equipment & Instruments",
+      "symbol": "ROP"
+    },
+    {
+      "cik": "0000745732",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Apparel Retail",
+      "symbol": "ROST"
+    },
+    {
+      "cik": "0001060391",
+      "sector": "Industrials",
+      "sub_industry": "Environmental & Facilities Services",
+      "symbol": "RSG"
+    },
+    {
+      "cik": "0000101829",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "RTX"
+    },
+    {
+      "cik": "0000031791",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "RVTY"
+    },
+    {
+      "cik": "0001034054",
+      "sector": "Real Estate",
+      "sub_industry": "Telecom Tower REITs",
+      "symbol": "SBAC"
+    },
+    {
+      "cik": "0000829224",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Restaurants",
+      "symbol": "SBUX"
+    },
+    {
+      "cik": "0000316709",
+      "sector": "Financials",
+      "sub_industry": "Investment Banking & Brokerage",
+      "symbol": "SCHW"
+    },
+    {
+      "cik": "0000089800",
+      "sector": "Materials",
+      "sub_industry": "Specialty Chemicals",
+      "symbol": "SHW"
+    },
+    {
+      "cik": "0000091419",
+      "sector": "Consumer Staples",
+      "sub_industry": "Packaged Foods & Meats",
+      "symbol": "SJM"
+    },
+    {
+      "cik": "0002041610",
+      "sector": "Communication Services",
+      "sub_industry": "Movies & Entertainment",
+      "symbol": "SKYD"
+    },
+    {
+      "cik": "0000087347",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Equipment & Services",
+      "symbol": "SLB"
+    },
+    {
+      "cik": "0001375365",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "SMCI"
+    },
+    {
+      "cik": "0000091440",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "SNA"
+    },
+    {
+      "cik": "0002023554",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "SNDK"
+    },
+    {
+      "cik": "0000883241",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "SNPS"
+    },
+    {
+      "cik": "0000092122",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "SO"
+    },
+    {
+      "cik": "0001964738",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Technology",
+      "symbol": "SOLV"
+    },
+    {
+      "cik": "0001063761",
+      "sector": "Real Estate",
+      "sub_industry": "Retail REITs",
+      "symbol": "SPG"
+    },
+    {
+      "cik": "0000064040",
+      "sector": "Financials",
+      "sub_industry": "Financial Exchanges & Data",
+      "symbol": "SPGI"
+    },
+    {
+      "cik": "0001032208",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "SRE"
+    },
+    {
+      "cik": "0001757898",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "STE"
+    },
+    {
+      "cik": "0001022671",
+      "sector": "Materials",
+      "sub_industry": "Steel",
+      "symbol": "STLD"
+    },
+    {
+      "cik": "0000093751",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "STT"
+    },
+    {
+      "cik": "0001137789",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "STX"
+    },
+    {
+      "cik": "0000016918",
+      "sector": "Consumer Staples",
+      "sub_industry": "Distillers & Vintners",
+      "symbol": "STZ"
+    },
+    {
+      "cik": "0002005951",
+      "sector": "Materials",
+      "sub_industry": "Paper & Plastic Packaging Products & Materials",
+      "symbol": "SW"
+    },
+    {
+      "cik": "0000093556",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "SWK"
+    },
+    {
+      "cik": "0000004127",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "SWKS"
+    },
+    {
+      "cik": "0001601712",
+      "sector": "Financials",
+      "sub_industry": "Consumer Finance",
+      "symbol": "SYF"
+    },
+    {
+      "cik": "0000310764",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "SYK"
+    },
+    {
+      "cik": "0000096021",
+      "sector": "Consumer Staples",
+      "sub_industry": "Food Distributors",
+      "symbol": "SYY"
+    },
+    {
+      "cik": "0000732717",
+      "sector": "Communication Services",
+      "sub_industry": "Integrated Telecommunication Services",
+      "symbol": "T"
+    },
+    {
+      "cik": "0001260221",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "TDG"
+    },
+    {
+      "cik": "0001094285",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Equipment & Instruments",
+      "symbol": "TDY"
+    },
+    {
+      "cik": "0000842023",
+      "sector": "Health Care",
+      "sub_industry": "Life Sciences Tools & Services",
+      "symbol": "TECH"
+    },
+    {
+      "cik": "0001385157",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Manufacturing Services",
+      "symbol": "TEL"
+    },
+    {
+      "cik": "0000097210",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductor Materials & Equipment",
+      "symbol": "TER"
+    },
+    {
+      "cik": "0000092230",
+      "sector": "Financials",
+      "sub_industry": "Diversified Banks",
+      "symbol": "TFC"
+    },
+    {
+      "cik": "0000027419",
+      "sector": "Consumer Staples",
+      "sub_industry": "Consumer Staples Merchandise Retail",
+      "symbol": "TGT"
+    },
+    {
+      "cik": "0000109198",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Apparel Retail",
+      "symbol": "TJX"
+    },
+    {
+      "cik": "0001973266",
+      "sector": "Communication Services",
+      "sub_industry": "Movies & Entertainment",
+      "symbol": "TKO"
+    },
+    {
+      "cik": "0000097745",
+      "sector": "Health Care",
+      "sub_industry": "Life Sciences Tools & Services",
+      "symbol": "TMO"
+    },
+    {
+      "cik": "0001283699",
+      "sector": "Communication Services",
+      "sub_industry": "Wireless Telecommunication Services",
+      "symbol": "TMUS"
+    },
+    {
+      "cik": "0001811074",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Exploration & Production",
+      "symbol": "TPL"
+    },
+    {
+      "cik": "0001116132",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Apparel, Accessories & Luxury Goods",
+      "symbol": "TPR"
+    },
+    {
+      "cik": "0001389170",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Storage & Transportation",
+      "symbol": "TRGP"
+    },
+    {
+      "cik": "0000864749",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "TRMB"
+    },
+    {
+      "cik": "0001113169",
+      "sector": "Financials",
+      "sub_industry": "Asset Management & Custody Banks",
+      "symbol": "TROW"
+    },
+    {
+      "cik": "0000086312",
+      "sector": "Financials",
+      "sub_industry": "Property & Casualty Insurance",
+      "symbol": "TRV"
+    },
+    {
+      "cik": "0000916365",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Other Specialty Retail",
+      "symbol": "TSCO"
+    },
+    {
+      "cik": "0001318605",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Automobile Manufacturers",
+      "symbol": "TSLA"
+    },
+    {
+      "cik": "0000100493",
+      "sector": "Consumer Staples",
+      "sub_industry": "Packaged Foods & Meats",
+      "symbol": "TSN"
+    },
+    {
+      "cik": "0001466258",
+      "sector": "Industrials",
+      "sub_industry": "Building Products",
+      "symbol": "TT"
+    },
+    {
+      "cik": "0000946581",
+      "sector": "Communication Services",
+      "sub_industry": "Interactive Home Entertainment",
+      "symbol": "TTWO"
+    },
+    {
+      "cik": "0001447669",
+      "sector": "Information Technology",
+      "sub_industry": "Systems Software",
+      "symbol": "TWLO"
+    },
+    {
+      "cik": "0000097476",
+      "sector": "Information Technology",
+      "sub_industry": "Semiconductors",
+      "symbol": "TXN"
+    },
+    {
+      "cik": "0000217346",
+      "sector": "Industrials",
+      "sub_industry": "Aerospace & Defense",
+      "symbol": "TXT"
+    },
+    {
+      "cik": "0000860731",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "TYL"
+    },
+    {
+      "cik": "0000100517",
+      "sector": "Industrials",
+      "sub_industry": "Passenger Airlines",
+      "symbol": "UAL"
+    },
+    {
+      "cik": "0001543151",
+      "sector": "Industrials",
+      "sub_industry": "Passenger Ground Transportation",
+      "symbol": "UBER"
+    },
+    {
+      "cik": "0000074208",
+      "sector": "Real Estate",
+      "sub_industry": "Multi-Family Residential REITs",
+      "symbol": "UDR"
+    },
+    {
+      "cik": "0000352915",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Facilities",
+      "symbol": "UHS"
+    },
+    {
+      "cik": "0001403568",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Other Specialty Retail",
+      "symbol": "ULTA"
+    },
+    {
+      "cik": "0000731766",
+      "sector": "Health Care",
+      "sub_industry": "Managed Health Care",
+      "symbol": "UNH"
+    },
+    {
+      "cik": "0000100885",
+      "sector": "Industrials",
+      "sub_industry": "Rail Transportation",
+      "symbol": "UNP"
+    },
+    {
+      "cik": "0001090727",
+      "sector": "Industrials",
+      "sub_industry": "Air Freight & Logistics",
+      "symbol": "UPS"
+    },
+    {
+      "cik": "0001067701",
+      "sector": "Industrials",
+      "sub_industry": "Trading Companies & Distributors",
+      "symbol": "URI"
+    },
+    {
+      "cik": "0000036104",
+      "sector": "Financials",
+      "sub_industry": "Diversified Banks",
+      "symbol": "USB"
+    },
+    {
+      "cik": "0001403161",
+      "sector": "Financials",
+      "sub_industry": "Transaction & Payment Processing Services",
+      "symbol": "V"
+    },
+    {
+      "cik": "0001393052",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Technology",
+      "symbol": "VEEV"
+    },
+    {
+      "cik": "0001705696",
+      "sector": "Real Estate",
+      "sub_industry": "Hotel & Resort REITs",
+      "symbol": "VICI"
+    },
+    {
+      "cik": "0001035002",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Refining & Marketing",
+      "symbol": "VLO"
+    },
+    {
+      "cik": "0001967680",
+      "sector": "Industrials",
+      "sub_industry": "Environmental & Facilities Services",
+      "symbol": "VLTO"
+    },
+    {
+      "cik": "0001396009",
+      "sector": "Materials",
+      "sub_industry": "Construction Materials",
+      "symbol": "VMC"
+    },
+    {
+      "cik": "0000906107",
+      "sector": "Real Estate",
+      "sub_industry": "Multi-Family Residential REITs",
+      "symbol": "VMRK"
+    },
+    {
+      "cik": "0001442145",
+      "sector": "Industrials",
+      "sub_industry": "Research & Consulting Services",
+      "symbol": "VRSK"
+    },
+    {
+      "cik": "0001014473",
+      "sector": "Information Technology",
+      "sub_industry": "Internet Services & Infrastructure",
+      "symbol": "VRSN"
+    },
+    {
+      "cik": "0001674101",
+      "sector": "Industrials",
+      "sub_industry": "Electrical Components & Equipment",
+      "symbol": "VRT"
+    },
+    {
+      "cik": "0000875320",
+      "sector": "Health Care",
+      "sub_industry": "Biotechnology",
+      "symbol": "VRTX"
+    },
+    {
+      "cik": "0001692819",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "VST"
+    },
+    {
+      "cik": "0000740260",
+      "sector": "Real Estate",
+      "sub_industry": "Health Care REITs",
+      "symbol": "VTR"
+    },
+    {
+      "cik": "0001792044",
+      "sector": "Health Care",
+      "sub_industry": "Pharmaceuticals",
+      "symbol": "VTRS"
+    },
+    {
+      "cik": "0002128626",
+      "sector": "Consumer Staples",
+      "sub_industry": "Agricultural Products & Services",
+      "symbol": "VYLR"
+    },
+    {
+      "cik": "0000732712",
+      "sector": "Communication Services",
+      "sub_industry": "Integrated Telecommunication Services",
+      "symbol": "VZ"
+    },
+    {
+      "cik": "0000943452",
+      "sector": "Industrials",
+      "sub_industry": "Construction Machinery & Heavy Transportation Equipment",
+      "symbol": "WAB"
+    },
+    {
+      "cik": "0001000697",
+      "sector": "Health Care",
+      "sub_industry": "Life Sciences Tools & Services",
+      "symbol": "WAT"
+    },
+    {
+      "cik": "0001327811",
+      "sector": "Information Technology",
+      "sub_industry": "Application Software",
+      "symbol": "WDAY"
+    },
+    {
+      "cik": "0000106040",
+      "sector": "Information Technology",
+      "sub_industry": "Technology Hardware, Storage & Peripherals",
+      "symbol": "WDC"
+    },
+    {
+      "cik": "0000783325",
+      "sector": "Utilities",
+      "sub_industry": "Electric Utilities",
+      "symbol": "WEC"
+    },
+    {
+      "cik": "0000766704",
+      "sector": "Real Estate",
+      "sub_industry": "Health Care REITs",
+      "symbol": "WELL"
+    },
+    {
+      "cik": "0000072971",
+      "sector": "Financials",
+      "sub_industry": "Diversified Banks",
+      "symbol": "WFC"
+    },
+    {
+      "cik": "0000823768",
+      "sector": "Industrials",
+      "sub_industry": "Environmental & Facilities Services",
+      "symbol": "WM"
+    },
+    {
+      "cik": "0000107263",
+      "sector": "Energy",
+      "sub_industry": "Oil & Gas Storage & Transportation",
+      "symbol": "WMB"
+    },
+    {
+      "cik": "0000104169",
+      "sector": "Consumer Staples",
+      "sub_industry": "Consumer Staples Merchandise Retail",
+      "symbol": "WMT"
+    },
+    {
+      "cik": "0000011544",
+      "sector": "Financials",
+      "sub_industry": "Property & Casualty Insurance",
+      "symbol": "WRB"
+    },
+    {
+      "cik": "0000719955",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Homefurnishing Retail",
+      "symbol": "WSM"
+    },
+    {
+      "cik": "0000105770",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Supplies",
+      "symbol": "WST"
+    },
+    {
+      "cik": "0001140536",
+      "sector": "Financials",
+      "sub_industry": "Insurance Brokers",
+      "symbol": "WTW"
+    },
+    {
+      "cik": "0000106535",
+      "sector": "Real Estate",
+      "sub_industry": "Timber REITs",
+      "symbol": "WY"
+    },
+    {
+      "cik": "0001174922",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Casinos & Gaming",
+      "symbol": "WYNN"
+    },
+    {
+      "cik": "0000072903",
+      "sector": "Utilities",
+      "sub_industry": "Multi-Utilities",
+      "symbol": "XEL"
+    },
+    {
+      "cik": "0002115436",
+      "sector": "Energy",
+      "sub_industry": "Integrated Oil & Gas",
+      "symbol": "XOM"
+    },
+    {
+      "cik": "0001524472",
+      "sector": "Industrials",
+      "sub_industry": "Industrial Machinery & Supplies & Components",
+      "symbol": "XYL"
+    },
+    {
+      "cik": "0001512673",
+      "sector": "Financials",
+      "sub_industry": "Transaction & Payment Processing Services",
+      "symbol": "XYZ"
+    },
+    {
+      "cik": "0001041061",
+      "sector": "Consumer Discretionary",
+      "sub_industry": "Restaurants",
+      "symbol": "YUM"
+    },
+    {
+      "cik": "0001136869",
+      "sector": "Health Care",
+      "sub_industry": "Health Care Equipment",
+      "symbol": "ZBH"
+    },
+    {
+      "cik": "0000877212",
+      "sector": "Information Technology",
+      "sub_industry": "Electronic Equipment & Instruments",
+      "symbol": "ZBRA"
+    },
+    {
+      "cik": "0001555280",
+      "sector": "Health Care",
+      "sub_industry": "Pharmaceuticals",
+      "symbol": "ZTS"
+    }
+  ],
+  "generated_at": "2026-10-10T11:24:33-04:00",
+  "holdings": [
+    {
+      "sector": null,
+      "symbol": "A",
+      "weight": 0.071187
+    },
+    {
+      "sector": null,
+      "symbol": "AAPL",
+      "weight": 7.425376
+    },
+    {
+      "sector": null,
+      "symbol": "ABBV",
+      "weight": 0.719683
+    },
+    {
+      "sector": null,
+      "symbol": "ABNB",
+      "weight": 0.10219
+    },
+    {
+      "sector": null,
+      "symbol": "ABT",
+      "weight": 0.254579
+    },
+    {
+      "sector": null,
+      "symbol": "ACGL",
+      "weight": 0.04858
+    },
+    {
+      "sector": null,
+      "symbol": "ACN",
+      "weight": 0.190259
+    },
+    {
+      "sector": null,
+      "symbol": "ADBE",
+      "weight": 0.142952
+    },
+    {
+      "sector": null,
+      "symbol": "ADI",
+      "weight": 0.2957
+    },
+    {
+      "sector": null,
+      "symbol": "ADM",
+      "weight": 0.059521
+    },
+    {
+      "sector": null,
+      "symbol": "ADP",
+      "weight": 0.160666
+    },
+    {
+      "sector": null,
+      "symbol": "ADSK",
+      "weight": 0.073879
+    },
+    {
+      "sector": null,
+      "symbol": "AEE",
+      "weight": 0.042206
+    },
+    {
+      "sector": null,
+      "symbol": "AEP",
+      "weight": 0.099695
+    },
+    {
+      "sector": null,
+      "symbol": "AES",
+      "weight": 0.015949
+    },
+    {
+      "sector": null,
+      "symbol": "AFL",
+      "weight": 0.076611
+    },
+    {
+      "sector": null,
+      "symbol": "AIG",
+      "weight": 0.060182
+    },
+    {
+      "sector": null,
+      "symbol": "AIZ",
+      "weight": 0.020261
+    },
+    {
+      "sector": null,
+      "symbol": "AJG",
+      "weight": 0.089607
+    },
+    {
+      "sector": null,
+      "symbol": "AKAM",
+      "weight": 0.021966
+    },
+    {
+      "sector": null,
+      "symbol": "ALB",
+      "weight": 0.018012
+    },
+    {
+      "sector": null,
+      "symbol": "ALGN",
+      "weight": 0.013913
+    },
+    {
+      "sector": null,
+      "symbol": "ALL",
+      "weight": 0.086936
+    },
+    {
+      "sector": null,
+      "symbol": "ALLE",
+      "weight": 0.019082
+    },
+    {
+      "sector": null,
+      "symbol": "AMAT",
+      "weight": 0.604849
+    },
+    {
+      "sector": null,
+      "symbol": "AMCR",
+      "weight": 0.028801
+    },
+    {
+      "sector": null,
+      "symbol": "AMD",
+      "weight": 1.514538
+    },
+    {
+      "sector": null,
+      "symbol": "AME",
+      "weight": 0.084985
+    },
+    {
+      "sector": null,
+      "symbol": "AMGN",
+      "weight": 0.329094
+    },
+    {
+      "sector": null,
+      "symbol": "AMP",
+      "weight": 0.065677
+    },
+    {
+      "sector": null,
+      "symbol": "AMT",
+      "weight": 0.116352
+    },
+    {
+      "sector": null,
+      "symbol": "AMZN",
+      "weight": 3.727229
+    },
+    {
+      "sector": null,
+      "symbol": "ANET",
+      "weight": 0.329899
+    },
+    {
+      "sector": null,
+      "symbol": "AON",
+      "weight": 0.087639
+    },
+    {
+      "sector": null,
+      "symbol": "AOS",
+      "weight": 0.00948
+    },
+    {
+      "sector": null,
+      "symbol": "APA",
+      "weight": 0.024069
+    },
+    {
+      "sector": null,
+      "symbol": "APD",
+      "weight": 0.092891
+    },
+    {
+      "sector": null,
+      "symbol": "APH",
+      "weight": 0.314644
+    },
+    {
+      "sector": null,
+      "symbol": "APO",
+      "weight": 0.081369
+    },
+    {
+      "sector": null,
+      "symbol": "APP",
+      "weight": 0.113385
+    },
+    {
+      "sector": null,
+      "symbol": "APTV",
+      "weight": 0.014024
+    },
+    {
+      "sector": null,
+      "symbol": "ARE",
+      "weight": 0.010674
+    },
+    {
+      "sector": null,
+      "symbol": "ARES",
+      "weight": 0.038892
+    },
+    {
+      "sector": null,
+      "symbol": "ATO",
+      "weight": 0.04056
+    },
+    {
+      "sector": null,
+      "symbol": "AVGO",
+      "weight": 2.560963
+    },
+    {
+      "sector": null,
+      "symbol": "AVY",
+      "weight": 0.019201
+    },
+    {
+      "sector": null,
+      "symbol": "AWK",
+      "weight": 0.038052
+    },
+    {
+      "sector": null,
+      "symbol": "AXON",
+      "weight": 0.050643
+    },
+    {
+      "sector": null,
+      "symbol": "AXP",
+      "weight": 0.241673
+    },
+    {
+      "sector": null,
+      "symbol": "AZO",
+      "weight": 0.070897
+    },
+    {
+      "sector": null,
+      "symbol": "BA",
+      "weight": 0.221669
+    },
+    {
+      "sector": null,
+      "symbol": "BAC",
+      "weight": 0.521259
+    },
+    {
+      "sector": null,
+      "symbol": "BALL",
+      "weight": 0.023275
+    },
+    {
+      "sector": null,
+      "symbol": "BAX",
+      "weight": 0.018576
+    },
+    {
+      "sector": null,
+      "symbol": "BBY",
+      "weight": 0.026047
+    },
+    {
+      "sector": null,
+      "symbol": "BDX",
+      "weight": 0.074163
+    },
+    {
+      "sector": null,
+      "symbol": "BE",
+      "weight": 0.120028
+    },
+    {
+      "sector": null,
+      "symbol": "BEN",
+      "weight": 0.014074
+    },
+    {
+      "sector": null,
+      "symbol": "BF.B",
+      "weight": 0.007022
+    },
+    {
+      "sector": null,
+      "symbol": "BG",
+      "weight": 0.025373
+    },
+    {
+      "sector": null,
+      "symbol": "BIIB",
+      "weight": 0.048381
+    },
+    {
+      "sector": null,
+      "symbol": "BKNG",
+      "weight": 0.179368
+    },
+    {
+      "sector": null,
+      "symbol": "BKR",
+      "weight": 0.083682
+    },
+    {
+      "sector": null,
+      "symbol": "BLK",
+      "weight": 0.22919
+    },
+    {
+      "sector": null,
+      "symbol": "BMY",
+      "weight": 0.181893
+    },
+    {
+      "sector": null,
+      "symbol": "BNY",
+      "weight": 0.145374
+    },
+    {
+      "sector": null,
+      "symbol": "BR",
+      "weight": 0.028141
+    },
+    {
+      "sector": null,
+      "symbol": "BRK.B",
+      "weight": 1.422707
+    },
+    {
+      "sector": null,
+      "symbol": "BRO",
+      "weight": 0.027402
+    },
+    {
+      "sector": null,
+      "symbol": "BSX",
+      "weight": 0.090826
+    },
+    {
+      "sector": null,
+      "symbol": "BX",
+      "weight": 0.126347
+    },
+    {
+      "sector": null,
+      "symbol": "BXP",
+      "weight": 0.014147
+    },
+    {
+      "sector": null,
+      "symbol": "C",
+      "weight": 0.321296
+    },
+    {
+      "sector": null,
+      "symbol": "CAH",
+      "weight": 0.08281
+    },
+    {
+      "sector": null,
+      "symbol": "CARR",
+      "weight": 0.068746
+    },
+    {
+      "sector": null,
+      "symbol": "CASY",
+      "weight": 0.035609
+    },
+    {
+      "sector": null,
+      "symbol": "CAT",
+      "weight": 0.547168
+    },
+    {
+      "sector": null,
+      "symbol": "CB",
+      "weight": 0.180099
+    },
+    {
+      "sector": null,
+      "symbol": "CBOE",
+      "weight": 0.046176
+    },
+    {
+      "sector": null,
+      "symbol": "CBRE",
+      "weight": 0.055623
+    },
+    {
+      "sector": null,
+      "symbol": "CCI",
+      "weight": 0.043783
+    },
+    {
+      "sector": null,
+      "symbol": "CCL",
+      "weight": 0.049719
+    },
+    {
+      "sector": null,
+      "symbol": "CDNS",
+      "weight": 0.143501
+    },
+    {
+      "sector": null,
+      "symbol": "CDW",
+      "weight": 0.025941
+    },
+    {
+      "sector": null,
+      "symbol": "CEG",
+      "weight": 0.140311
+    },
+    {
+      "sector": null,
+      "symbol": "CF",
+      "weight": 0.025675
+    },
+    {
+      "sector": null,
+      "symbol": "CFG",
+      "weight": 0.040591
+    },
+    {
+      "sector": null,
+      "symbol": "CHD",
+      "weight": 0.034599
+    },
+    {
+      "sector": null,
+      "symbol": "CHRW",
+      "weight": 0.024953
+    },
+    {
+      "sector": null,
+      "symbol": "CHTR",
+      "weight": 0.018317
+    },
+    {
+      "sector": null,
+      "symbol": "CI",
+      "weight": 0.110933
+    },
+    {
+      "sector": null,
+      "symbol": "CIEN",
+      "weight": 0.090015
+    },
+    {
+      "sector": null,
+      "symbol": "CINF",
+      "weight": 0.037889
+    },
+    {
+      "sector": null,
+      "symbol": "CL",
+      "weight": 0.104912
+    },
+    {
+      "sector": null,
+      "symbol": "CLX",
+      "weight": 0.015195
+    },
+    {
+      "sector": null,
+      "symbol": "CMCSA",
+      "weight": 0.111956
+    },
+    {
+      "sector": null,
+      "symbol": "CME",
+      "weight": 0.148292
+    },
+    {
+      "sector": null,
+      "symbol": "CMG",
+      "weight": 0.061586
+    },
+    {
+      "sector": null,
+      "symbol": "CMI",
+      "weight": 0.10684
+    },
+    {
+      "sector": null,
+      "symbol": "CMS",
+      "weight": 0.030605
+    },
+    {
+      "sector": null,
+      "symbol": "CNC",
+      "weight": 0.047627
+    },
+    {
+      "sector": null,
+      "symbol": "CNP",
+      "weight": 0.03764
+    },
+    {
+      "sector": null,
+      "symbol": "COF",
+      "weight": 0.18255
+    },
+    {
+      "sector": null,
+      "symbol": "COHR",
+      "weight": 0.088597
+    },
+    {
+      "sector": null,
+      "symbol": "COIN",
+      "weight": 0.05731
+    },
+    {
+      "sector": null,
+      "symbol": "COO",
+      "weight": 0.015867
+    },
+    {
+      "sector": null,
+      "symbol": "COP",
+      "weight": 0.240809
+    },
+    {
+      "sector": null,
+      "symbol": "COR",
+      "weight": 0.091597
+    },
+    {
+      "sector": null,
+      "symbol": "COST",
+      "weight": 0.62849
+    },
+    {
+      "sector": null,
+      "symbol": "CPAY",
+      "weight": 0.039374
+    },
+    {
+      "sector": null,
+      "symbol": "CPRT",
+      "weight": 0.034406
+    },
+    {
+      "sector": null,
+      "symbol": "CPT",
+      "weight": 0.014567
+    },
+    {
+      "sector": null,
+      "symbol": "CRH",
+      "weight": 0.081192
+    },
+    {
+      "sector": null,
+      "symbol": "CRL",
+      "weight": 0.021503
+    },
+    {
+      "sector": null,
+      "symbol": "CRM",
+      "weight": 0.278747
+    },
+    {
+      "sector": null,
+      "symbol": "CRWD",
+      "weight": 0.400478
+    },
+    {
+      "sector": null,
+      "symbol": "CSCO",
+      "weight": 0.676985
+    },
+    {
+      "sector": null,
+      "symbol": "CSGP",
+      "weight": 0.018233
+    },
+    {
+      "sector": null,
+      "symbol": "CSX",
+      "weight": 0.130811
+    },
+    {
+      "sector": null,
+      "symbol": "CTAS",
+      "weight": 0.103394
+    },
+    {
+      "sector": null,
+      "symbol": "CTSH",
+      "weight": 0.040377
+    },
+    {
+      "sector": null,
+      "symbol": "CVNA",
+      "weight": 0.067817
+    },
+    {
+      "sector": null,
+      "symbol": "CVS",
+      "weight": 0.167742
+    },
+    {
+      "sector": null,
+      "symbol": "CVX",
+      "weight": 0.624889
+    },
+    {
+      "sector": null,
+      "symbol": "D",
+      "weight": 0.081351
+    },
+    {
+      "sector": null,
+      "symbol": "DAL",
+      "weight": 0.072833
+    },
+    {
+      "sector": null,
+      "symbol": "DASH",
+      "weight": 0.107752
+    },
+    {
+      "sector": null,
+      "symbol": "DD",
+      "weight": 0.026911
+    },
+    {
+      "sector": null,
+      "symbol": "DDOG",
+      "weight": 0.136982
+    },
+    {
+      "sector": null,
+      "symbol": "DE",
+      "weight": 0.245032
+    },
+    {
+      "sector": null,
+      "symbol": "DECK",
+      "weight": 0.016598
+    },
+    {
+      "sector": null,
+      "symbol": "DELL",
+      "weight": 0.259453
+    },
+    {
+      "sector": null,
+      "symbol": "DG",
+      "weight": 0.04104
+    },
+    {
+      "sector": null,
+      "symbol": "DGX",
+      "weight": 0.03827
+    },
+    {
+      "sector": null,
+      "symbol": "DHI",
+      "weight": 0.051454
+    },
+    {
+      "sector": null,
+      "symbol": "DHR",
+      "weight": 0.203243
+    },
+    {
+      "sector": null,
+      "symbol": "DIS",
+      "weight": 0.276387
+    },
+    {
+      "sector": null,
+      "symbol": "DLR",
+      "weight": 0.092456
+    },
+    {
+      "sector": null,
+      "symbol": "DLTR",
+      "weight": 0.034052
+    },
+    {
+      "sector": null,
+      "symbol": "DOC",
+      "weight": 0.019201
+    },
+    {
+      "sector": null,
+      "symbol": "DOV",
+      "weight": 0.038147
+    },
+    {
+      "sector": null,
+      "symbol": "DOW",
+      "weight": 0.03076
+    },
+    {
+      "sector": null,
+      "symbol": "DPZ",
+      "weight": 0.01525
+    },
+    {
+      "sector": null,
+      "symbol": "DRI",
+      "weight": 0.033739
+    },
+    {
+      "sector": null,
+      "symbol": "DTE",
+      "weight": 0.03961
+    },
+    {
+      "sector": null,
+      "symbol": "DUK",
+      "weight": 0.136124
+    },
+    {
+      "sector": null,
+      "symbol": "DVA",
+      "weight": 0.008947
+    },
+    {
+      "sector": null,
+      "symbol": "DVN",
+      "weight": 0.080192
+    },
+    {
+      "sector": null,
+      "symbol": "DXCM",
+      "weight": 0.047397
+    },
+    {
+      "sector": null,
+      "symbol": "EBAY",
+      "weight": 0.066991
+    },
+    {
+      "sector": null,
+      "symbol": "ECHO",
+      "weight": 0.019308
+    },
+    {
+      "sector": null,
+      "symbol": "ECL",
+      "weight": 0.105967
+    },
+    {
+      "sector": null,
+      "symbol": "ED",
+      "weight": 0.058527
+    },
+    {
+      "sector": null,
+      "symbol": "EFX",
+      "weight": 0.025542
+    },
+    {
+      "sector": null,
+      "symbol": "EG",
+      "weight": 0.019882
+    },
+    {
+      "sector": null,
+      "symbol": "EIX",
+      "weight": 0.031297
+    },
+    {
+      "sector": null,
+      "symbol": "EL",
+      "weight": 0.03483
+    },
+    {
+      "sector": null,
+      "symbol": "ELV",
+      "weight": 0.129693
+    },
+    {
+      "sector": null,
+      "symbol": "EME",
+      "weight": 0.051265
+    },
+    {
+      "sector": null,
+      "symbol": "EMR",
+      "weight": 0.132326
+    },
+    {
+      "sector": null,
+      "symbol": "EOG",
+      "weight": 0.116362
+    },
+    {
+      "sector": null,
+      "symbol": "EQIX",
+      "weight": 0.149241
+    },
+    {
+      "sector": null,
+      "symbol": "EQT",
+      "weight": 0.0496
+    },
+    {
+      "sector": null,
+      "symbol": "ERIE",
+      "weight": 0.008617
+    },
+    {
+      "sector": null,
+      "symbol": "ES",
+      "weight": 0.036954
+    },
+    {
+      "sector": null,
+      "symbol": "ESS",
+      "weight": 0.025844
+    },
+    {
+      "sector": null,
+      "symbol": "ETN",
+      "weight": 0.246573
+    },
+    {
+      "sector": null,
+      "symbol": "ETR",
+      "weight": 0.071443
+    },
+    {
+      "sector": null,
+      "symbol": "EVRG",
+      "weight": 0.027809
+    },
+    {
+      "sector": null,
+      "symbol": "EW",
+      "weight": 0.072663
+    },
+    {
+      "sector": null,
+      "symbol": "EXC",
+      "weight": 0.064348
+    },
+    {
+      "sector": null,
+      "symbol": "EXE",
+      "weight": 0.030538
+    },
+    {
+      "sector": null,
+      "symbol": "EXPD",
+      "weight": 0.037943
+    },
+    {
+      "sector": null,
+      "symbol": "EXPE",
+      "weight": 0.046323
+    },
+    {
+      "sector": null,
+      "symbol": "EXR",
+      "weight": 0.042123
+    },
+    {
+      "sector": null,
+      "symbol": "F",
+      "weight": 0.07182
+    },
+    {
+      "sector": null,
+      "symbol": "FANG",
+      "weight": 0.05853
+    },
+    {
+      "sector": null,
+      "symbol": "FAST",
+      "weight": 0.086823
+    },
+    {
+      "sector": null,
+      "symbol": "FCX",
+      "weight": 0.152411
+    },
+    {
+      "sector": null,
+      "symbol": "FDS",
+      "weight": 0.01523
+    },
+    {
+      "sector": null,
+      "symbol": "FDX",
+      "weight": 0.095925
+    },
+    {
+      "sector": null,
+      "symbol": "FDXF",
+      "weight": 0.020664
+    },
+    {
+      "sector": null,
+      "symbol": "FE",
+      "weight": 0.034975
+    },
+    {
+      "sector": null,
+      "symbol": "FERG",
+      "weight": 0.062629
+    },
+    {
+      "sector": null,
+      "symbol": "FFIV",
+      "weight": 0.038973
+    },
+    {
+      "sector": null,
+      "symbol": "FICO",
+      "weight": 0.022802
+    },
+    {
+      "sector": null,
+      "symbol": "FIS",
+      "weight": 0.026588
+    },
+    {
+      "sector": null,
+      "symbol": "FISV",
+      "weight": 0.036692
+    },
+    {
+      "sector": null,
+      "symbol": "FITB",
+      "weight": 0.068664
+    },
+    {
+      "sector": null,
+      "symbol": "FIX",
+      "weight": 0.089774
+    },
+    {
+      "sector": null,
+      "symbol": "FLEX",
+      "weight": 0.063199
+    },
+    {
+      "sector": null,
+      "symbol": "FOX",
+      "weight": 0.011435
+    },
+    {
+      "sector": null,
+      "symbol": "FOXA",
+      "weight": 0.018998
+    },
+    {
+      "sector": null,
+      "symbol": "FRT",
+      "weight": 0.012461
+    },
+    {
+      "sector": null,
+      "symbol": "FSLR",
+      "weight": 0.028763
+    },
+    {
+      "sector": null,
+      "symbol": "FTNT",
+      "weight": 0.174093
+    },
+    {
+      "sector": null,
+      "symbol": "FTV",
+      "weight": 0.025761
+    },
+    {
+      "sector": null,
+      "symbol": "GD",
+      "weight": 0.124828
+    },
+    {
+      "sector": null,
+      "symbol": "GDDY",
+      "weight": 0.019521
+    },
+    {
+      "sector": null,
+      "symbol": "GE",
+      "weight": 0.474118
+    },
+    {
+      "sector": null,
+      "symbol": "GEHC",
+      "weight": 0.04333
+    },
+    {
+      "sector": null,
+      "symbol": "GEN",
+      "weight": 0.018308
+    },
+    {
+      "sector": null,
+      "symbol": "GEV",
+      "weight": 0.397992
+    },
+    {
+      "sector": null,
+      "symbol": "GILD",
+      "weight": 0.272805
+    },
+    {
+      "sector": null,
+      "symbol": "GIS",
+      "weight": 0.026053
+    },
+    {
+      "sector": null,
+      "symbol": "GL",
+      "weight": 0.019307
+    },
+    {
+      "sector": null,
+      "symbol": "GLW",
+      "weight": 0.180919
+    },
+    {
+      "sector": null,
+      "symbol": "GM",
+      "weight": 0.107624
+    },
+    {
+      "sector": null,
+      "symbol": "GNRC",
+      "weight": 0.019605
+    },
+    {
+      "sector": null,
+      "symbol": "GOOG",
+      "weight": 2.450071
+    },
+    {
+      "sector": null,
+      "symbol": "GOOGL",
+      "weight": 3.054719
+    },
+    {
+      "sector": null,
+      "symbol": "GPC",
+      "weight": 0.026426
+    },
+    {
+      "sector": null,
+      "symbol": "GPN",
+      "weight": 0.027481
+    },
+    {
+      "sector": null,
+      "symbol": "GRMN",
+      "weight": 0.066509
+    },
+    {
+      "sector": null,
+      "symbol": "GS",
+      "weight": 0.383863
+    },
+    {
+      "sector": null,
+      "symbol": "GWW",
+      "weight": 0.082117
+    },
+    {
+      "sector": null,
+      "symbol": "HAL",
+      "weight": 0.040741
+    },
+    {
+      "sector": null,
+      "symbol": "HAS",
+      "weight": 0.019492
+    },
+    {
+      "sector": null,
+      "symbol": "HBAN",
+      "weight": 0.046667
+    },
+    {
+      "sector": null,
+      "symbol": "HCA",
+      "weight": 0.097862
+    },
+    {
+      "sector": null,
+      "symbol": "HD",
+      "weight": 0.440215
+    },
+    {
+      "sector": null,
+      "symbol": "HIG",
+      "weight": 0.052208
+    },
+    {
+      "sector": null,
+      "symbol": "HII",
+      "weight": 0.015571
+    },
+    {
+      "sector": null,
+      "symbol": "HLT",
+      "weight": 0.108484
+    },
+    {
+      "sector": null,
+      "symbol": "HON",
+      "weight": 0.098055
+    },
+    {
+      "sector": null,
+      "symbol": "HONA",
+      "weight": 0.073095
+    },
+    {
+      "sector": null,
+      "symbol": "HOOD",
+      "weight": 0.126519
+    },
+    {
+      "sector": null,
+      "symbol": "HPE",
+      "weight": 0.14022
+    },
+    {
+      "sector": null,
+      "symbol": "HPQ",
+      "weight": 0.044471
+    },
+    {
+      "sector": null,
+      "symbol": "HRL",
+      "weight": 0.008484
+    },
+    {
+      "sector": null,
+      "symbol": "HSIC",
+      "weight": 0.012269
+    },
+    {
+      "sector": null,
+      "symbol": "HST",
+      "weight": 0.023068
+    },
+    {
+      "sector": null,
+      "symbol": "HSY",
+      "weight": 0.035344
+    },
+    {
+      "sector": null,
+      "symbol": "HUBB",
+      "weight": 0.03765
+    },
+    {
+      "sector": null,
+      "symbol": "HUM",
+      "weight": 0.069618
+    },
+    {
+      "sector": null,
+      "symbol": "HWM",
+      "weight": 0.132391
+    },
+    {
+      "sector": null,
+      "symbol": "IBKR",
+      "weight": 0.058524
+    },
+    {
+      "sector": null,
+      "symbol": "IBM",
+      "weight": 0.31892
+    },
+    {
+      "sector": null,
+      "symbol": "ICE",
+      "weight": 0.130273
+    },
+    {
+      "sector": null,
+      "symbol": "IDXX",
+      "weight": 0.06065
+    },
+    {
+      "sector": null,
+      "symbol": "IEX",
+      "weight": 0.025696
+    },
+    {
+      "sector": null,
+      "symbol": "IFF",
+      "weight": 0.032446
+    },
+    {
+      "sector": null,
+      "symbol": "ILMN",
+      "weight": 0.059673
+    },
+    {
+      "sector": null,
+      "symbol": "INCY",
+      "weight": 0.028675
+    },
+    {
+      "sector": null,
+      "symbol": "INTC",
+      "weight": 0.795392
+    },
+    {
+      "sector": null,
+      "symbol": "INTU",
+      "weight": 0.12398
+    },
+    {
+      "sector": null,
+      "symbol": "INVH",
+      "weight": 0.02126
+    },
+    {
+      "sector": null,
+      "symbol": "IP",
+      "weight": 0.025231
+    },
+    {
+      "sector": null,
+      "symbol": "IQV",
+      "weight": 0.063466
+    },
+    {
+      "sector": null,
+      "symbol": "IR",
+      "weight": 0.040031
+    },
+    {
+      "sector": null,
+      "symbol": "IRM",
+      "weight": 0.050345
+    },
+    {
+      "sector": null,
+      "symbol": "ISRG",
+      "weight": 0.219216
+    },
+    {
+      "sector": null,
+      "symbol": "IT",
+      "weight": 0.018231
+    },
+    {
+      "sector": null,
+      "symbol": "ITW",
+      "weight": 0.102484
+    },
+    {
+      "sector": null,
+      "symbol": "IVZ",
+      "weight": 0.020021
+    },
+    {
+      "sector": null,
+      "symbol": "J",
+      "weight": 0.024508
+    },
+    {
+      "sector": null,
+      "symbol": "JBHT",
+      "weight": 0.025476
+    },
+    {
+      "sector": null,
+      "symbol": "JBL",
+      "weight": 0.046835
+    },
+    {
+      "sector": null,
+      "symbol": "JCI",
+      "weight": 0.139137
+    },
+    {
+      "sector": null,
+      "symbol": "JKHY",
+      "weight": 0.015861
+    },
+    {
+      "sector": null,
+      "symbol": "JNJ",
+      "weight": 0.92397
+    },
+    {
+      "sector": null,
+      "symbol": "JPM",
+      "weight": 1.316867
+    },
+    {
+      "sector": null,
+      "symbol": "KDP",
+      "weight": 0.063709
+    },
+    {
+      "sector": null,
+      "symbol": "KEY",
+      "weight": 0.027234
+    },
+    {
+      "sector": null,
+      "symbol": "KEYS",
+      "weight": 0.096025
+    },
+    {
+      "sector": null,
+      "symbol": "KHC",
+      "weight": 0.029069
+    },
+    {
+      "sector": null,
+      "symbol": "KIM",
+      "weight": 0.022314
+    },
+    {
+      "sector": null,
+      "symbol": "KKR",
+      "weight": 0.092752
+    },
+    {
+      "sector": null,
+      "symbol": "KLAC",
+      "weight": 0.383939
+    },
+    {
+      "sector": null,
+      "symbol": "KMB",
+      "weight": 0.048597
+    },
+    {
+      "sector": null,
+      "symbol": "KMI",
+      "weight": 0.094582
+    },
+    {
+      "sector": null,
+      "symbol": "KO",
+      "weight": 0.50816
+    },
+    {
+      "sector": null,
+      "symbol": "KR",
+      "weight": 0.052188
+    },
+    {
+      "sector": null,
+      "symbol": "KVUE",
+      "weight": 0.050993
+    },
+    {
+      "sector": null,
+      "symbol": "L",
+      "weight": 0.026427
+    },
+    {
+      "sector": null,
+      "symbol": "LDOS",
+      "weight": 0.022465
+    },
+    {
+      "sector": null,
+      "symbol": "LEN",
+      "weight": 0.022263
+    },
+    {
+      "sector": null,
+      "symbol": "LH",
+      "weight": 0.03788
+    },
+    {
+      "sector": null,
+      "symbol": "LHX",
+      "weight": 0.066118
+    },
+    {
+      "sector": null,
+      "symbol": "LII",
+      "weight": 0.017138
+    },
+    {
+      "sector": null,
+      "symbol": "LIN",
+      "weight": 0.332076
+    },
+    {
+      "sector": null,
+      "symbol": "LITE",
+      "weight": 0.138769
+    },
+    {
+      "sector": null,
+      "symbol": "LLY",
+      "weight": 1.39891
+    },
+    {
+      "sector": null,
+      "symbol": "LMT",
+      "weight": 0.154148
+    },
+    {
+      "sector": null,
+      "symbol": "LNT",
+      "weight": 0.0252
+    },
+    {
+      "sector": null,
+      "symbol": "LOW",
+      "weight": 0.158116
+    },
+    {
+      "sector": null,
+      "symbol": "LRCX",
+      "weight": 0.599745
+    },
+    {
+      "sector": null,
+      "symbol": "LULU",
+      "weight": 0.014535
+    },
+    {
+      "sector": null,
+      "symbol": "LUV",
+      "weight": 0.030273
+    },
+    {
+      "sector": null,
+      "symbol": "LVS",
+      "weight": 0.013801
+    },
+    {
+      "sector": null,
+      "symbol": "LYB",
+      "weight": 0.023422
+    },
+    {
+      "sector": null,
+      "symbol": "LYV",
+      "weight": 0.040621
+    },
+    {
+      "sector": null,
+      "symbol": "MA",
+      "weight": 0.693756
+    },
+    {
+      "sector": null,
+      "symbol": "MAA",
+      "weight": 0.020251
+    },
+    {
+      "sector": null,
+      "symbol": "MAR",
+      "weight": 0.115137
+    },
+    {
+      "sector": null,
+      "symbol": "MAS",
+      "weight": 0.020277
+    },
+    {
+      "sector": null,
+      "symbol": "MCD",
+      "weight": 0.250751
+    },
+    {
+      "sector": null,
+      "symbol": "MCHP",
+      "weight": 0.061227
+    },
+    {
+      "sector": null,
+      "symbol": "MCK",
+      "weight": 0.161788
+    },
+    {
+      "sector": null,
+      "symbol": "MCO",
+      "weight": 0.102046
+    },
+    {
+      "sector": null,
+      "symbol": "MDLZ",
+      "weight": 0.115483
+    },
+    {
+      "sector": null,
+      "symbol": "MDT",
+      "weight": 0.167608
+    },
+    {
+      "sector": null,
+      "symbol": "MET",
+      "weight": 0.078326
+    },
+    {
+      "sector": null,
+      "symbol": "META",
+      "weight": 2.376019
+    },
+    {
+      "sector": null,
+      "symbol": "MGM",
+      "weight": 0.007895
+    },
+    {
+      "sector": null,
+      "symbol": "MKC",
+      "weight": 0.017532
+    },
+    {
+      "sector": null,
+      "symbol": "MLM",
+      "weight": 0.043325
+    },
+    {
+      "sector": null,
+      "symbol": "MMM",
+      "weight": 0.125828
+    },
+    {
+      "sector": null,
+      "symbol": "MNST",
+      "weight": 0.093317
+    },
+    {
+      "sector": null,
+      "symbol": "MO",
+      "weight": 0.178261
+    },
+    {
+      "sector": null,
+      "symbol": "MOS",
+      "weight": 0.009462
+    },
+    {
+      "sector": null,
+      "symbol": "MPC",
+      "weight": 0.19415
+    },
+    {
+      "sector": null,
+      "symbol": "MPWR",
+      "weight": 0.100749
+    },
+    {
+      "sector": null,
+      "symbol": "MRK",
+      "weight": 0.525198
+    },
+    {
+      "sector": null,
+      "symbol": "MRNA",
+      "weight": 0.109266
+    },
+    {
+      "sector": null,
+      "symbol": "MRSH",
+      "weight": 0.125941
+    },
+    {
+      "sector": null,
+      "symbol": "MRVL",
+      "weight": 0.359551
+    },
+    {
+      "sector": null,
+      "symbol": "MS",
+      "weight": 0.334579
+    },
+    {
+      "sector": null,
+      "symbol": "MSCI",
+      "weight": 0.061243
+    },
+    {
+      "sector": null,
+      "symbol": "MSFT",
+      "weight": 5.800066
+    },
+    {
+      "sector": null,
+      "symbol": "MSI",
+      "weight": 0.110357
+    },
+    {
+      "sector": null,
+      "symbol": "MTB",
+      "weight": 0.046746
+    },
+    {
+      "sector": null,
+      "symbol": "MTD",
+      "weight": 0.04605
+    },
+    {
+      "sector": null,
+      "symbol": "MU",
+      "weight": 1.748625
+    },
+    {
+      "sector": null,
+      "symbol": "NCLH",
+      "weight": 0.010726
+    },
+    {
+      "sector": null,
+      "symbol": "NDAQ",
+      "weight": 0.06093
+    },
+    {
+      "sector": null,
+      "symbol": "NDSN",
+      "weight": 0.025958
+    },
+    {
+      "sector": null,
+      "symbol": "NEE",
+      "weight": 0.241364
+    },
+    {
+      "sector": null,
+      "symbol": "NEM",
+      "weight": 0.181697
+    },
+    {
+      "sector": null,
+      "symbol": "NFLX",
+      "weight": 0.445609
+    },
+    {
+      "sector": null,
+      "symbol": "NI",
+      "weight": 0.029025
+    },
+    {
+      "sector": null,
+      "symbol": "NKE",
+      "weight": 0.062426
+    },
+    {
+      "sector": null,
+      "symbol": "NOC",
+      "weight": 0.096879
+    },
+    {
+      "sector": null,
+      "symbol": "NOW",
+      "weight": 0.215827
+    },
+    {
+      "sector": null,
+      "symbol": "NRG",
+      "weight": 0.033595
+    },
+    {
+      "sector": null,
+      "symbol": "NSC",
+      "weight": 0.106396
+    },
+    {
+      "sector": null,
+      "symbol": "NTAP",
+      "weight": 0.06757
+    },
+    {
+      "sector": null,
+      "symbol": "NTRS",
+      "weight": 0.046054
+    },
+    {
+      "sector": null,
+      "symbol": "NUE",
+      "weight": 0.083238
+    },
+    {
+      "sector": null,
+      "symbol": "NVDA",
+      "weight": 8.336249
+    },
+    {
+      "sector": null,
+      "symbol": "NVR",
+      "weight": 0.022919
+    },
+    {
+      "sector": null,
+      "symbol": "NWS",
+      "weight": 0.00583
+    },
+    {
+      "sector": null,
+      "symbol": "NWSA",
+      "weight": 0.015829
+    },
+    {
+      "sector": null,
+      "symbol": "NXPI",
+      "weight": 0.087044
+    },
+    {
+      "sector": null,
+      "symbol": "O",
+      "weight": 0.076567
+    },
+    {
+      "sector": null,
+      "symbol": "ODFL",
+      "weight": 0.050641
+    },
+    {
+      "sector": null,
+      "symbol": "OKE",
+      "weight": 0.085208
+    },
+    {
+      "sector": null,
+      "symbol": "OMC",
+      "weight": 0.031333
+    },
+    {
+      "sector": null,
+      "symbol": "ON",
+      "weight": 0.046181
+    },
+    {
+      "sector": null,
+      "symbol": "ORCL",
+      "weight": 0.34902
+    },
+    {
+      "sector": null,
+      "symbol": "ORLY",
+      "weight": 0.103939
+    },
+    {
+      "sector": null,
+      "symbol": "OTIS",
+      "weight": 0.037593
+    },
+    {
+      "sector": null,
+      "symbol": "OXY",
+      "weight": 0.065574
+    },
+    {
+      "sector": null,
+      "symbol": "P",
+      "weight": 0.074763
+    },
+    {
+      "sector": null,
+      "symbol": "PANW",
+      "weight": 0.485148
+    },
+    {
+      "sector": null,
+      "symbol": "PAYX",
+      "weight": 0.049779
+    },
+    {
+      "sector": null,
+      "symbol": "PCAR",
+      "weight": 0.086446
+    },
+    {
+      "sector": null,
+      "symbol": "PCG",
+      "weight": 0.041796
+    },
+    {
+      "sector": null,
+      "symbol": "PEG",
+      "weight": 0.053624
+    },
+    {
+      "sector": null,
+      "symbol": "PEP",
+      "weight": 0.262004
+    },
+    {
+      "sector": null,
+      "symbol": "PFE",
+      "weight": 0.237077
+    },
+    {
+      "sector": null,
+      "symbol": "PFG",
+      "weight": 0.03195
+    },
+    {
+      "sector": null,
+      "symbol": "PG",
+      "weight": 0.523357
+    },
+    {
+      "sector": null,
+      "symbol": "PGR",
+      "weight": 0.189956
+    },
+    {
+      "sector": null,
+      "symbol": "PH",
+      "weight": 0.178507
+    },
+    {
+      "sector": null,
+      "symbol": "PHM",
+      "weight": 0.031787
+    },
+    {
+      "sector": null,
+      "symbol": "PKG",
+      "weight": 0.030491
+    },
+    {
+      "sector": null,
+      "symbol": "PLD",
+      "weight": 0.183538
+    },
+    {
+      "sector": null,
+      "symbol": "PLTR",
+      "weight": 0.683721
+    },
+    {
+      "sector": null,
+      "symbol": "PM",
+      "weight": 0.467263
+    },
+    {
+      "sector": null,
+      "symbol": "PNC",
+      "weight": 0.130922
+    },
+    {
+      "sector": null,
+      "symbol": "PNR",
+      "weight": 0.012656
+    },
+    {
+      "sector": null,
+      "symbol": "PNW",
+      "weight": 0.017797
+    },
+    {
+      "sector": null,
+      "symbol": "PODD",
+      "weight": 0.013951
+    },
+    {
+      "sector": null,
+      "symbol": "PPG",
+      "weight": 0.035206
+    },
+    {
+      "sector": null,
+      "symbol": "PPL",
+      "weight": 0.038429
+    },
+    {
+      "sector": null,
+      "symbol": "PRU",
+      "weight": 0.058321
+    },
+    {
+      "sector": null,
+      "symbol": "PSA",
+      "weight": 0.071732
+    },
+    {
+      "sector": null,
+      "symbol": "PSX",
+      "weight": 0.167658
+    },
+    {
+      "sector": null,
+      "symbol": "PTC",
+      "weight": 0.031128
+    },
+    {
+      "sector": null,
+      "symbol": "PWR",
+      "weight": 0.153707
+    },
+    {
+      "sector": null,
+      "symbol": "PYPL",
+      "weight": 0.070108
+    },
+    {
+      "sector": null,
+      "symbol": "Q",
+      "weight": 0.039699
+    },
+    {
+      "sector": null,
+      "symbol": "QCOM",
+      "weight": 0.280815
+    },
+    {
+      "sector": null,
+      "symbol": "RCL",
+      "weight": 0.104346
+    },
+    {
+      "sector": null,
+      "symbol": "RDDT",
+      "weight": 0.034145
+    },
+    {
+      "sector": null,
+      "symbol": "REG",
+      "weight": 0.01765
+    },
+    {
+      "sector": null,
+      "symbol": "REGN",
+      "weight": 0.108145
+    },
+    {
+      "sector": null,
+      "symbol": "RF",
+      "weight": 0.034603
+    },
+    {
+      "sector": null,
+      "symbol": "RJF",
+      "weight": 0.041214
+    },
+    {
+      "sector": null,
+      "symbol": "RL",
+      "weight": 0.020695
+    },
+    {
+      "sector": null,
+      "symbol": "RMD",
+      "weight": 0.048851
+    },
+    {
+      "sector": null,
+      "symbol": "ROK",
+      "weight": 0.072345
+    },
+    {
+      "sector": null,
+      "symbol": "ROL",
+      "weight": 0.014198
+    },
+    {
+      "sector": null,
+      "symbol": "ROP",
+      "weight": 0.053807
+    },
+    {
+      "sector": null,
+      "symbol": "ROST",
+      "weight": 0.107717
+    },
+    {
+      "sector": null,
+      "symbol": "RSG",
+      "weight": 0.063287
+    },
+    {
+      "sector": null,
+      "symbol": "RTX",
+      "weight": 0.371085
+    },
+    {
+      "sector": null,
+      "symbol": "RVTY",
+      "weight": 0.025426
+    },
+    {
+      "sector": null,
+      "symbol": "SBAC",
+      "weight": 0.027003
+    },
+    {
+      "sector": null,
+      "symbol": "SBUX",
+      "weight": 0.158804
+    },
+    {
+      "sector": null,
+      "symbol": "SCHW",
+      "weight": 0.23505
+    },
+    {
+      "sector": null,
+      "symbol": "SHW",
+      "weight": 0.109241
+    },
+    {
+      "sector": null,
+      "symbol": "SJM",
+      "weight": 0.01908
+    },
+    {
+      "sector": null,
+      "symbol": "SKYD",
+      "weight": 0.007558
+    },
+    {
+      "sector": null,
+      "symbol": "SLB",
+      "weight": 0.108409
+    },
+    {
+      "sector": null,
+      "symbol": "SMCI",
+      "weight": 0.036052
+    },
+    {
+      "sector": null,
+      "symbol": "SNA",
+      "weight": 0.027848
+    },
+    {
+      "sector": null,
+      "symbol": "SNDK",
+      "weight": 0.350971
+    },
+    {
+      "sector": null,
+      "symbol": "SNPS",
+      "weight": 0.14238
+    },
+    {
+      "sector": null,
+      "symbol": "SO",
+      "weight": 0.148041
+    },
+    {
+      "sector": null,
+      "symbol": "SOLV",
+      "weight": 0.018679
+    },
+    {
+      "sector": null,
+      "symbol": "SPG",
+      "weight": 0.096474
+    },
+    {
+      "sector": null,
+      "symbol": "SPGI",
+      "weight": 0.181692
+    },
+    {
+      "sector": null,
+      "symbol": "SRE",
+      "weight": 0.078419
+    },
+    {
+      "sector": null,
+      "symbol": "STE",
+      "weight": 0.030953
+    },
+    {
+      "sector": null,
+      "symbol": "STLD",
+      "weight": 0.047129
+    },
+    {
+      "sector": null,
+      "symbol": "STT",
+      "weight": 0.071667
+    },
+    {
+      "sector": null,
+      "symbol": "STX",
+      "weight": 0.262327
+    },
+    {
+      "sector": null,
+      "symbol": "STZ",
+      "weight": 0.027751
+    },
+    {
+      "sector": null,
+      "symbol": "SW",
+      "weight": 0.032585
+    },
+    {
+      "sector": null,
+      "symbol": "SWK",
+      "weight": 0.019922
+    },
+    {
+      "sector": null,
+      "symbol": "SWKS",
+      "weight": 0.027578
+    },
+    {
+      "sector": null,
+      "symbol": "SYF",
+      "weight": 0.03564
+    },
+    {
+      "sector": null,
+      "symbol": "SYK",
+      "weight": 0.14442
+    },
+    {
+      "sector": null,
+      "symbol": "SYY",
+      "weight": 0.056015
+    },
+    {
+      "sector": null,
+      "symbol": "T",
+      "weight": 0.252059
+    },
+    {
+      "sector": null,
+      "symbol": "TDG",
+      "weight": 0.089755
+    },
+    {
+      "sector": null,
+      "symbol": "TDY",
+      "weight": 0.041983
+    },
+    {
+      "sector": null,
+      "symbol": "TECH",
+      "weight": 0.017017
+    },
+    {
+      "sector": null,
+      "symbol": "TEL",
+      "weight": 0.092678
+    },
+    {
+      "sector": null,
+      "symbol": "TER",
+      "weight": 0.093442
+    },
+    {
+      "sector": null,
+      "symbol": "TFC",
+      "weight": 0.084088
+    },
+    {
+      "sector": null,
+      "symbol": "TGT",
+      "weight": 0.105098
+    },
+    {
+      "sector": null,
+      "symbol": "TJX",
+      "weight": 0.228961
+    },
+    {
+      "sector": null,
+      "symbol": "TKO",
+      "weight": 0.016087
+    },
+    {
+      "sector": null,
+      "symbol": "TMO",
+      "weight": 0.360487
+    },
+    {
+      "sector": null,
+      "symbol": "TMUS",
+      "weight": 0.123524
+    },
+    {
+      "sector": null,
+      "symbol": "TPL",
+      "weight": 0.031337
+    },
+    {
+      "sector": null,
+      "symbol": "TPR",
+      "weight": 0.034304
+    },
+    {
+      "sector": null,
+      "symbol": "TRGP",
+      "weight": 0.092407
+    },
+    {
+      "sector": null,
+      "symbol": "TRMB",
+      "weight": 0.020899
+    },
+    {
+      "sector": null,
+      "symbol": "TROW",
+      "weight": 0.033447
+    },
+    {
+      "sector": null,
+      "symbol": "TRV",
+      "weight": 0.115188
+    },
+    {
+      "sector": null,
+      "symbol": "TSCO",
+      "weight": 0.026297
+    },
+    {
+      "sector": null,
+      "symbol": "TSLA",
+      "weight": 1.579717
+    },
+    {
+      "sector": null,
+      "symbol": "TSN",
+      "weight": 0.02212
+    },
+    {
+      "sector": null,
+      "symbol": "TT",
+      "weight": 0.154237
+    },
+    {
+      "sector": null,
+      "symbol": "TTWO",
+      "weight": 0.054975
+    },
+    {
+      "sector": null,
+      "symbol": "TWLO",
+      "weight": 0.063619
+    },
+    {
+      "sector": null,
+      "symbol": "TXN",
+      "weight": 0.393167
+    },
+    {
+      "sector": null,
+      "symbol": "TXT",
+      "weight": 0.019023
+    },
+    {
+      "sector": null,
+      "symbol": "TYL",
+      "weight": 0.01884
+    },
+    {
+      "sector": null,
+      "symbol": "UAL",
+      "weight": 0.052237
+    },
+    {
+      "sector": null,
+      "symbol": "UBER",
+      "weight": 0.214313
+    },
+    {
+      "sector": null,
+      "symbol": "UDR",
+      "weight": 0.014863
+    },
+    {
+      "sector": null,
+      "symbol": "UHS",
+      "weight": 0.013569
+    },
+    {
+      "sector": null,
+      "symbol": "ULTA",
+      "weight": 0.036038
+    },
+    {
+      "sector": null,
+      "symbol": "UNH",
+      "weight": 0.497829
+    },
+    {
+      "sector": null,
+      "symbol": "UNP",
+      "weight": 0.247076
+    },
+    {
+      "sector": null,
+      "symbol": "UPS",
+      "weight": 0.105282
+    },
+    {
+      "sector": null,
+      "symbol": "URI",
+      "weight": 0.09764
+    },
+    {
+      "sector": null,
+      "symbol": "USB",
+      "weight": 0.132732
+    },
+    {
+      "sector": null,
+      "symbol": "V",
+      "weight": 0.955544
+    },
+    {
+      "sector": null,
+      "symbol": "VEEV",
+      "weight": 0.063581
+    },
+    {
+      "sector": null,
+      "symbol": "VICI",
+      "weight": 0.037484
+    },
+    {
+      "sector": null,
+      "symbol": "VLO",
+      "weight": 0.190866
+    },
+    {
+      "sector": null,
+      "symbol": "VLTO",
+      "weight": 0.035137
+    },
+    {
+      "sector": null,
+      "symbol": "VMC",
+      "weight": 0.047861
+    },
+    {
+      "sector": null,
+      "symbol": "VMRK",
+      "weight": 0.064294
+    },
+    {
+      "sector": null,
+      "symbol": "VRSK",
+      "weight": 0.034434
+    },
+    {
+      "sector": null,
+      "symbol": "VRSN",
+      "weight": 0.036151
+    },
+    {
+      "sector": null,
+      "symbol": "VRT",
+      "weight": 0.14017
+    },
+    {
+      "sector": null,
+      "symbol": "VRTX",
+      "weight": 0.190529
+    },
+    {
+      "sector": null,
+      "symbol": "VST",
+      "weight": 0.073583
+    },
+    {
+      "sector": null,
+      "symbol": "VTR",
+      "weight": 0.062646
+    },
+    {
+      "sector": null,
+      "symbol": "VTRS",
+      "weight": 0.029923
+    },
+    {
+      "sector": null,
+      "symbol": "VYLR",
+      "weight": 0.073024
+    },
+    {
+      "sector": null,
+      "symbol": "VZ",
+      "weight": 0.283617
+    },
+    {
+      "sector": null,
+      "symbol": "WAB",
+      "weight": 0.070664
+    },
+    {
+      "sector": null,
+      "symbol": "WAT",
+      "weight": 0.063036
+    },
+    {
+      "sector": null,
+      "symbol": "WDAY",
+      "weight": 0.056208
+    },
+    {
+      "sector": null,
+      "symbol": "WDC",
+      "weight": 0.211817
+    },
+    {
+      "sector": null,
+      "symbol": "WEC",
+      "weight": 0.050551
+    },
+    {
+      "sector": null,
+      "symbol": "WELL",
+      "weight": 0.24014
+    },
+    {
+      "sector": null,
+      "symbol": "WFC",
+      "weight": 0.370941
+    },
+    {
+      "sector": null,
+      "symbol": "WM",
+      "weight": 0.116669
+    },
+    {
+      "sector": null,
+      "symbol": "WMB",
+      "weight": 0.132299
+    },
+    {
+      "sector": null,
+      "symbol": "WMT",
+      "weight": 0.736598
+    },
+    {
+      "sector": null,
+      "symbol": "WRB",
+      "weight": 0.024373
+    },
+    {
+      "sector": null,
+      "symbol": "WSM",
+      "weight": 0.04215
+    },
+    {
+      "sector": null,
+      "symbol": "WST",
+      "weight": 0.038445
+    },
+    {
+      "sector": null,
+      "symbol": "WTW",
+      "weight": 0.041328
+    },
+    {
+      "sector": null,
+      "symbol": "WY",
+      "weight": 0.02055
+    },
+    {
+      "sector": null,
+      "symbol": "WYNN",
+      "weight": 0.008041
+    },
+    {
+      "sector": null,
+      "symbol": "XEL",
+      "weight": 0.068605
+    },
+    {
+      "sector": null,
+      "symbol": "XOM",
+      "weight": 1.035717
+    },
+    {
+      "sector": null,
+      "symbol": "XYL",
+      "weight": 0.035572
+    },
+    {
+      "sector": null,
+      "symbol": "XYZ",
+      "weight": 0.060778
+    },
+    {
+      "sector": null,
+      "symbol": "YUM",
+      "weight": 0.058296
+    },
+    {
+      "sector": null,
+      "symbol": "ZBH",
+      "weight": 0.025322
+    },
+    {
+      "sector": null,
+      "symbol": "ZBRA",
+      "weight": 0.027258
+    },
+    {
+      "sector": null,
+      "symbol": "ZTS",
+      "weight": 0.045111
+    }
+  ]
+}

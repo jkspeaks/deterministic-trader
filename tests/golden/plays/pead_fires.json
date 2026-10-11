@@ -1,0 +1,17 @@
+{
+  "candidates": [
+    {
+      "symbol": "F",
+      "play_id": "PEAD",
+      "conviction": 0.7,
+      "conviction_raw": 0.7,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.0,
+      "expected_holding_days": 10,
+      "notional_multiplier": 1.0,
+      "detail": "beat by 7.0% 2 session(s) ago, tape confirmed at +3.0%, above the 50-day",
+      "full_deployment": false
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,92 @@
+{
+  "findings": [
+    {
+      "code": "PHANTOM_ORDER",
+      "symbol": "MRK",
+      "detail": "the broker has an open buy of 1 MRK (zz99) that no plan proposed; entries are blocked for one cycle",
+      "order_id": "zz99"
+    },
+    {
+      "code": "POSITION_DELTA_MISMATCH",
+      "symbol": "F",
+      "detail": "the broker holds 1.6 F where prior positions and this cycle's fills come to 1; the broker's figure is what goes forward",
+      "order_id": null
+    },
+    {
+      "code": "RECONCILIATION_DIVERGENCE_PERSISTENT",
+      "symbol": "",
+      "detail": "the broker and the book have disagreed for 2 cycles running; entries are blocked until edge_control is cleared",
+      "order_id": null
+    },
+    {
+      "code": "STALE_OPEN_ORDER",
+      "symbol": "F",
+      "detail": "F: open across 2 reconciling cycles",
+      "order_id": "a1b2"
+    }
+  ],
+  "positions": [
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "quantity": 1.6,
+      "entry_price": 15.0,
+      "sessions_held": 2,
+      "adopted": false,
+      "adopted_on": null,
+      "last_fill_on": "2026-07-30",
+      "last_fill_price": 15.0,
+      "open_lot_count": 1,
+      "high_since_entry": 15.0,
+      "shares_available_for_sells": null,
+      "shares_held_for_sells": null,
+      "entry_price_source": "tax_lots",
+      "entry_anchored_on": "2026-07-30",
+      "entry_price_disputed": false
+    }
+  ],
+  "cancels": [
+    {
+      "order_id": "a1b2",
+      "symbol": "F",
+      "reason": "open across 2 reconciling cycles"
+    }
+  ],
+  "control_updates": {
+    "positions_held": 1,
+    "has_whole_share_position": true,
+    "unreconciled": false,
+    "pending_events": true,
+    "high_water_mark": 236.42,
+    "high_water_mark_equity": 236.42,
+    "high_water_mark_as_of": "2026-08-03",
+    "entries_blocked": true,
+    "entries_blocked_reason": "reconciliation divergence persisted across 2 cycles; clear edge_control to resume entries",
+    "entries_blocked_until_cleared": true,
+    "divergence_streak": 2,
+    "open_order_cycles": {
+      "a1b2": 2
+    },
+    "retired_order_ids": [],
+    "resubmit_candidates": {
+      "trading_day": "2026-08-03",
+      "triggers": []
+    }
+  },
+  "loss_closes": [],
+  "play_state_updates": {},
+  "symbol_lock_claims": [
+    "F"
+  ],
+  "symbol_lock_releases": [],
+  "fills_quality": [],
+  "protection_plan": {
+    "place": [],
+    "replace": [],
+    "keep": [],
+    "notes": [],
+    "desired": []
+  },
+  "realized_trades": [],
+  "reason": "1 position reconciled, 4 findings, 1 cancel"
+}

@@ -1,0 +1,179 @@
+{
+  "findings": [],
+  "positions": [
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "quantity": 1.0,
+      "entry_price": 15.0,
+      "sessions_held": 2,
+      "adopted": false,
+      "adopted_on": null,
+      "last_fill_on": "2026-07-30",
+      "last_fill_price": 15.0,
+      "open_lot_count": 1,
+      "high_since_entry": 21.0,
+      "shares_available_for_sells": null,
+      "shares_held_for_sells": null,
+      "entry_price_source": "tax_lots",
+      "entry_anchored_on": "2026-07-30",
+      "entry_price_disputed": false
+    },
+    {
+      "symbol": "GME",
+      "play_id": "PEAD",
+      "quantity": 1.0,
+      "entry_price": 40.0,
+      "sessions_held": 0,
+      "adopted": false,
+      "adopted_on": null,
+      "last_fill_on": "2026-08-03",
+      "last_fill_price": 40.0,
+      "open_lot_count": 1,
+      "high_since_entry": 41.0,
+      "shares_available_for_sells": null,
+      "shares_held_for_sells": null,
+      "entry_price_source": "tax_lots",
+      "entry_anchored_on": "2026-08-03",
+      "entry_price_disputed": false
+    },
+    {
+      "symbol": "PFE",
+      "play_id": "PEAD",
+      "quantity": 2.0,
+      "entry_price": 25.03,
+      "sessions_held": 0,
+      "adopted": false,
+      "adopted_on": null,
+      "last_fill_on": "2026-08-03",
+      "last_fill_price": 25.03,
+      "open_lot_count": 1,
+      "high_since_entry": 25.03,
+      "shares_available_for_sells": null,
+      "shares_held_for_sells": null,
+      "entry_price_source": "tax_lots",
+      "entry_anchored_on": "2026-08-03",
+      "entry_price_disputed": false
+    }
+  ],
+  "cancels": [],
+  "control_updates": {
+    "positions_held": 3,
+    "has_whole_share_position": true,
+    "unreconciled": false,
+    "pending_events": false,
+    "high_water_mark": 236.42,
+    "high_water_mark_equity": 236.42,
+    "high_water_mark_as_of": "2026-08-03",
+    "entries_blocked": false,
+    "entries_blocked_reason": null,
+    "entries_blocked_until_cleared": false,
+    "divergence_streak": 0,
+    "open_order_cycles": {
+      "s1": 1,
+      "t1": 1
+    },
+    "retired_order_ids": [],
+    "resubmit_candidates": {
+      "trading_day": "2026-08-03",
+      "triggers": []
+    }
+  },
+  "loss_closes": [],
+  "play_state_updates": {},
+  "symbol_lock_claims": [
+    "F",
+    "GME",
+    "PFE"
+  ],
+  "symbol_lock_releases": [],
+  "fills_quality": [],
+  "protection_plan": {
+    "place": [
+      {
+        "symbol": "PFE",
+        "side": "sell",
+        "type": "stop_market",
+        "quantity": 2.0,
+        "limit_price": null,
+        "stop_price": 23.53,
+        "session": "regular_hours",
+        "time_in_force": "gtc",
+        "play_id": "PEAD",
+        "protective_stop": true,
+        "protective_target": false
+      }
+    ],
+    "replace": [
+      {
+        "cancel_order_id": "s1",
+        "new_order": {
+          "symbol": "F",
+          "side": "sell",
+          "type": "stop_market",
+          "quantity": 1.0,
+          "limit_price": null,
+          "stop_price": 19.43,
+          "session": "regular_hours",
+          "time_in_force": "gtc",
+          "play_id": "DIP",
+          "protective_stop": true,
+          "protective_target": false
+        }
+      },
+      {
+        "cancel_order_id": "t1",
+        "new_order": null
+      }
+    ],
+    "keep": [
+      {
+        "symbol": "GME",
+        "play_id": "PEAD",
+        "kind": "stop",
+        "quantity": 1.0,
+        "order_type": "stop_market",
+        "stop_price": 38.5,
+        "limit_price": null,
+        "reason": "GME rests at 38.50: the higher of 3xATR below a 40.00 entry and 3.5xATR below its 41.00 high",
+        "order_id": "s2",
+        "ours": true
+      }
+    ],
+    "notes": [],
+    "desired": [
+      {
+        "symbol": "F",
+        "play_id": "DIP",
+        "kind": "stop",
+        "quantity": 1.0,
+        "order_type": "stop_market",
+        "stop_price": 19.43,
+        "limit_price": null,
+        "reason": "F rests at 19.43: the higher of 3xATR below a 15.00 entry and 3.5xATR below its 21.00 high"
+      },
+      {
+        "symbol": "GME",
+        "play_id": "PEAD",
+        "kind": "stop",
+        "quantity": 1.0,
+        "order_type": "stop_market",
+        "stop_price": 38.5,
+        "limit_price": null,
+        "reason": "GME rests at 38.50: the higher of 3xATR below a 40.00 entry and 3.5xATR below its 41.00 high"
+      },
+      {
+        "symbol": "PFE",
+        "play_id": "PEAD",
+        "kind": "stop",
+        "quantity": 2.0,
+        "order_type": "stop_market",
+        "stop_price": 23.53,
+        "limit_price": null,
+        "reason": "PFE rests at 23.53: the higher of 3xATR below a 25.03 entry and 3.5xATR below its 25.03 high"
+      }
+    ]
+  },
+  "realized_trades": [],
+  "reason": "3 positions reconciled, 0 findings, 0 cancels"
+}

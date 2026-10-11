@@ -1,0 +1,27 @@
+{
+  "benchmark": {
+    "trading_day": "2026-08-06",
+    "equity": 180.0,
+    "net_deposits": 0.0,
+    "spy_close": 690.0,
+    "frozen_value": 226.42
+  },
+  "scorecard": null,
+  "alerts": [
+    {
+      "title": "Post-close cycle succeeded",
+      "body": "Nothing to report.\n\ncycle unknown \u00b7 16:30 ET \u00b7 Post-close \u00b7 docs/OPERATIONS.md#post-close-cycle-succeeded",
+      "priority": "min"
+    },
+    {
+      "title": "Drawdown halt",
+      "body": "Equity $180.00 net of deposits, against a high-water mark of $247.72 and below the $198.18 drawdown floor (\u00a710): the account is down 20% from its peak, deposits excluded. Buys are denied and exits still place. The halt lifts by itself once equity clears the floor; there is no flag to reset.\n\ndocs/OPERATIONS.md#drawdown-halt",
+      "priority": "urgent"
+    }
+  ],
+  "control_updates": {
+    "last_drawdown_alert": "2026-08-06"
+  },
+  "notes": [],
+  "status": "success"
+}

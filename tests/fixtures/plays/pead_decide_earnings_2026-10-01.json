@@ -1,0 +1,15 @@
+{
+  "_source": "Supabase deterministic-trader, read 2026-10-03: `stdout.earnings` of two consecutive `decide` runlog rows, verbatim (the monitor row trimmed to the three names PEAD skipped 'reaction None'). `monitor_633` is the 15:13 ET monitor cycle of 2026-10-01; `overnight_640` is the 22:53 ET overnight cycle that followed it, and is the row the pre-market job found at 05:26 ET on 2026-10-02. Never edit to make a test pass.",
+  "monitor_633": {
+    "FDS": {"status": "known", "timing": "am", "verified": false, "reaction_pct": null, "eps_surprise_pct": 4.1474654377880125, "last_report_date": "2026-09-30", "next_report_date": "2026-12-17", "sessions_since_report": 1, "sessions_until_report": 54},
+    "JBL": {"status": "known", "timing": "am", "verified": false, "reaction_pct": null, "eps_surprise_pct": 9.45273631840798, "last_report_date": "2026-09-30", "next_report_date": "2026-12-16", "sessions_since_report": 1, "sessions_until_report": 53},
+    "MU": {"status": "known", "timing": "pm", "verified": false, "reaction_pct": null, "eps_surprise_pct": 6.095238095238101, "last_report_date": "2026-09-30", "next_report_date": "2026-12-16", "sessions_since_report": 1, "sessions_until_report": 53}
+  },
+  "overnight_640": {
+    "RF": {"status": "known", "timing": "am", "verified": true, "reaction_pct": null, "eps_surprise_pct": 7.936507936507943, "last_report_date": "2026-07-17", "next_report_date": "2026-10-16", "sessions_since_report": 54, "sessions_until_report": 10},
+    "KIM": {"status": "known", "timing": "am", "verified": true, "reaction_pct": null, "eps_surprise_pct": 0, "last_report_date": "2026-08-04", "next_report_date": "2026-10-29", "sessions_since_report": 42, "sessions_until_report": 19},
+    "RTX": {"status": "known", "timing": "am", "verified": true, "reaction_pct": null, "eps_surprise_pct": 13.855421686746988, "last_report_date": "2026-07-23", "next_report_date": "2026-10-20", "sessions_since_report": 50, "sessions_until_report": 12},
+    "SPG": {"status": "known", "timing": "pm", "verified": false, "reaction_pct": null, "eps_surprise_pct": -1.8867924528301903, "last_report_date": "2026-08-10", "next_report_date": "2026-11-02", "sessions_since_report": 38, "sessions_until_report": 21},
+    "INVH": {"status": "known", "timing": "pm", "verified": false, "reaction_pct": null, "eps_surprise_pct": 6.250000000000005, "last_report_date": "2026-07-29", "next_report_date": "2026-10-28", "sessions_since_report": 46, "sessions_until_report": 18}
+  }
+}

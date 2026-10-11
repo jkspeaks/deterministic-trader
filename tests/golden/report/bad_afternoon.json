@@ -1,0 +1,14 @@
+{
+  "benchmark": null,
+  "scorecard": null,
+  "alerts": [
+    {
+      "title": "Monitor cycle failed",
+      "body": "place_equity_order failed: Limit order quantity cannot include fractional shares\n\nPHANTOM_ORDER MRK: the broker has an open buy of 1 MRK (zz99) that no plan proposed; entries are blocked for one cycle\n\nPlay state changed:\nDIP disabled: dips keep going\n\ncycle unknown \u00b7 11:40 ET \u00b7 Monitor \u00b7 docs/OPERATIONS.md#monitor-cycle-failed",
+      "priority": "high"
+    }
+  ],
+  "control_updates": {},
+  "notes": [],
+  "status": "failed"
+}

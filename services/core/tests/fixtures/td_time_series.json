@@ -1,0 +1,41 @@
+{
+  "_fixture": "Hand-written from Twelve Data's documented /time_series response shape (batched, comma-separated symbols -> a {symbol: block} map). [V] field spelling unconfirmed against a live Basic-grade key; two symbols and five bars is enough to exercise the batch-map extraction and the string->float parsing in twelvedata._rows.",
+  "SPY": {
+    "meta": {
+      "symbol": "SPY",
+      "interval": "1day",
+      "currency": "USD",
+      "exchange_timezone": "America/New_York",
+      "exchange": "NYSE",
+      "mic_code": "ARCX",
+      "type": "ETF"
+    },
+    "values": [
+      {"datetime": "2026-09-03", "open": "596.10", "high": "599.20", "low": "595.40", "close": "598.75", "volume": "61230000"},
+      {"datetime": "2026-09-04", "open": "598.90", "high": "601.10", "low": "598.10", "close": "600.20", "volume": "58110000"},
+      {"datetime": "2026-09-08", "open": "600.50", "high": "603.30", "low": "600.00", "close": "602.90", "volume": "54900000"},
+      {"datetime": "2026-09-09", "open": "603.00", "high": "604.80", "low": "601.20", "close": "601.85", "volume": "60420000"},
+      {"datetime": "2026-09-10", "open": "601.90", "high": "605.50", "low": "601.10", "close": "605.10", "volume": "57330000"}
+    ],
+    "status": "ok"
+  },
+  "XLK": {
+    "meta": {
+      "symbol": "XLK",
+      "interval": "1day",
+      "currency": "USD",
+      "exchange_timezone": "America/New_York",
+      "exchange": "NYSE",
+      "mic_code": "ARCX",
+      "type": "ETF"
+    },
+    "values": [
+      {"datetime": "2026-09-03", "open": "255.10", "high": "256.90", "low": "254.20", "close": "256.40", "volume": "9120000"},
+      {"datetime": "2026-09-04", "open": "256.60", "high": "258.00", "low": "256.10", "close": "257.75", "volume": "8830000"},
+      {"datetime": "2026-09-08", "open": "257.90", "high": "259.40", "low": "257.60", "close": "259.10", "volume": "8410000"},
+      {"datetime": "2026-09-09", "open": "259.20", "high": "260.10", "low": "257.80", "close": "258.30", "volume": "9010000"},
+      {"datetime": "2026-09-10", "open": "258.40", "high": "261.20", "low": "258.20", "close": "260.95", "volume": "8720000"}
+    ],
+    "status": "ok"
+  }
+}

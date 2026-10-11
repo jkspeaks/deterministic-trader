@@ -1,0 +1,390 @@
+{
+  "plan_fetch": {
+    "cycle_id": "2026-08-03T13:40:00Z-full",
+    "cycle": {
+      "cycle_type": "overnight",
+      "session": "all_day_hours",
+      "now": "2026-08-04T00:30:00Z",
+      "entries_allowed": false,
+      "entries_remaining": 3,
+      "exits_allowed": true,
+      "reconcile_required": false,
+      "reason": "20:30 ET Mon: overnight cycle for 2026-08-04",
+      "trading_day": "2026-08-04",
+      "clock_updates": {
+        "last_overnight_cycle": "2026-08-04T00:30:00Z"
+      }
+    },
+    "config_source": "checkout",
+    "fetch": [
+      {
+        "step": "runlog",
+        "source": "supabase",
+        "tool": "edge_prior",
+        "scope": "account",
+        "calls": 1
+      },
+      {
+        "step": "play_state",
+        "source": "supabase",
+        "tool": "edge_play_state_json",
+        "scope": "account",
+        "calls": 1
+      },
+      {
+        "step": "account",
+        "source": "robinhood",
+        "tool": "get_portfolio",
+        "scope": "account",
+        "calls": 1
+      },
+      {
+        "step": "balances",
+        "source": "robinhood",
+        "tool": "get_accounts",
+        "scope": "account",
+        "calls": 1
+      },
+      {
+        "step": "positions",
+        "source": "robinhood",
+        "tool": "get_equity_positions",
+        "scope": "account",
+        "calls": 1
+      },
+      {
+        "step": "orders",
+        "source": "robinhood",
+        "tool": "get_equity_orders",
+        "scope": "account",
+        "state": "confirmed",
+        "calls": 1
+      },
+      {
+        "step": "quotes",
+        "source": "robinhood",
+        "tool": "get_equity_quotes",
+        "scope": "positions",
+        "calls": 1
+      },
+      {
+        "step": "day_context",
+        "source": "supabase",
+        "tool": "edge_day_context_recent",
+        "scope": "account",
+        "trading_day": "2026-08-04",
+        "calls": 1
+      },
+      {
+        "step": "indicators",
+        "source": "robinhood",
+        "tool": "get_equity_technical_indicators",
+        "scope": "positions",
+        "interval": "day",
+        "output": "latest",
+        "start_time": "2026-07-30T00:30:00Z",
+        "calls": 1
+      },
+      {
+        "step": "tradability",
+        "source": "robinhood",
+        "tool": "get_equity_tradability",
+        "scope": "positions",
+        "calls": 1
+      },
+      {
+        "step": "earnings",
+        "source": "robinhood",
+        "tool": "get_earnings_results",
+        "scope": "positions",
+        "calls": 1
+      },
+      {
+        "step": "events",
+        "source": "checkout",
+        "tool": "data/events.json",
+        "scope": "account",
+        "calls": 0
+      }
+    ],
+    "estimate": {
+      "calls": 11,
+      "per_candidate_steps": 0,
+      "positions_held": 1
+    },
+    "reason": "20:30 ET Mon: overnight cycle for 2026-08-04"
+  },
+  "decide": {
+    "cycle_id": "2026-08-03T13:40:00Z-full",
+    "cycle": {
+      "cycle_type": "overnight",
+      "session": "all_day_hours",
+      "now": "2026-08-04T00:30:00Z",
+      "entries_allowed": false,
+      "entries_remaining": 3,
+      "exits_allowed": true,
+      "reconcile_required": false,
+      "reason": "20:30 ET Mon: overnight cycle for 2026-08-04",
+      "trading_day": "2026-08-04",
+      "clock_updates": {
+        "last_overnight_cycle": "2026-08-04T00:30:00Z"
+      }
+    },
+    "config_source": "checkout",
+    "universe": {
+      "candidates": [
+        "F",
+        "PFE"
+      ],
+      "snapshot_age_days": 2,
+      "stale": false,
+      "reason": "2 candidates from 20 members, snapshot 2 days old",
+      "members": [
+        "AAPL",
+        "DIA",
+        "F",
+        "IWM",
+        "PFE",
+        "QQQ",
+        "SPY",
+        "SPYM",
+        "XLB",
+        "XLC",
+        "XLE",
+        "XLF",
+        "XLI",
+        "XLK",
+        "XLP",
+        "XLRE",
+        "XLU",
+        "XLV",
+        "XLY",
+        "XOM"
+      ],
+      "sectors": {
+        "AAPL": "Information Technology",
+        "F": "Consumer Discretionary",
+        "PFE": "Health Care",
+        "XOM": "Energy",
+        "XLE": "Energy",
+        "XLF": "Financials",
+        "XLK": "Information Technology",
+        "XLV": "Health Care",
+        "XLI": "Industrials",
+        "XLY": "Consumer Discretionary",
+        "XLP": "Consumer Staples",
+        "XLU": "Utilities",
+        "XLB": "Materials",
+        "XLRE": "Real Estate",
+        "XLC": "Communication Services",
+        "SPY": "Broad Market",
+        "QQQ": "Broad Market",
+        "IWM": "Broad Market",
+        "DIA": "Broad Market",
+        "SPYM": "Broad Market"
+      },
+      "rotation": [
+        "XLB",
+        "XLC",
+        "XLE",
+        "XLF",
+        "XLI",
+        "XLK",
+        "XLP",
+        "XLRE",
+        "XLU",
+        "XLV",
+        "XLY"
+      ],
+      "notes": []
+    },
+    "sectors": {
+      "AAPL": "Information Technology",
+      "F": "Consumer Discretionary",
+      "PFE": "Health Care",
+      "XOM": "Energy",
+      "XLE": "Energy",
+      "XLF": "Financials",
+      "XLK": "Information Technology",
+      "XLV": "Health Care",
+      "XLI": "Industrials",
+      "XLY": "Consumer Discretionary",
+      "XLP": "Consumer Staples",
+      "XLU": "Utilities",
+      "XLB": "Materials",
+      "XLRE": "Real Estate",
+      "XLC": "Communication Services",
+      "SPY": "Broad Market",
+      "QQQ": "Broad Market",
+      "IWM": "Broad Market",
+      "DIA": "Broad Market",
+      "SPYM": "Broad Market"
+    },
+    "regime": null,
+    "regime_v2_enabled": false,
+    "shadow_posture": null,
+    "shadow_dip_would_block": [],
+    "shadow_entries": null,
+    "shadow_dip_table": null,
+    "sizing_v2_enabled": false,
+    "shadow_sizing": null,
+    "core_sleeve": {
+      "enabled": true,
+      "symbol": "SPYM",
+      "action": "none",
+      "reason": "this cycle cannot buy",
+      "quantity": 0,
+      "limit_price": null,
+      "notional": 0.0,
+      "sleeve_value": 0,
+      "cap_value": 118.21,
+      "room": 118.21,
+      "cash_after_plays": 100.0,
+      "kept_back": 83.54,
+      "would_deploy": 16.46,
+      "ordered": false,
+      "placed": false
+    },
+    "deployment": null,
+    "dead_plays": [],
+    "book": [
+      {
+        "symbol": "F",
+        "play_id": "DIP",
+        "quantity": 1.0,
+        "entry_price": 15.0,
+        "sessions_held": 3,
+        "adopted": false,
+        "adopted_on": null,
+        "market_value": 14.88,
+        "loss_pct_below_stop": 0.014652
+      }
+    ],
+    "earnings": {
+      "F": {
+        "status": "known",
+        "next_report_date": "2026-10-28",
+        "verified": false,
+        "sessions_until_report": 60,
+        "last_report_date": "2026-07-23",
+        "sessions_since_report": 8,
+        "eps_surprise_pct": 8.51063829787235,
+        "reaction_pct": null,
+        "timing": "pm"
+      },
+      "PFE": {
+        "status": "known",
+        "next_report_date": "2026-11-04",
+        "verified": false,
+        "sessions_until_report": 65,
+        "last_report_date": "2026-07-28",
+        "sessions_since_report": 5,
+        "eps_surprise_pct": 1.6393442622950833,
+        "reaction_pct": null,
+        "timing": "am"
+      }
+    },
+    "exits": {
+      "exits": [
+        {
+          "symbol": "F",
+          "play_id": "DIP",
+          "priority": 4,
+          "code": "ATR_STOP",
+          "reason": "F at 13.45 is through its 13.65 stop (3xATR from a 15.00 entry)",
+          "quantity": 1.0,
+          "order_type": "limit",
+          "session": "all_day_hours",
+          "limit_price": 13.43
+        }
+      ],
+      "covered_by_resting": [],
+      "held_for_news": [],
+      "manual_required": [],
+      "average_down_eligible": [],
+      "control_updates": {},
+      "notes": []
+    },
+    "entries": {
+      "candidates": [],
+      "skipped": []
+    },
+    "sizing": {
+      "ladder": {
+        "equity_total": 236.42,
+        "n_target": 3,
+        "open_slots": 2,
+        "cash_reserve": 4.7284,
+        "deployable": 95.2716,
+        "notional": 47.6358,
+        "position_cap": 94.56799999999998,
+        "sector_cap": 118.21
+      },
+      "entries": [],
+      "unsized": []
+    },
+    "guard": {
+      "halted": false,
+      "halts": [],
+      "approved": [
+        {
+          "symbol": "F",
+          "side": "sell",
+          "type": "limit",
+          "quantity": 1.0,
+          "limit_price": 13.43,
+          "stop_price": null,
+          "session": "all_day_hours",
+          "play_id": "DIP"
+        }
+      ],
+      "denied": []
+    },
+    "blocked": [],
+    "held_for_news": [],
+    "manual_required": [],
+    "plan": {
+      "cancels": [],
+      "orders": [
+        {
+          "symbol": "F",
+          "side": "sell",
+          "type": "limit",
+          "quantity": 1.0,
+          "limit_price": 13.43,
+          "stop_price": null,
+          "session": "all_day_hours",
+          "play_id": "DIP"
+        }
+      ],
+      "protection": []
+    },
+    "control_updates": {
+      "last_overnight_cycle": "2026-08-04T00:30:00Z",
+      "new_positions": {
+        "date": "2026-08-04",
+        "count": 0,
+        "filled": []
+      },
+      "unreconciled": true
+    },
+    "play_state_updates": {
+      "DIP": {
+        "silent_entry_cycles": 0
+      }
+    },
+    "day_context_write": {
+      "trading_day": "2026-08-04",
+      "fresh_count": 0,
+      "stale_count": 0
+    },
+    "rotation": {
+      "active_sectors": [],
+      "active_sub_industries": [],
+      "unmatched": [],
+      "filtering": false,
+      "sub_industry_data": false
+    },
+    "reason": "20:30 ET Mon: overnight cycle for 2026-08-04"
+  }
+}

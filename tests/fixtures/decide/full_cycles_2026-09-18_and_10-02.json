@@ -1,0 +1,103 @@
+{
+  "_source": "Supabase deterministic-trader, read 2026-10-03: two `decide` runlog rows (`edge_runlog.stdout`), reduced to the fields the deployment funnel and sizing read. Kept verbatim: symbols, play ids, skip/unsized/denial codes, quantities, notionals, limit prices, the ladder, the book and each pool name's sector. Dropped: messages and every other field. `members` (517 and 518 symbols) is reduced to `members_count`; the tests rebuild a list of that length. Never edit to make a test pass.",
+  "2026-09-18": {
+    "runlog_id": 520,
+    "cycle_id": "3d00709b-f14b-4d45-b4e1-f67f4385c662",
+    "cycle": {"now": "2026-09-18T13:41:18Z", "cycle_type": "full", "trading_day": "2026-09-18", "entries_allowed": true},
+    "members_count": 517,
+    "pool": ["AON", "APH", "BKNG", "BKR", "CARR", "CCL", "CLX", "CMS", "COO", "D", "DTE", "EQT", "FIS", "HRL", "INVH", "KIM", "LIN", "LVS", "MGM", "NCLH", "O", "ODFL", "PCAR", "PNR", "RCL", "REG", "RF", "ROL", "RTX", "SPG", "TJX", "TROW", "UDR", "VICI", "WY", "WYNN"],
+    "candidates_dropped": [],
+    "entries": {
+      "candidates": [{"symbol": "INVH", "play_id": "DIP"}, {"symbol": "RTX", "play_id": "DIP"}, {"symbol": "RF", "play_id": "DIP"}, {"symbol": "KIM", "play_id": "DIP"}],
+      "skipped": [
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "AON", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "BKNG", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "BKR", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "CARR", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "CCL", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "CLX", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "COO", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "EQT", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "FIS", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "HRL", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "LIN", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "LVS", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "MGM", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "NCLH", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "O", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "ODFL", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "PCAR", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "PNR", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "RCL", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "ROL", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "SPG", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "TJX", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "TROW", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "UDR", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "VICI", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "WY", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "WYNN", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "XLK", "play_id": "MACRO"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "XLRE", "play_id": "MACRO"}
+      ]
+    },
+    "sizing": {
+      "ladder": {"n_target": 7, "notional": 197.994475, "deployable": 791.9779, "open_slots": 4, "sector_cap": 426.18149999999997, "cash_reserve": 28.412100000000002, "equity_total": 1420.605, "position_cap": 243.5322857142857},
+      "entries": [
+        {"symbol": "INVH", "play_id": "DIP", "notional": 190.04999999999998, "quantity": 7},
+        {"symbol": "RTX", "play_id": "DIP", "notional": 193.41, "quantity": 1},
+        {"symbol": "RF", "play_id": "DIP", "notional": 171.06, "quantity": 6},
+        {"symbol": "KIM", "play_id": "DIP", "notional": 22.56, "quantity": 1}
+      ],
+      "unsized": []
+    },
+    "guard": {"halts": [], "denied": [{"order": {"side": "sell", "symbol": "SPG"}, "denials": [{"code": "PROTECTION_CONTENDS"}]}]},
+    "approved": [
+      {"side": "buy", "symbol": "INVH", "play_id": "DIP", "quantity": 7, "limit_price": 27.15},
+      {"side": "buy", "symbol": "RTX", "play_id": "DIP", "quantity": 1, "limit_price": 193.41},
+      {"side": "buy", "symbol": "RF", "play_id": "DIP", "quantity": 6, "limit_price": 28.51},
+      {"side": "buy", "symbol": "KIM", "play_id": "DIP", "quantity": 1, "limit_price": 22.56}
+    ],
+    "sectors": {"D": "Utilities", "O": "Real Estate", "RF": "Financials", "WY": "Real Estate", "AON": "Financials", "APH": "Information Technology", "BKR": "Energy", "CCL": "Consumer Discretionary", "CLX": "Consumer Staples", "CMS": "Utilities", "COO": "Health Care", "DTE": "Utilities", "EQT": "Energy", "FIS": "Financials", "HRL": "Consumer Staples", "KIM": "Real Estate", "LIN": "Materials", "LVS": "Consumer Discretionary", "MGM": "Consumer Discretionary", "PNR": "Industrials", "RCL": "Consumer Discretionary", "REG": "Real Estate", "ROL": "Industrials", "RTX": "Industrials", "SPG": "Real Estate", "TJX": "Consumer Discretionary", "UDR": "Real Estate", "BKNG": "Consumer Discretionary", "CARR": "Industrials", "INVH": "Real Estate", "NCLH": "Consumer Discretionary", "ODFL": "Industrials", "PCAR": "Industrials", "TROW": "Financials", "VICI": "Real Estate", "WYNN": "Consumer Discretionary"},
+    "book": [
+      {"symbol": "D", "adopted": true, "market_value": 190.875, "sessions_held": 2},
+      {"symbol": "SPG", "adopted": true, "market_value": 203.82, "sessions_held": 6},
+      {"symbol": "TROW", "adopted": true, "market_value": 205.52, "sessions_held": 2}
+    ]
+  },
+  "2026-10-02": {
+    "runlog_id": 645,
+    "cycle_id": "498c4d88-cfe2-4de8-b220-970f723de131",
+    "cycle": {"now": "2026-10-02T13:41:40Z", "cycle_type": "full", "trading_day": "2026-10-02", "entries_allowed": true},
+    "members_count": 518,
+    "pool": ["BKR", "FDS", "GIS", "HPE", "HRL", "INVH", "JBL", "KDP", "KIM", "KMB", "MKC", "MRNA", "MU", "ON", "PSKY", "RF", "ROP", "RTX", "SPG", "WDAY"],
+    "candidates_dropped": [{"symbol": "ACN"}, {"symbol": "ACN"}, {"symbol": "CAH"}, {"symbol": "CNP"}, {"symbol": "CTVA"}, {"symbol": "IBM"}, {"symbol": "LDOS"}, {"symbol": "ORLY"}, {"symbol": "WAB"}, {"symbol": "AEP"}, {"symbol": "CI"}, {"symbol": "FANG"}, {"symbol": "HIG"}, {"symbol": "JCI"}, {"symbol": "LH"}, {"symbol": "NCLH"}, {"symbol": "NWSA"}, {"symbol": "PNW"}, {"symbol": "TTWO"}, {"symbol": "CCL"}, {"symbol": "XLE"}, {"symbol": "XLP"}, {"symbol": "MU"}, {"symbol": "REGN"}, {"symbol": "SWKS"}, {"symbol": "WDAY"}, {"symbol": "NKE"}, {"symbol": "NKE"}],
+    "entries": {
+      "candidates": [],
+      "skipped": [
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "BKR", "play_id": "CATALYST"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "FDS", "play_id": "PEAD"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "FDS", "play_id": "CATALYST"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "GIS", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "GIS", "play_id": "CATALYST"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "HPE", "play_id": "CATALYST"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "HRL", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "HRL", "play_id": "CATALYST"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "INVH", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "JBL", "play_id": "PEAD"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "JBL", "play_id": "CATALYST"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "KDP", "play_id": "CATALYST"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "KIM", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "KMB", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "KMB", "play_id": "CATALYST"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "MKC", "play_id": "PEAD"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "MKC", "play_id": "DIP"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "MKC", "play_id": "CATALYST"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "MRNA", "play_id": "CATALYST"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "MU", "play_id": "PEAD"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "MU", "play_id": "CATALYST"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "ON", "play_id": "CATALYST"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "PSKY", "play_id": "CATALYST"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "RF", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "ROP", "play_id": "CATALYST"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "RTX", "play_id": "DIP"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "WDAY", "play_id": "CATALYST"}, {"code": "NO_CONVICTION", "symbol": "FOMC", "play_id": "MACRO"},
+        {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "XLE", "play_id": "MACRO"}, {"code": "ENTRY_CONDITIONS_UNMET", "symbol": "XLP", "play_id": "MACRO"},
+        {"code": "SECTOR_INACTIVE", "symbol": "SPG", "play_id": "DIP"}
+      ]
+    },
+    "sizing": {
+      "ladder": {"n_target": 7, "notional": 303.54488899999996, "deployable": 607.0897779999999, "open_slots": 2, "sector_cap": 417.60332999999997, "cash_reserve": 27.840222, "equity_total": 1392.0111, "position_cap": 238.63047428571429},
+      "entries": [],
+      "unsized": []
+    },
+    "guard": {"halts": [], "denied": []},
+    "approved": [
+      {"side": "sell", "symbol": "INVH", "play_id": "DIP", "quantity": 7, "limit_price": 26.49},
+      {"side": "sell", "symbol": "KIM", "play_id": "DIP", "quantity": 1, "limit_price": 22.4},
+      {"side": "sell", "symbol": "RF", "play_id": "DIP", "quantity": 6, "limit_price": 27.16},
+      {"side": "sell", "symbol": "RTX", "play_id": "DIP", "quantity": 1, "limit_price": 184.5}
+    ],
+    "sectors": {"MU": "Information Technology", "ON": "Information Technology", "RF": "Financials", "BKR": "Energy", "FDS": "Financials", "GIS": "Consumer Staples", "HPE": "Information Technology", "HRL": "Consumer Staples", "JBL": "Information Technology", "KDP": "Consumer Staples", "KIM": "Real Estate", "KMB": "Consumer Staples", "MKC": "Consumer Staples", "ROP": "Information Technology", "RTX": "Industrials", "SPG": "Real Estate", "INVH": "Real Estate", "MRNA": "Health Care", "PSKY": "Communication Services", "WDAY": "Information Technology"},
+    "book": [
+      {"symbol": "INVH", "adopted": false, "market_value": 185.535, "sessions_held": 10},
+      {"symbol": "KIM", "adopted": false, "market_value": 22.41, "sessions_held": 10},
+      {"symbol": "RF", "adopted": false, "market_value": 163.02, "sessions_held": 10},
+      {"symbol": "RTX", "adopted": false, "market_value": 184.695, "sessions_held": 10},
+      {"symbol": "SPG", "adopted": true, "market_value": 202.14, "sessions_held": 16}
+    ]
+  }
+}

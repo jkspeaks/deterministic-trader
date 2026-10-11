@@ -1,0 +1,60 @@
+name: Leaders
+
+# S5's shadow record for Leaders monthly.
+#
+# Once a month this records what the rule in `src/leaders.py` would have picked
+# beside a random same-sector control, and fills in what last month's picks,
+# their control and SPY returned. Mechanical only: daily bars in, JSON out. No
+# model runs, no vendor key is used, no order is placed and nothing in the
+# trading cycle reads `data/leaders_shadow.json`.
+#
+# The picks for a month are computed from closes before its first calendar
+# day, so the day this lands on cannot change them. It runs on the first seven
+# days because a scheduled run can be late or dropped, and because last
+# month's result needs the new month's first open, which does not exist yet at
+# the first run. A run with nothing new writes nothing.
+
+on:
+  schedule:
+    - cron: "23 11 1-7 * *"
+
+  workflow_dispatch:
+
+concurrency:
+  group: leaders
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  leaders:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Record this month's picks and settle earlier months
+        run: uv run ops/leaders_shadow.py
+
+      - name: Commit the record
+        run: |
+          set -euo pipefail
+          git config user.name  "<owner>"
+          git config user.email "you@example.com"
+          git add -N data/leaders_shadow.json
+          if git diff --quiet -- data/leaders_shadow.json; then
+            echo "nothing new to record"
+            exit 0
+          fi
+          git add data/leaders_shadow.json
+          git commit -m "data: leaders shadow $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

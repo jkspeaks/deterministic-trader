@@ -1,0 +1,41 @@
+[project]
+name = "deterministic-trader"
+version = "0.1.0"
+description = "Event-adaptive swing equities agent. Deterministic core; the agent is the only thing that touches the network."
+requires-python = ">=3.11"
+dependencies = [
+    "tzdata>=2026.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+# CI-only. `ci/fetch_universe.py` reads SSGA's holdings workbook, which is the
+# one source that does not publish JSON or CSV. Kept out of `dependencies` so
+# the routine's own `uv sync` never installs it: nothing under `src/` may import
+# it, and a dependency the deterministic core cannot see is one it cannot grow
+# a use for by accident.
+ci = [
+    "openpyxl>=3.1",
+]
+# `ops/control.py`'s own Supabase RPC client (`ops/supabase_client.py`) is
+# the only thing in this repo that needs an HTTP client outside `services/`.
+control = [
+    "httpx>=0.27.0",
+]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+# `services/core` is in the suite because it imports `src/` directly: its whole
+# acceptance criterion is that it produces the plan `cli.decide` produces, and a
+# test that cannot run beside the core's own tests could not assert that.
+testpaths = ["tests", "services/core/tests"]
+addopts = "-q"

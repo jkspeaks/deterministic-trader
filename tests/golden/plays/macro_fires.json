@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "symbol": "XLE",
+      "play_id": "MACRO",
+      "conviction": 0.8,
+      "conviction_raw": 0.8,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.0,
+      "expected_holding_days": 15,
+      "notional_multiplier": 1.0,
+      "detail": "CPI printed +20.0% against consensus; \u00a76.4's map tilts above",
+      "full_deployment": false
+    },
+    {
+      "symbol": "XLF",
+      "play_id": "MACRO",
+      "conviction": 0.8,
+      "conviction_raw": 0.8,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.0,
+      "expected_holding_days": 15,
+      "notional_multiplier": 1.0,
+      "detail": "CPI printed +20.0% against consensus; \u00a76.4's map tilts above",
+      "full_deployment": false
+    }
+  ],
+  "skipped": []
+}

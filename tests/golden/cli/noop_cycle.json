@@ -1,0 +1,94 @@
+{
+  "plan_fetch": {
+    "cycle_id": "2026-08-03T13:40:00Z-full",
+    "cycle": {
+      "cycle_type": "noop",
+      "session": "regular_hours",
+      "now": "2026-08-03T14:40:00Z",
+      "entries_allowed": false,
+      "entries_remaining": 0,
+      "exits_allowed": false,
+      "reconcile_required": false,
+      "reason": "10:40 ET Mon: nothing held, nothing pending, nothing reconcilable, and 0 entries left today",
+      "trading_day": "2026-08-03",
+      "clock_updates": {}
+    },
+    "config_source": "checkout",
+    "fetch": [],
+    "estimate": {
+      "calls": 0,
+      "per_candidate_steps": 0,
+      "positions_held": 0
+    },
+    "reason": "10:40 ET Mon: nothing held, nothing pending, nothing reconcilable, and 0 entries left today"
+  },
+  "decide": {
+    "cycle_id": "2026-08-03T13:40:00Z-full",
+    "cycle": {
+      "cycle_type": "noop",
+      "session": "regular_hours",
+      "now": "2026-08-03T14:40:00Z",
+      "entries_allowed": false,
+      "entries_remaining": 0,
+      "exits_allowed": false,
+      "reconcile_required": false,
+      "reason": "10:40 ET Mon: nothing held, nothing pending, nothing reconcilable, and 0 entries left today",
+      "trading_day": "2026-08-03",
+      "clock_updates": {}
+    },
+    "config_source": "checkout",
+    "universe": null,
+    "sectors": {},
+    "regime": null,
+    "regime_v2_enabled": false,
+    "shadow_posture": null,
+    "shadow_dip_would_block": [],
+    "shadow_entries": null,
+    "shadow_dip_table": null,
+    "sizing_v2_enabled": false,
+    "shadow_sizing": null,
+    "core_sleeve": null,
+    "deployment": null,
+    "dead_plays": [],
+    "book": [],
+    "earnings": {},
+    "exits": {
+      "exits": [],
+      "covered_by_resting": [],
+      "held_for_news": [],
+      "manual_required": [],
+      "average_down_eligible": [],
+      "control_updates": {},
+      "notes": []
+    },
+    "entries": {
+      "candidates": [],
+      "skipped": []
+    },
+    "sizing": null,
+    "guard": null,
+    "blocked": [],
+    "held_for_news": [],
+    "manual_required": [],
+    "plan": {
+      "cancels": [],
+      "orders": [],
+      "protection": []
+    },
+    "control_updates": {},
+    "play_state_updates": {},
+    "day_context_write": {
+      "trading_day": "2026-08-03",
+      "fresh_count": 0,
+      "stale_count": 0
+    },
+    "rotation": {
+      "active_sectors": [],
+      "active_sub_industries": [],
+      "unmatched": [],
+      "filtering": false,
+      "sub_industry_data": false
+    },
+    "reason": "10:40 ET Mon: nothing held, nothing pending, nothing reconcilable, and 0 entries left today"
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "_comment": "Prompt 10b (2026-09-26) adds `lists[]`: list-valued control keys (today only `sectors` -> `active_sectors`), whose `sectors`/`aliases` vocabulary is config/etfs.json's sleeve verbatim (asserted by test). Prompt 3.2. Single source ops/control.py (json.load) reads to build its known-verb set, its HELP_TEXT and its per-table key whitelist. A plain on/off toggle (master, core, dip, surge) is added here alone — its apply logic is a one-line dispatch keyed by 'key'/'table'. Verbs whose logic is genuinely bespoke (block's reason arg, clear's multi-key reset, last/holds' reads, status's summary) still have hand-written apply code, but their name/help/whitelist membership still comes from here so nothing can drift.",
+  "help_text_comment": "2026-10-06: the whole of help, one phone-width line per entry. Read by ops/control.py in place of the per-verb help strings below.",
+  "help_text": [
+    "VIEW",
+    "status   switches, account",
+    "sectors  active sectors",
+    "last     last cycle result",
+    "step     cycle in progress",
+    "holds    operator holds",
+    "",
+    "SWITCHES",
+    "master on|off  all trading",
+    "core on|off    core entries",
+    "dip on|off     Dip Recovery",
+    "block on [why] stop entries",
+    "block off      allow entries",
+    "clear  unblock, reset streak",
+    "kill   same as master off",
+    "",
+    "SECTORS",
+    "sectors set <codes>",
+    "sectors add <codes>",
+    "sectors remove <codes>",
+    "sectors clear  allow all",
+    "",
+    "OTHER",
+    "holds expire <symbol>",
+    "surge off  SURGE is RETIRED",
+    "  (surge on is refused)",
+    "help"
+  ],
+  "toggles": [
+    {
+      "name": "master",
+      "table": "control",
+      "key": "trading_enabled",
+      "help": "master on|off        TRADING_ENABLED — the absolute kill switch"
+    },
+    {
+      "name": "core",
+      "table": "dip_config",
+      "key": "core_strategies_enabled",
+      "help": "core on|off          core_strategies_enabled — pause/resume core entries"
+    },
+    {
+      "name": "dip",
+      "table": "dip_config",
+      "key": "dip_recovery_enabled",
+      "help": "dip on|off           dip_recovery_enabled — pause/resume Dip Recovery entries"
+    },
+    {
+      "name": "surge",
+      "table": "control",
+      "key": "full_send_enabled",
+      "confirm_on_required": "confirm",
+      "retired": "SURGE retired on 2026-10-06 and cannot be switched on. Buys nothing. Reviving it is a code change (docs/TUNING.md 1.17).",
+      "help": "surge off            SURGE is RETIRED (2026-10-06): 'surge on' is refused; 'surge off' clears full_send_enabled"
+    }
+  ],
+  "block": {
+    "name": "block",
+    "table": "control",
+    "help": "block on [reason]    entries_blocked, held until block off\nblock off             clears entries_blocked (+ reason, + until_cleared)"
+  },
+  "lists": [
+    {
+      "name": "sectors",
+      "table": "control",
+      "key": "active_sectors",
+      "ops": [
+        "set",
+        "add",
+        "remove",
+        "clear"
+      ],
+      "help": "sectors [set|add|remove|clear] <codes>  active_sectors — what new money may go into: sector codes (EN, IT, RE…), baskets (SEMI, SOFT, BANK, INS, RESI) or any of the 126 sub-industry codes (CHIP, DC…), comma-separated; full names and sleeve tickers (XLE) work too. Bare 'sectors' shows the set; empty = everything. 'remove' of the last one and 'add' onto 'all' are refused — use 'clear' / 'set'",
+      "sectors": [
+        "Energy",
+        "Financials",
+        "Information Technology",
+        "Health Care",
+        "Industrials",
+        "Consumer Discretionary",
+        "Consumer Staples",
+        "Utilities",
+        "Materials",
+        "Real Estate",
+        "Communication Services"
+      ],
+      "aliases": {
+        "XLE": "Energy",
+        "XLF": "Financials",
+        "XLK": "Information Technology",
+        "XLV": "Health Care",
+        "XLI": "Industrials",
+        "XLY": "Consumer Discretionary",
+        "XLP": "Consumer Staples",
+        "XLU": "Utilities",
+        "XLB": "Materials",
+        "XLRE": "Real Estate",
+        "XLC": "Communication Services"
+      },
+      "codes": {
+        "sectors": {
+          "EN": "Energy",
+          "FIN": "Financials",
+          "IT": "Information Technology",
+          "HC": "Health Care",
+          "IND": "Industrials",
+          "CD": "Consumer Discretionary",
+          "CS": "Consumer Staples",
+          "UTL": "Utilities",
+          "MAT": "Materials",
+          "RE": "Real Estate",
+          "COM": "Communication Services"
+        },
+        "sub_industries": {
+          "IOG": "Integrated Oil & Gas",
+          "OFS": "Oil & Gas Equipment & Services",
+          "EP": "Oil & Gas Exploration & Production",
+          "REF": "Oil & Gas Refining & Marketing",
+          "MID": "Oil & Gas Storage & Transportation",
+          "AMGT": "Asset Management & Custody Banks",
+          "CFIN": "Consumer Finance",
+          "DBNK": "Diversified Banks",
+          "EXCH": "Financial Exchanges & Data",
+          "IBRK": "Insurance Brokers",
+          "IBNK": "Investment Banking & Brokerage",
+          "LIFE": "Life & Health Insurance",
+          "HOLD": "Multi-Sector Holdings",
+          "MINS": "Multi-line Insurance",
+          "PC": "Property & Casualty Insurance",
+          "RBNK": "Regional Banks",
+          "REIN": "Reinsurance",
+          "PAY": "Transaction & Payment Processing Services",
+          "APPS": "Application Software",
+          "CEQ": "Communications Equipment",
+          "ECMP": "Electronic Components",
+          "EEI": "Electronic Equipment & Instruments",
+          "EMS": "Electronic Manufacturing Services",
+          "ITCS": "IT Consulting & Other Services",
+          "INET": "Internet Services & Infrastructure",
+          "SME": "Semiconductor Materials & Equipment",
+          "CHIP": "Semiconductors",
+          "SYSW": "Systems Software",
+          "TDIS": "Technology Distributors",
+          "HW": "Technology Hardware, Storage & Peripherals",
+          "BIO": "Biotechnology",
+          "HCD": "Health Care Distributors",
+          "MEDT": "Health Care Equipment",
+          "HCF": "Health Care Facilities",
+          "HCS": "Health Care Services",
+          "HSUP": "Health Care Supplies",
+          "HCIT": "Health Care Technology",
+          "LSTS": "Life Sciences Tools & Services",
+          "MCO": "Managed Health Care",
+          "PHRM": "Pharmaceuticals",
+          "AERO": "Aerospace & Defense",
+          "FARM": "Agricultural & Farm Machinery",
+          "FRGT": "Air Freight & Logistics",
+          "BLDG": "Building Products",
+          "TRCK": "Cargo Ground Transportation",
+          "CENG": "Construction & Engineering",
+          "HVY": "Construction Machinery & Heavy Transportation Equipment",
+          "DPOS": "Data Processing & Outsourced Services",
+          "DSS": "Diversified Support Services",
+          "ELEQ": "Electrical Components & Equipment",
+          "ENVS": "Environmental & Facilities Services",
+          "HEEQ": "Heavy Electrical Equipment",
+          "HR": "Human Resource & Employment Services",
+          "CONG": "Industrial Conglomerates",
+          "MACH": "Industrial Machinery & Supplies & Components",
+          "AIR": "Passenger Airlines",
+          "PGT": "Passenger Ground Transportation",
+          "RAIL": "Rail Transportation",
+          "RCS": "Research & Consulting Services",
+          "TCD": "Trading Companies & Distributors",
+          "APRL": "Apparel Retail",
+          "LUX": "Apparel, Accessories & Luxury Goods",
+          "AUTO": "Automobile Manufacturers",
+          "APTS": "Automotive Parts & Equipment",
+          "ARTL": "Automotive Retail",
+          "BRTL": "Broadline Retail",
+          "CASI": "Casinos & Gaming",
+          "ERTL": "Computer & Electronics Retail",
+          "CELE": "Consumer Electronics",
+          "DIST": "Distributors",
+          "SHOE": "Footwear",
+          "HIRT": "Home Improvement Retail",
+          "HOME": "Homebuilding",
+          "HFRT": "Homefurnishing Retail",
+          "HOTL": "Hotels, Resorts & Cruise Lines",
+          "LEIS": "Leisure Products",
+          "SRTL": "Other Specialty Retail",
+          "REST": "Restaurants",
+          "SVCS": "Specialized Consumer Services",
+          "AGRI": "Agricultural Products & Services",
+          "CSRT": "Consumer Staples Merchandise Retail",
+          "ALC": "Distillers & Vintners",
+          "FDIS": "Food Distributors",
+          "FRTL": "Food Retail",
+          "HHP": "Household Products",
+          "FOOD": "Packaged Foods & Meats",
+          "PCP": "Personal Care Products",
+          "BEV": "Soft Drinks & Non-alcoholic Beverages",
+          "TOB": "Tobacco",
+          "ELEC": "Electric Utilities",
+          "GUTL": "Gas Utilities",
+          "IPP": "Independent Power Producers & Energy Traders",
+          "MULT": "Multi-Utilities",
+          "WATR": "Water Utilities",
+          "CCHM": "Commodity Chemicals",
+          "CMAT": "Construction Materials",
+          "CU": "Copper",
+          "FERT": "Fertilizers & Agricultural Chemicals",
+          "GOLD": "Gold",
+          "IGAS": "Industrial Gases",
+          "CONT": "Metal, Glass & Plastic Containers",
+          "PACK": "Paper & Plastic Packaging Products & Materials",
+          "SCHM": "Specialty Chemicals",
+          "STL": "Steel",
+          "DC": "Data Center REITs",
+          "HCRE": "Health Care REITs",
+          "HTRE": "Hotel & Resort REITs",
+          "INRE": "Industrial REITs",
+          "MFR": "Multi-Family Residential REITs",
+          "OFFC": "Office REITs",
+          "SPRE": "Other Specialized REITs",
+          "RESV": "Real Estate Services",
+          "RTRE": "Retail REITs",
+          "STOR": "Self-Storage REITs",
+          "SFR": "Single-Family Residential REITs",
+          "TOWR": "Telecom Tower REITs",
+          "TIMB": "Timber REITs",
+          "ADV": "Advertising",
+          "BCST": "Broadcasting",
+          "CABL": "Cable & Satellite",
+          "TELC": "Integrated Telecommunication Services",
+          "GAME": "Interactive Home Entertainment",
+          "IMED": "Interactive Media & Services",
+          "FILM": "Movies & Entertainment",
+          "PUB": "Publishing",
+          "WIRE": "Wireless Telecommunication Services"
+        },
+        "baskets": {
+          "SEMI": {
+            "name": "Semiconductors + equipment",
+            "includes": [
+              "CHIP",
+              "SME"
+            ]
+          },
+          "SOFT": {
+            "name": "Software",
+            "includes": [
+              "APPS",
+              "SYSW"
+            ]
+          },
+          "BANK": {
+            "name": "Banks",
+            "includes": [
+              "DBNK",
+              "RBNK"
+            ]
+          },
+          "INS": {
+            "name": "Insurance",
+            "includes": [
+              "LIFE",
+              "MINS",
+              "PC",
+              "REIN",
+              "IBRK"
+            ]
+          },
+          "RESI": {
+            "name": "Residential REITs",
+            "includes": [
+              "MFR",
+              "SFR"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "single": [
+    {
+      "name": "status",
+      "readonly": true,
+      "help": "status               read-only snapshot of edge_control + dip_recovery_config, plus a one-line summary"
+    },
+    {
+      "name": "clear",
+      "table": "control",
+      "help": "clear                clears entries_blocked (+ reason, + until_cleared) AND resets divergence_streak to 0 — use this instead of 'block off' when a persistent-divergence block just fired, or it re-blocks on the next cycle"
+    },
+    {
+      "name": "last",
+      "readonly": true,
+      "help": "last                 the last cycle's status and its alert's footer (cycle/time/routine/runlog)"
+    },
+    {
+      "name": "step",
+      "readonly": true,
+      "help": "step                where the routine is right now: the cycle, its current step, since when (ET), how long it has run"
+    },
+    {
+      "name": "holds",
+      "readonly": true,
+      "help": "holds                list operator_holds (symbol, reason, set_on, age); 'holds expire <symbol>' removes one early"
+    },
+    {
+      "name": "kill",
+      "alias_of": "master_off",
+      "help": "kill                 alias for master off"
+    },
+    {
+      "name": "help",
+      "readonly": true,
+      "help": "help                 this text"
+    }
+  ]
+}

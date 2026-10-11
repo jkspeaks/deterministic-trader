@@ -1,0 +1,74 @@
+{
+  "benchmark": {
+    "trading_day": "2026-08-07",
+    "equity": 260.01,
+    "net_deposits": 0.0,
+    "spy_close": 784.36,
+    "frozen_value": 247.72
+  },
+  "scorecard": {
+    "trading_day": "2026-08-07",
+    "days": 3,
+    "equity": 260.01,
+    "net_deposits": 0.0,
+    "agent_return": 0.049612,
+    "agent_gain": 12.29,
+    "spy_return": 0.016893,
+    "frozen_return": 0.0,
+    "target_return": 0.001768,
+    "fill_rate": null,
+    "median_slippage": null,
+    "plays": [
+      {
+        "play_id": "CATALYST",
+        "regime_fit": 1.0,
+        "reason": "news flow is live",
+        "closed_trades": 0,
+        "realized_pnl": 0.0,
+        "near_flat_trades": 0
+      },
+      {
+        "play_id": "DIP",
+        "regime_fit": 1.0,
+        "reason": "range-bound tape",
+        "closed_trades": 5,
+        "realized_pnl": 6.4,
+        "near_flat_trades": 0
+      },
+      {
+        "play_id": "MACRO",
+        "regime_fit": 1.0,
+        "reason": "CPI lands Thursday",
+        "closed_trades": 0,
+        "realized_pnl": 0.0,
+        "near_flat_trades": 0
+      },
+      {
+        "play_id": "PEAD",
+        "regime_fit": 0.0,
+        "reason": "drift stopped paying",
+        "closed_trades": 2,
+        "realized_pnl": -4.1,
+        "near_flat_trades": 0
+      }
+    ],
+    "data_quality": []
+  },
+  "alerts": [
+    {
+      "title": "Post-close cycle succeeded",
+      "body": "Nothing to report.\n\ncycle unknown · 16:30 ET · Post-close · docs/OPERATIONS.md#post-close-cycle-succeeded",
+      "priority": "min"
+    },
+    {
+      "title": "Weekly scorecard",
+      "body": "3 days in. Equity $260.01.\n  agent   $12.29 (+4.96% money-weighted)\n  SPY     +1.69%\n  frozen  +0.00%\n  24%/yr  +0.18%\n  fill    n/a\n  slip    n/a\n  CATALYST: 0 closed, $0.00\n  DIP: 5 closed, $6.40\n  MACRO: 0 closed, $0.00\n  PEAD: 2 closed, -$4.10 (disabled)\n\ndocs/OPERATIONS.md#weekly-scorecard",
+      "priority": "default"
+    }
+  ],
+  "control_updates": {
+    "last_scorecard_date": "2026-08-07"
+  },
+  "notes": [],
+  "status": "success"
+}

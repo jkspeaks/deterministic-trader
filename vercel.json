@@ -1,0 +1,30 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':!data/' ':!*.md' ':!docs/'",
+  "functions": {
+    "api/cycle.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{.git/**,.github/**,.claude/**,.venv/**,.pytest_cache/**,.ruff_cache/**,.coverage,.env*,tests/**,ci/**,ops/**,db/**,docs/**,services/core/tests/**,uv.lock,*.md}"
+    },
+    "api/premarket.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{.git/**,.github/**,.claude/**,.venv/**,.pytest_cache/**,.ruff_cache/**,.coverage,.env*,tests/**,ci/**,ops/**,db/**,docs/**,services/core/tests/**,uv.lock,*.md}"
+    },
+    "api/watch.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{.git/**,.github/**,.claude/**,.venv/**,.pytest_cache/**,.ruff_cache/**,.coverage,.env*,tests/**,ci/**,ops/**,db/**,docs/**,services/core/tests/**,uv.lock,*.md}"
+    },
+    "api/schedule.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{.git/**,.github/**,.claude/**,.venv/**,.pytest_cache/**,.ruff_cache/**,.coverage,.env*,tests/**,ci/**,ops/**,db/**,docs/**,services/core/tests/**,uv.lock,*.md}"
+    },
+    "api/shadow.py": {
+      "maxDuration": 300,
+      "excludeFiles": "{.git/**,.github/**,.claude/**,.venv/**,.pytest_cache/**,.ruff_cache/**,.coverage,.env*,tests/**,ci/**,ops/**,db/**,docs/**,services/core/tests/**,uv.lock,*.md}"
+    },
+    "api/evidence.py": {
+      "maxDuration": 300,
+      "excludeFiles": "{.git/**,.github/**,.claude/**,.venv/**,.pytest_cache/**,.ruff_cache/**,.coverage,.env*,tests/**,ci/**,ops/**,db/**,docs/**,services/core/tests/**,uv.lock,*.md}"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "candidates": [],
+  "skipped": [
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "code": "ENTRY_CONDITIONS_UNMET",
+      "message": "F is +6.3% against its 50-day, outside \u00a74.3 A's -5%..0% pullback band"
+    }
+  ]
+}

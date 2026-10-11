@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "symbol": "INVH",
+      "quantity": "8.00000000",
+      "intraday_quantity": "0.00000000",
+      "average_buy_price": "33.0000",
+      "shares_available_for_sells": "0.00000000",
+      "shares_held_for_sells": "8.00000000",
+      "market_value": "268.16"
+    },
+    {
+      "symbol": "MGM",
+      "quantity": "6.00000000",
+      "intraday_quantity": "0.00000000",
+      "average_buy_price": "40.8800",
+      "shares_available_for_sells": "0.00000000",
+      "shares_held_for_sells": "6.00000000",
+      "market_value": "244.98"
+    },
+    {
+      "symbol": "SPG",
+      "quantity": "2.00000000",
+      "intraday_quantity": "0.00000000",
+      "average_buy_price": "175.0000",
+      "shares_available_for_sells": "0.00000000",
+      "shares_held_for_sells": "2.00000000",
+      "market_value": "352.40"
+    }
+  ]
+}

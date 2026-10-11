@@ -1,0 +1,145 @@
+{
+  "ladder": {
+    "equity_total": 1000.0,
+    "n_target": 5,
+    "open_slots": 5,
+    "cash_reserve": 20.0,
+    "deployable": 980.0,
+    "notional": 196.0,
+    "position_cap": 240.0,
+    "sector_cap": 300.0
+  },
+  "entries": [
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "path": "WHOLE",
+      "quantity": 13,
+      "price": 14.68,
+      "price_source": "ask",
+      "limit_price": 14.68,
+      "notional": 190.84,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "sessions_eligible": [
+        "regular_hours",
+        "extended_hours"
+      ],
+      "resting_stop_eligible": true,
+      "conviction": 0.88,
+      "rank_bonus": 0.05,
+      "rank_score": 0.93,
+      "notional_multiplier": 1.0,
+      "full_deployment": false
+    },
+    {
+      "symbol": "NVDA",
+      "play_id": "DIP",
+      "path": "WHOLE",
+      "quantity": 1.0,
+      "price": 198.9,
+      "price_source": "ask",
+      "limit_price": 198.9,
+      "notional": 198.9,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "sessions_eligible": [
+        "regular_hours",
+        "extended_hours"
+      ],
+      "resting_stop_eligible": true,
+      "conviction": 0.92,
+      "rank_bonus": 0.0,
+      "rank_score": 0.92,
+      "notional_multiplier": 1.0,
+      "full_deployment": false
+    },
+    {
+      "symbol": "PFE",
+      "play_id": "DIP",
+      "path": "WHOLE",
+      "quantity": 7,
+      "price": 25.03,
+      "price_source": "ask",
+      "limit_price": 25.03,
+      "notional": 175.21,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "sessions_eligible": [
+        "regular_hours",
+        "extended_hours"
+      ],
+      "resting_stop_eligible": true,
+      "conviction": 0.85,
+      "rank_bonus": 0.05,
+      "rank_score": 0.9,
+      "notional_multiplier": 1.0,
+      "full_deployment": false
+    },
+    {
+      "symbol": "BAC",
+      "play_id": "DIP",
+      "path": "WHOLE",
+      "quantity": 3,
+      "price": 61.97,
+      "price_source": "ask",
+      "limit_price": 61.97,
+      "notional": 185.91,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "sessions_eligible": [
+        "regular_hours",
+        "extended_hours"
+      ],
+      "resting_stop_eligible": true,
+      "conviction": 0.76,
+      "rank_bonus": 0.05,
+      "rank_score": 0.81,
+      "notional_multiplier": 1.0,
+      "full_deployment": false
+    },
+    {
+      "symbol": "AMD",
+      "play_id": "DIP",
+      "path": "FRACTIONAL",
+      "quantity": 0.212287,
+      "price": 476.24,
+      "price_source": "ask",
+      "limit_price": null,
+      "notional": 101.099561,
+      "order_type": "market",
+      "session": "regular_hours",
+      "sessions_eligible": [
+        "regular_hours"
+      ],
+      "resting_stop_eligible": false,
+      "conviction": 0.8,
+      "rank_bonus": 0.0,
+      "rank_score": 0.8,
+      "notional_multiplier": 1.0,
+      "full_deployment": false
+    }
+  ],
+  "unsized": [
+    {
+      "symbol": "INTC",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "5 of 5 slots are held; INTC would be the n+1-th position"
+    },
+    {
+      "symbol": "T",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "5 of 5 slots are held; T would be the n+1-th position"
+    },
+    {
+      "symbol": "SOFI",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "5 of 5 slots are held; SOFI would be the n+1-th position"
+    },
+    {
+      "symbol": "SPY",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "5 of 5 slots are held; SPY would be the n+1-th position"
+    }
+  ]
+}

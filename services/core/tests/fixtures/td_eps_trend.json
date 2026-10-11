@@ -1,0 +1,33 @@
+{
+  "_source": "Twelve Data /eps_trend for AAPL, fetched 2026-10-05 through the operator's Twelve Data connector (get_analyst_data, data_type eps_trend). Pasted as it came; never edit it to make a test pass.",
+  "meta": {
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "currency": "USD",
+    "exchange_timezone": "America/New_York",
+    "exchange": "NASDAQ",
+    "mic_code": "XNGS",
+    "type": "Common Stock"
+  },
+  "eps_trend": [
+    {
+      "date": "2026-12-31",
+      "period": "next_quarter",
+      "current_estimate": 2.90586,
+      "7_days_ago": 2.90313,
+      "30_days_ago": 2.89268,
+      "60_days_ago": 2.90908,
+      "90_days_ago": 2.94829
+    },
+    {
+      "date": "2027-09-30",
+      "period": "next_year",
+      "current_estimate": 9.57579,
+      "7_days_ago": 9.58154,
+      "30_days_ago": 9.53058,
+      "60_days_ago": 9.58609,
+      "90_days_ago": 9.68258
+    }
+  ],
+  "status": "ok"
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [],
+  "skipped": [
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "code": "REGIME_DARK",
+      "message": "DIP is dark on today's regime: SPY 580.00 is below its 200-day 600.00 and 20-day realized vol 0.42 is over the 0.35 ceiling; no entries today"
+    },
+    {
+      "symbol": "PFE",
+      "play_id": "PEAD",
+      "code": "REGIME_DARK",
+      "message": "PEAD is dark on today's regime: SPY 580.00 is below its 200-day 600.00 and 20-day realized vol 0.42 is over the 0.35 ceiling; no entries today"
+    },
+    {
+      "symbol": "BAC",
+      "play_id": "CATALYST",
+      "code": "REGIME_DARK",
+      "message": "CATALYST is dark on today's regime: SPY 580.00 is below its 200-day 600.00 and 20-day realized vol 0.42 is over the 0.35 ceiling; no entries today"
+    },
+    {
+      "symbol": "XLI",
+      "play_id": "MACRO",
+      "code": "REGIME_DARK",
+      "message": "MACRO is dark on today's regime: SPY 580.00 is below its 200-day 600.00 and 20-day realized vol 0.42 is over the 0.35 ceiling; no entries today"
+    },
+    {
+      "symbol": "XLF",
+      "play_id": "MACRO",
+      "code": "REGIME_DARK",
+      "message": "MACRO is dark on today's regime: SPY 580.00 is below its 200-day 600.00 and 20-day realized vol 0.42 is over the 0.35 ceiling; no entries today"
+    }
+  ]
+}

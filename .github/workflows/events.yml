@@ -1,0 +1,123 @@
+name: Events
+
+# §7.2's extraction pipeline: EDGAR 8-K item codes into data/events.json and FRED
+# releases into data/macro.json, both committed for the routine to read out of its
+# own checkout.
+#
+# Who reads the two files, when PEAD was retired and CATALYST and MACRO were
+# shelved (docs/TUNING.md §1.17): the restatement veto on every entry, the
+# catalyst-confirmed target exit on every held position, and the regime's "a macro
+# series printed today" note. None of the three plays that used to buy off these
+# files runs, so nothing here feeds a new position.
+#
+# CI does mechanical extraction only (§7.3). No model runs here and no judgment
+# is made — item codes and release values in, JSON out. Every interpretation of
+# them happens in the routine, which is the one component that has judgment.
+#
+# Each fetcher also mirrors what it
+# just wrote into Supabase (`edge_data_files`, via `ci.common.publish_data_file`),
+# so the runner can read live data instead of whatever `data/` looked like at
+# the last successful Vercel build — production builds no longer run on every
+# commit this workflow makes (see `vercel.json`'s `ignoreCommand`). The git
+# commit below is still the channel of record; the Supabase write is best-effort
+# and never fails this job on its own.
+
+on:
+  schedule:
+    # **The cadence §8 asks for is not deliverable, and pretending otherwise
+    # would waste the budget on runs that never happen.** Measured on the
+    # operator's other private repo, 2026-07-30/31: every scheduled run
+    # arrived 57-114 minutes late, worst at the top of the hour. A `*/30`
+    # schedule under that delay does not produce half-hourly runs — GitHub drops
+    # queued occurrences once the next one is due, so it produces roughly hourly
+    # runs and bills for the attempts.
+    #
+    # Twice an hour at :07 and :37, off both the hour and the half hour, is what
+    # actually lands. Effective freshness is ~1 hour; the accumulator in
+    # fetch_events.py is what makes that lossless, since each run merges the
+    # feed into the file rather than replacing it.
+    #
+    # Hours 08-23 UTC on weekdays, plus 00 UTC on Tue-Sat, cover §13's cycles
+    # from the 04:30 ET overnight read to the 20:00 ET one. Nothing runs outside
+    # them: 34 runs a weekday is ~750 billed minutes a month against the
+    # account's 2,000-minute private-repo budget, where round-the-clock would
+    # have been ~2,880 for this job alone.
+    #
+    # Every workflow in this repo together came to about 165. The schedule is
+    # left as it is: fewer slots would mean fewer deliveries, and a 6-hour gap
+    # with no new data/events.json commit is treated as a problem worth alerting
+    # on.
+    - cron: "7,37 8-23 * * 1-5"
+    - cron: "7,37 0 * * 2-6"
+
+  workflow_dispatch:
+
+concurrency:
+  # A late run must not overlap the next one. Both commit the same two files,
+  # and fetch_events.py merges against whatever it checked out — two concurrent
+  # runs would each drop the other's filings.
+  group: events
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  events:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history: the rebase-and-retry below needs a real merge base,
+          # which a depth-1 clone does not have.
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Extract 8-K item codes
+        # data/events.json is an accumulator keyed on accession number, so a
+        # failed run costs freshness and never history.
+        run: uv run --group ci python -m ci.fetch_events
+        env:
+          EDGE_SUPABASE_URL: ${{ secrets.EDGE_SUPABASE_URL }}
+          EDGE_SUPABASE_KEY: ${{ secrets.EDGE_SUPABASE_KEY }}
+
+      - name: Extract macro releases
+        # Runs even if EDGAR failed. The two files have different readers (see
+        # the top of this file), so letting one outage suppress the other
+        # would turn a degradation into a wider one.
+        if: always()
+        run: uv run --group ci python -m ci.fetch_macro
+        env:
+          EDGE_SUPABASE_URL: ${{ secrets.EDGE_SUPABASE_URL }}
+          EDGE_SUPABASE_KEY: ${{ secrets.EDGE_SUPABASE_KEY }}
+
+      - name: Commit what changed
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name  "<owner>"
+          git config user.email "you@example.com"
+          if git diff --quiet -- data/events.json data/macro.json; then
+            echo "no new filings or releases"
+            exit 0
+          fi
+          git add data/events.json data/macro.json
+          git commit -m "data: events + macro $(date -u +%Y-%m-%dT%H:%MZ)"
+          # These land every half hour on the branch the weekly universe job
+          # also writes to, so a rebase-and-retry is the normal path, not the
+          # exceptional one.
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            echo "push rejected, retrying (${attempt}/3)"
+            sleep 5
+          done
+          echo "could not push after 3 attempts" >&2
+          exit 1

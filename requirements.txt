@@ -1,0 +1,9 @@
+# Kept as a marker, not as a dependency list. Vercel's Python builder installs
+# this project from `pyproject.toml`, not from here — verified on an earlier
+# deploy, where `tzdata` (a pyproject dependency) was vendored and an `httpx`
+# named only in a requirements file was not.
+#
+# The hosted core therefore depends on nothing beyond `pyproject.toml`'s own
+# dependencies plus the standard library. See `services/core/requirements.txt`
+# for why, and `services/core/RUNTIME.md` for the rest of the build's
+# behaviour.

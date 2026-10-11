@@ -1,0 +1,74 @@
+# Settled call 34 makes the git checkout the CI→routine data channel, so the
+# three files CI publishes are tracked and everything else under data/ is not.
+# Listed by name rather than by pattern: a file that stops arriving should show
+# up as an aging `as_of`, never as a path that quietly slipped the net.
+data/*
+!data/universe.json
+!data/events.json
+!data/macro.json
+# S5: the Leaders monthly shadow record (`.github/workflows/leaders.yml`).
+# Tracked so the record has a history; the trading cycle does not read it.
+!data/leaders_shadow.json
+
+.venv/
+__pycache__/
+*.pyc
+.env
+.coverage
+.pytest_cache/
+
+# docs/routine/cycle-prompt.md's per-cycle scratch files — the operator (or an
+# agent following the prompt by hand) redirects each `src.cli` call straight
+# into the checkout root. Only cycle.json was listed before; a premarket run
+# alone leaves plan.json, settled_cash.json, decide.json and report.json
+# sitting untracked too (full/monitor/postclose add candidates.json,
+# day_context_plan.json, symbol_write.json, reconcile.json, account.json,
+# shaped.json on top),
+# one `git add -A` away from being committed.
+cycle.json
+plan.json
+candidates.json
+day_context_plan.json
+symbol_write.json
+settled_cash.json
+reconcile.json
+decide.json
+report.json
+mc_prefilter.json
+account.json
+shaped.json
+
+# Locally-installed agent skills (npx skills add). Scoped to skills/ rather
+# than all of .claude/ so project settings stay committable if we add them.
+.claude/skills/
+.agents/skills/
+skills-lock.json
+
+# Secrets. `.env.example` is the tracked template; anything that could hold a
+# real value is not. Named widely on purpose — a filled-in copy left in the tree
+# is one `git add -A` away from a Supabase service_role key and a Telegram bot
+# token going public in the same commit.
+.env
+*.env.filled
+ops/*-state.json
+
+
+# Vercel's per-directory project link (project id + org id). Untracked because
+# it is machine-local state, not configuration: `vercel link` recreates it and
+# the deployed settings live in the Vercel project itself. `vercel.json` and
+# `.vercelignore` ARE tracked -- those are the configuration.
+.vercel/
+
+# `vercel link` writes .env.local here (the OIDC token). `.env.example` is the
+# tracked template, so it is negated back in.
+.env*
+!.env.example
+
+# Written by `vercel build`/`vercel pull`, not by this project. Untracked
+# because committing it would also repoint the *local* interpreter (the repo
+# runs on the 3.11.8 global; pyproject asks only for >=3.11), and the deployed
+# Python version comes from the Vercel project settings regardless -- the
+# build resolves to python3.12 with or without this file. See
+# services/core/RUNTIME.md.
+.python-version
+.placebo_cache/

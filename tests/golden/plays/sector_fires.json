@@ -1,0 +1,17 @@
+{
+  "candidates": [
+    {
+      "symbol": "XLE",
+      "play_id": "SECTOR",
+      "conviction": 0.4,
+      "conviction_raw": 0.4,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.0,
+      "expected_holding_days": 10,
+      "notional_multiplier": 1.0,
+      "detail": "XLE at RSI 24 is oversold while holding its 95.00 200-day, and SPY RSI 58 says the tape has not rolled over",
+      "full_deployment": false
+    }
+  ],
+  "skipped": []
+}

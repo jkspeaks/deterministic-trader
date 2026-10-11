@@ -1,0 +1,11 @@
+{
+  "account_number": "<your-cash-account-number>",
+  "total_value": "1400.00",
+  "equity_value": "669.53",
+  "cash": "569.61",
+  "market_value": "865.54",
+  "buying_power": {
+    "buying_power": "569.61",
+    "cash_available_from_instant_deposits": "0.00"
+  }
+}

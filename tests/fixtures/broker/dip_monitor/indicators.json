@@ -1,0 +1,8 @@
+[
+{"data":{"symbol":"BMY","interval":"day","bounds":"regular","indicators":[{"type":"rsi","params":{"period":14},"series":[{"begins_at":"2026-10-02T00:00:00Z","value":37.853067073367846}]}]},"guide":"Convert begins_at (UTC) to the user's timezone for display."},
+{"data":{"symbol":"BMY","interval":"day","bounds":"regular","indicators":[{"type":"sma","params":{"period":20},"series":[{"begins_at":"2026-10-02T00:00:00Z","value":63.1385}]}]},"guide":"Convert begins_at (UTC) to the user's timezone for display."},
+{"data":{"symbol":"BMY","interval":"day","bounds":"regular","indicators":[{"type":"sma","params":{"period":200},"series":[{"begins_at":"2026-10-02T00:00:00Z","value":59.396199999999936}]}]},"guide":"Convert begins_at (UTC) to the user's timezone for display."},
+{"data":{"symbol":"JNJ","interval":"day","bounds":"regular","indicators":[{"type":"rsi","params":{"period":14},"series":[{"begins_at":"2026-10-02T00:00:00Z","value":32.29234465696648}]}]},"guide":"Convert begins_at (UTC) to the user's timezone for display."},
+{"data":{"symbol":"JNJ","interval":"day","bounds":"regular","indicators":[{"type":"sma","params":{"period":20},"series":[{"begins_at":"2026-10-02T00:00:00Z","value":267.65250000000003}]}]},"guide":"Convert begins_at (UTC) to the user's timezone for display."},
+{"data":{"symbol":"JNJ","interval":"day","bounds":"regular","indicators":[{"type":"sma","params":{"period":200},"series":[{"begins_at":"2026-10-02T00:00:00Z","value":241.7070499999998}]}]},"guide":"Convert begins_at (UTC) to the user's timezone for display."}
+]

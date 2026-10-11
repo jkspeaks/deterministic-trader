@@ -1,0 +1,62 @@
+{
+  "_comment": "Design v3 §1, benchmark 2 — 'the book as it stood at inception, held unchanged'. Operator-maintained and deliberately not derived from the live account: a do-nothing control that moves when the account moves is not a control. `report.py` values `inventory` against each day's quotes to produce `edge_benchmark.frozen_value`, and compares against `equity` and `spy_close` for the other two benchmarks.",
+  "_source": "The figures in this file are a synthetic sample, not a live account read.",
+  "_equity_is_derived": "`equity` below is `cash` + Σ(quantity × close) at those same prices, NOT the account's own equity read. An earlier file recorded a measured equity of 236.42 while its inventory priced to 237.46, because Appendix A.4's per-share prices were rounded to the cent against six-decimal quantities — so benchmark 2 began $1.04 (0.44%) ahead of the account it was controlling for, permanently, since §8.4 says the series cannot be rebuilt. Deriving equity from the same prices the frozen book is valued at makes the gap zero by construction. `tests/test_report_benchmark.py` pins it.",
+  "_deposits": "§1 measures the agent, not the funding. Every dollar added after inception must appear below with the date it landed, or it is scored as return. A withdrawal belongs here too, as a negative amount.",
+  "_deposits_are_load_bearing": "`sizing.flow_adjusted_equity` subtracts the running total from equity before the halt compares it to the high-water mark, so a recorded flow is invisible to §10 in both directions. An UNRECORDED withdrawal is indistinguishable from a loss of the same size and will still halt trading and flatten the book — record the transfer here on the day it lands and nothing happens.",
+  "_deposit_dates": "Date a flow by the TRADING DAY it lands in, not the calendar day it happened. `cadence.trading_day` shifts at 20:00 ET, so a transfer arriving at 20:30 on Thursday belongs to Friday. Dating it to Thursday counts it against an edge_benchmark row written at 16:30 — four hours before the money existed — and understates that one day's return by the whole amount, permanently, because §8.4 says the series cannot be rebuilt afterwards. Both cases are pinned in tests/test_external_flows.py.",
+  "_account_number": "Which Robinhood account this system trades. Not decoration and not a comment: `get_accounts` returns EVERY account on the login, `unsettled_funds` is per account, and an earlier runner payload proves the login has two — a `margin` account (<your-margin-account-number>, `agentic_allowed: false`) and this `cash` one. `cli._settled_cash_value` matches on this and refuses to produce a number at all rather than pick a default, so a wrong or missing value costs a safe degradation (settled_cash null, buying_power alone) and never a wrong one. The live-session path passes it on stdin; the hosted core reads it here.",
+  "account_number": "<your-cash-account-number>",
+  "inception_date": "2026-08-04",
+  "equity": 247.72,
+  "cash": 34.67,
+  "spy_close": 771.33,
+  "inventory": {
+    "ADI": 0.054269,
+    "C": 0.209711,
+    "CAT": 0.030951,
+    "INTC": 0.275534,
+    "MRK": 0.153954,
+    "MS": 0.092555,
+    "MU": 0.030851,
+    "SMH": 0.037344,
+    "TXN": 0.070371
+  },
+  "_high_water_mark_anchor": "`edge_control.high_water_mark` was 750.00, measured while those deposits were unrecorded and so $500 too high; with them recorded and that mark left alone, flow-adjusted equity (about 150) would sit under its floor and section 10 would flatten the book. The true peak of equity-less-deposits is an earlier cycle: equity 950.00 against 700.00 deposited by that day, a mark of 250.00 (every stored `decide` checked). `cli._account` uses this anchor only while `edge_control` has no `high_water_mark_equity` of its own, and never on a cycle dated before `as_of`; the first reconcile after this commit writes the control row and this block is dead from then on. Do not edit it to move the mark - the mark is `reconcile`'s. See `sizing.anchored_mark`.",
+  "high_water_mark_anchor": {
+    "as_of": "2026-08-17",
+    "equity": 950.00
+  },
+  "deposits": [
+    {
+      "date": "2026-08-05",
+      "amount": 200.00,
+      "note": "Operator funding on go-live, dated to an earlier trading day. The account opened with the inventory above and a small cash balance; this is the first flow in the record, so no `edge_benchmark` row precedes it."
+    },
+    {
+      "date": "2026-08-10",
+      "amount": 250.00,
+      "note": "Eight weeks late. It landed over the weekend, so it belongs to Monday's trading day."
+    },
+    {
+      "date": "2026-08-13",
+      "amount": 150.00,
+      "note": "Derived: a single 150.00 transfer between that day's intraday and post-close `decide` reads, with no fill in between."
+    },
+    {
+      "date": "2026-08-14",
+      "amount": 100.00,
+      "note": "The third late transfer. With the two above it is the 500.00 that `report.BENCHMARK_INTEGRITY`'s own comment describes (a flat `net_deposits` while equity rose) and that the scorecard was reporting as a gain."
+    },
+    {
+      "date": "2026-08-25",
+      "amount": 250.00,
+      "note": "Operator-reported funding, landed intraday during regular hours (so no 20:00 ET boundary question). Landed after the day's `full` cycle had already ratcheted `high_water_mark` on the pre-deposit equity, so that mark is unaffected; `sizing.flow_adjusted_equity` on the next cycle nets this deposit back out and continues comparing against it."
+    },
+    {
+      "date": "2026-09-02",
+      "amount": 150.00,
+      "note": "Operator-reported funding, landed intraday during regular hours. Operator-maintained: any same-day manual fills are classified `UNTRACKED_FILL` by `reconcile.py` and adopted into the live book automatically on the next cycle, so this deposit is the only piece that needs an entry here."
+    }
+  ]
+}

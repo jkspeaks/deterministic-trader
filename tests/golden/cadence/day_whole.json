@@ -1,0 +1,140 @@
+[
+  {
+    "cycle_type": "overnight",
+    "session": "all_day_hours",
+    "now": "2026-08-03T08:30:00Z",
+    "entries_allowed": false,
+    "entries_remaining": 3,
+    "exits_allowed": true,
+    "reconcile_required": false,
+    "reason": "04:30 ET Mon: overnight cycle for 2026-08-03",
+    "trading_day": "2026-08-03",
+    "clock_updates": {
+      "last_overnight_cycle": "2026-08-03T08:30:00Z"
+    }
+  },
+  {
+    "cycle_type": "premarket",
+    "session": "extended_hours",
+    "now": "2026-08-03T12:45:00Z",
+    "entries_allowed": false,
+    "entries_remaining": 3,
+    "exits_allowed": false,
+    "reconcile_required": false,
+    "reason": "08:45 ET Mon: premarket cycle for 2026-08-03",
+    "trading_day": "2026-08-03",
+    "clock_updates": {}
+  },
+  {
+    "cycle_type": "full",
+    "session": "regular_hours",
+    "now": "2026-08-03T13:40:00Z",
+    "entries_allowed": true,
+    "entries_remaining": 3,
+    "exits_allowed": true,
+    "reconcile_required": true,
+    "reason": "09:40 ET Mon: full cycle for 2026-08-03",
+    "trading_day": "2026-08-03",
+    "clock_updates": {
+      "last_full_cycle": "2026-08-03T13:40:00Z"
+    }
+  },
+  {
+    "cycle_type": "monitor",
+    "session": "regular_hours",
+    "now": "2026-08-03T14:40:00Z",
+    "entries_allowed": true,
+    "entries_remaining": 3,
+    "exits_allowed": true,
+    "reconcile_required": true,
+    "reason": "10:40 ET Mon: monitor cycle for 2026-08-03",
+    "trading_day": "2026-08-03",
+    "clock_updates": {}
+  },
+  {
+    "cycle_type": "monitor",
+    "session": "regular_hours",
+    "now": "2026-08-03T15:40:00Z",
+    "entries_allowed": true,
+    "entries_remaining": 3,
+    "exits_allowed": true,
+    "reconcile_required": true,
+    "reason": "11:40 ET Mon: monitor cycle for 2026-08-03",
+    "trading_day": "2026-08-03",
+    "clock_updates": {}
+  },
+  {
+    "cycle_type": "monitor",
+    "session": "regular_hours",
+    "now": "2026-08-03T16:40:00Z",
+    "entries_allowed": true,
+    "entries_remaining": 3,
+    "exits_allowed": true,
+    "reconcile_required": true,
+    "reason": "12:40 ET Mon: monitor cycle for 2026-08-03",
+    "trading_day": "2026-08-03",
+    "clock_updates": {}
+  },
+  {
+    "cycle_type": "monitor",
+    "session": "regular_hours",
+    "now": "2026-08-03T17:40:00Z",
+    "entries_allowed": true,
+    "entries_remaining": 3,
+    "exits_allowed": true,
+    "reconcile_required": true,
+    "reason": "13:40 ET Mon: monitor cycle for 2026-08-03",
+    "trading_day": "2026-08-03",
+    "clock_updates": {}
+  },
+  {
+    "cycle_type": "monitor",
+    "session": "regular_hours",
+    "now": "2026-08-03T18:40:00Z",
+    "entries_allowed": true,
+    "entries_remaining": 3,
+    "exits_allowed": true,
+    "reconcile_required": true,
+    "reason": "14:40 ET Mon: monitor cycle for 2026-08-03",
+    "trading_day": "2026-08-03",
+    "clock_updates": {}
+  },
+  {
+    "cycle_type": "monitor",
+    "session": "regular_hours",
+    "now": "2026-08-03T19:40:00Z",
+    "entries_allowed": false,
+    "entries_remaining": 3,
+    "exits_allowed": true,
+    "reconcile_required": true,
+    "reason": "15:40 ET Mon: monitor cycle for 2026-08-03",
+    "trading_day": "2026-08-03",
+    "clock_updates": {}
+  },
+  {
+    "cycle_type": "postclose",
+    "session": "extended_hours",
+    "now": "2026-08-03T20:30:00Z",
+    "entries_allowed": false,
+    "entries_remaining": 3,
+    "exits_allowed": false,
+    "reconcile_required": true,
+    "reason": "16:30 ET Mon: after the close",
+    "trading_day": "2026-08-03",
+    "clock_updates": {}
+  },
+  {
+    "cycle_type": "overnight",
+    "session": "all_day_hours",
+    "now": "2026-08-04T00:00:00Z",
+    "entries_allowed": false,
+    "entries_remaining": 3,
+    "exits_allowed": true,
+    "reconcile_required": false,
+    "reason": "20:00 ET Mon: overnight cycle for 2026-08-04",
+    "trading_day": "2026-08-04",
+    "clock_updates": {
+      "last_overnight_cycle": "2026-08-04T00:00:00Z"
+    }
+  }
+]

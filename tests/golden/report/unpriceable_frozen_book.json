@@ -1,0 +1,26 @@
+{
+  "benchmark": {
+    "trading_day": "2026-08-06",
+    "equity": 247.72,
+    "net_deposits": 0.0,
+    "spy_close": 771.33,
+    "frozen_value": null
+  },
+  "scorecard": null,
+  "alerts": [
+    {
+      "title": "Post-close cycle succeeded",
+      "body": "Nothing to report.\n\ncycle unknown \u00b7 16:30 ET \u00b7 Post-close \u00b7 docs/OPERATIONS.md#post-close-cycle-succeeded",
+      "priority": "min"
+    }
+  ],
+  "control_updates": {},
+  "notes": [
+    {
+      "code": "QUOTE_UNAVAILABLE",
+      "symbol": "CAT",
+      "detail": "CAT is in the inception book and has no quote today; the frozen benchmark is unavailable rather than short one holding"
+    }
+  ],
+  "status": "success"
+}

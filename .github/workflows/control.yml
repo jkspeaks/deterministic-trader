@@ -1,0 +1,67 @@
+name: Manual Control
+
+# Ops/control plan — the operator control surface, with an audit trail: every
+# run is logged in the Actions UI under whoever's GitHub identity dispatched
+# it.
+#
+# workflow_dispatch only — no schedule — so this cannot run on its own and
+# cannot add to the repo's Actions-minutes budget beyond whatever a human
+# actually triggers.
+
+on:
+  workflow_dispatch:
+    inputs:
+      command:
+        description: verb (see ops/control.py --help)
+        type: choice
+        options:
+          - status
+          - master_on
+          - master_off
+          - core_on
+          - core_off
+          - dip_on
+          - dip_off
+          - block_on
+          - block_off
+          # Surge_on was removed: SURGE is retired and ops/control.py
+          # refuses it. surge_off stays, to clear the flag.
+          - surge_off
+          - clear
+          - last
+          - holds
+          - sectors
+          - sectors_set
+          - sectors_add
+          - sectors_remove
+          - sectors_clear
+        required: true
+      until:
+        description: >-
+          block_on: free-text reason, e.g. 'waiting on Fed minutes'.
+          holds: 'expire <symbol>' to remove one
+          early, blank to just list. sectors_set / sectors_add /
+          sectors_remove: comma-separated GICS names or sleeve tickers, e.g.
+          'Energy, Health Care, XLF' (sectors_set with nothing is refused - use
+          sectors_clear to allow every sector; sectors_add onto "all" is
+          refused - use sectors_set).
+        type: string
+        required: false
+        default: ""
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Run control
+        run: uv run --group control python -m ops.control "${{ inputs.command }}" "${{ inputs.until }}"
+        env:
+          EDGE_SUPABASE_URL: ${{ secrets.EDGE_SUPABASE_URL }}
+          EDGE_SUPABASE_KEY: ${{ secrets.EDGE_SUPABASE_KEY }}

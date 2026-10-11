@@ -1,0 +1,54 @@
+{
+  "exits": [
+    {
+      "symbol": "PFE",
+      "play_id": "PEAD",
+      "priority": 3,
+      "code": "EARNINGS_DEADLINE",
+      "reason": "PFE reports in 1 session(s); the system never holds through a print",
+      "quantity": 1.0,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "limit_price": 24.97
+    },
+    {
+      "symbol": "BAC",
+      "play_id": "CATALYST",
+      "priority": 4,
+      "code": "ATR_STOP",
+      "reason": "BAC at 61.94 is through its 66.40 stop (3xATR from a 70.00 entry)",
+      "quantity": 1.0,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "limit_price": 61.91
+    },
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "priority": 5,
+      "code": "TIME_STOP",
+      "reason": "DIP allows 8 sessions and this is session 8; the thesis has had its run",
+      "quantity": 1.0,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "limit_price": 14.85
+    },
+    {
+      "symbol": "XLE",
+      "play_id": "MACRO",
+      "priority": 7,
+      "code": "SIGNAL_EXIT",
+      "reason": "the macro regime XLE was bought for has flipped: payrolls broke the trend",
+      "quantity": 1.0,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "limit_price": 89.95
+    }
+  ],
+  "covered_by_resting": [],
+  "held_for_news": [],
+  "manual_required": [],
+  "average_down_eligible": [],
+  "control_updates": {},
+  "notes": []
+}

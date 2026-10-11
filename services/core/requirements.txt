@@ -1,0 +1,21 @@
+# **Vercel does not read this file, and the root one only points here.** The
+# Python builder installs this project from `pyproject.toml` — the built
+# function carries `deterministic_trader-0.1.0.dist-info` in its `_vendor`, and
+# `tzdata` arrived because `pyproject.toml` lists it, while an `httpx` named
+# only here never installed at all (`ModuleNotFoundError` on the first deploy
+# that reached Supabase).
+#
+# So this file is documentation of what the service needs at runtime, and the
+# answer is: nothing that is not already a dependency of the project or of the
+# standard library.
+#
+#   tzdata  — `src/cadence.py` builds ZoneInfo("America/New_York") at import
+#             time and every §13 boundary is an ET wall clock. Already in
+#             `pyproject.toml`'s `dependencies`, which is what actually
+#             installs it.
+#
+# There is deliberately no HTTP client here. `core/supabase.py` uses
+# `urllib.request` precisely so this list can stay empty — adding `httpx` to
+# `pyproject.toml` to get it deployed would also install it for every
+# `uv sync`, and that file keeps `openpyxl` out of `dependencies` for exactly
+# that reason.

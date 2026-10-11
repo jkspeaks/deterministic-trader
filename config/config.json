@@ -1,0 +1,169 @@
+{
+  "_comment": "THE COMMAND CENTRE. Every numeric knob the deterministic core reads, in one hand-edited file. `src/cli.py` loads it from the routine's own git checkout and hands it to each module as ctx[\"config\"] — so these are the numbers the live account actually runs on. A change here takes effect on the next cycle after you commit and push. `tests/factories.config()` is derived from this file, so the suite always tests exactly what ships.",
+  "_how_to_use": "Keys are grouped below by what they control, each group prefixed with an `_`-comment (the loader strips every `_` key). `docs/TUNING.md` is the full reference: what each knob does, safe ranges, and which trading style each setting pushes toward — plus the two OTHER control surfaces (the `edge_control` runtime switches you flip from the Manual Control Action or SQL, and the `dip_recovery_config` table).",
+  "_not_here": "Play-shape thresholds are deliberately absent. §17 makes a play's shape the play's own property, so §6.1–§6.4a's triggers, windows and conviction scales — including the SURGE uptrend gate and §4.3 C's whole sector play — are module constants in `src/plays/` and cannot be retuned without a code review. Same for report.py's 24%/year bar (§1), sizing's 3–25 position clamp (§4.1), and the Dip Recovery sleeve's entry thresholds (those live in the `dip_recovery_config` Supabase table — see docs/TUNING.md). ONE EXCEPTION, and it is the `_11_play_dip` group below: its thresholds ARE here, because the owner's goal is a UI that tunes a strategy without a deploy and A is the first strategy shaped for it. It is recorded in docs/TUNING.md §4 with its reasoning, it is scoped to that group, and the play it shapes ships switched off. A second exception needs its own paragraph there.",
+
+  "_1_position_sizing": "§4.1–§4.2. HOW MANY POSITIONS AND HOW BIG. n_target = clamp(round(equity / min_position_size), 3, 25). Raise min_position_size for a more concentrated book (fewer, larger positions — each can afford a whole share of a dearer name); lower it for more, smaller slots. At 200.0 the book holds the 3-position floor up to ~$500 and reaches the 25 ceiling from ~$5,000. cash_reserve is held back from every cycle and is never touched by guard. max_new_positions_per_day caps fresh entries per day (2 by design).",
+  "min_position_size": 200.0,
+  "cash_reserve_floor": 1.00,
+  "cash_reserve_pct": 0.02,
+  "max_new_positions_per_day": 3,
+
+  "_1b_risk_sizing": "VOLATILITY-AWARE SIZING, OFF BY DEFAULT. With risk_sizing_enabled true a candidate's notional is min(its even-split slot, risk_per_trade_pct x equity / stop_distance_pct) — the same dollar loss if the thesis is wrong, whatever the name's volatility, instead of the same slot. stop_distance_pct is the position's own stop (the play's ATR multiple where it declares one, config.atr_stop_multiple otherwise) divided by the price the order will cross at. It can only CUT a slot, never raise one. Off until edge_shadow_trades says otherwise — re-sizing every position in the book is a strategy change and §4.2 P1 makes the shadow ledger the precondition for those. docs/TUNING.md §1.1.",
+  "risk_sizing_enabled": false,
+  "risk_per_trade_pct": 0.01,
+
+  "_1c_sizing_v2": "PORTFOLIO CONSTRUCTION AND POSTURE SIZING — OFF BY DEFAULT. The ladder above sizes one position; nothing asked what the SET of new positions looks like, and the answer was four buys in one cycle, three of them the same rate bet in three sector buckets. With sizing_v2_enabled true, for NEW MONEY ONLY (no exit is touched): (1) one_per_sector_day — at most one new name per sector per trading day, counting names opened today and buys still resting; the second is unsized ONE_PER_SECTOR_DAY. (2) Re-entry — a name closed at a loss is not sized for max(wash_sale_days, reentry_block_days) days; ONE rule, read by guard, sizing and the Dip Recovery watchlist through one function. At 31 and 14 the wash-sale window already contains the re-entry one, so what changes is that sizing declines the name (REENTRY_BLOCKED) and gives its slot to the next candidate, instead of sizing it and letting guard deny it. (3) Share limit — a whole-share order is capped at the shares that fit under the position cap; one share that does not fit is unsized SHARE_LIMIT. (4) Correlated with a holding — a new name in the same GICS sub-industry or the same sector as something held gets corr_holdings_budget_fraction of its slot. A PROXY: no return correlation is computed (no daily closes for held and candidate names are in the payload). (5) Posture — the slot is multiplied by the regime's size_multiplier (once: if regime_v2_enabled already applied it in the plays, not again), and total new deployment is capped so invested stays at or under the posture's target_invested_pct, top-ups included. Idle cash in NO_NEW_POSITIONS / HOLD_CASH is the intended outcome. A top-up of a held name is exempt from (1), (4) and the multiplier. Full-send (SURGE) stands aside unless the posture is TRADE_NORMALLY. With the switch off the plan is unchanged and decide records what this rule would have bought as shadow_sizing; shadow-ledger variant I_sizing_v2. NOT BEHIND THE SWITCH: the deployment record (one edge_deployment_decision row per entry-capable cycle, bought or not), the one-line funnel in the status alert, and the dead-play counter (dead_play_alert_days: a play that has put no new name into the ranked list for that many consecutive trading days is named once in the status alert). Those are logging, and they change no decision. docs/TUNING.md §1.1b.",
+  "sizing_v2_enabled": false,
+  "one_per_sector_day": true,
+  "reentry_block_days": 14,
+  "corr_holdings_budget_fraction": 0.5,
+  "dead_play_alert_days": 5,
+
+  "_2_order_execution": "§4.3–§4.4. HOW ORDERS ARE PLACED. whole_shares_only refuses any buy sizing cannot afford a full share of at basis rather than routing it fractional — flip to false to re-enable fractional buys (but fractional lots can only be sold in regular hours). whole_share_bonus is a ranking tiebreaker for the WHOLE path, never an override of play quality. min_order_notional is the broker's own floor. entry_blackout_minutes stops new entries in the last N minutes before the close.",
+  "whole_shares_only": true,
+  "whole_share_bonus": 0.05,
+  "min_order_notional": 1.00,
+  "entry_blackout_minutes": 30,
+
+  "_3_stop_the_account": "§10. THE CIRCUIT BREAKER. drawdown_halt_pct below the ratcheting high-water mark: guard denies every buy beneath it and plays flattens the book. Measured on flow-adjusted equity, so deposits/withdrawals never move the floor. The 20% is of the WHOLE account - the peak plus every dollar deposited - not of the gain alone (a 3.4% fall was reading as 18.8%). floor = mark - pct x (mark + net_deposits); with no deposits that is mark x (1 - pct). The halt lifts by itself when equity clears the floor again — nothing in code sets TRADING_ENABLED=FALSE (that is the operator's `master` switch). Lower this for a tighter leash, raise it to ride out deeper drawdowns.",
+  "drawdown_halt_pct": 0.20,
+
+  "_4_exit_discipline": "§6.5. HOW POSITIONS LEAVE. atr_stop_multiple is the primary stop, entry_price - N x ATR(14). atr_trail_multiple is the trailing one, measured from the position's own high-water price instead of its entry — the resting stop sits at whichever of the two is HIGHER, so a position that has never been up is unaffected and one that has run gives back at most this much of it. Wider than the fixed stop on purpose: a stop measured from a peak is hit by ordinary noise around that peak. protection_replace_min_pct is the no-churn band — a resting order is only cancelled and replaced once the price it should rest at moves more than this. protection_rest_kind names which ONE leg, if any, rests at the broker: 'stop', 'target', or 'none' — Robinhood reserves 100% of a position's shares against the first resting sell it accepts, so a stop and a target on the same position cannot both exist and the second is refused 'Not enough shares to sell.' 'none' (owner's call, after a resting stop sold into a dip that would otherwise have recovered) rests NOTHING: both the ATR stop and the target are `plays.exits` decisions made fresh once per cycle, same cadence, no broker-side order that can fire on an intraday wick between checks. The tradeoff is gap risk — a stop that only rests would have caught a move straight through it overnight or between cycles; 'none' does not, and only catches it at the next cycle's evaluation. 'target' (owner's standing rule, PROFIT FIRST, repeated since day 1): every whole-share position rests ONE limit sell priced ABOVE its buy price (the play's take-profit) and NOTHING else; the ATR stop is never a resting order — it is checked once per cycle by plays.exits and, only when a position is actually through it, sold with an ordinary limit order (cli._protection_orders cancels the resting target first, so the shares are free). Never set this back to 'stop'. 'none' rested nothing at all. 'stop' rested the stop only, for the opposite tradeoff: gap protection, at the cost of firing on any intraday touch even one the position would have recovered from; §6.5's TARGET was still evaluated on every cycle and placed as an ordinary limit exit when it was reached either way. fractional_exit_market_ok: when an exit fires on a fractional lot during regular hours, place a MARKET sell (the broker allows fractional market sells in regular_hours) instead of routing it to manual_required — set false to keep the hand-placement fallback for every fractional exit. Outside regular hours, and when there is no bid to price against, a fractional exit still goes to manual_required whatever this says. entry_price_divergence_pct is how far the broker's average_buy_price and the tax-lot weighted basis may disagree about a position's cost before the position is treated as having no entry price at all: §6.5's ATR stop, time stop and target stand down, nothing is placed, replaced or cancelled behind it, and manual_required puts it in front of the operator. One percent is far outside what the two feeds differ by on a healthy book and far inside the 4.5% of a basis that is actually wrong. max_adopted_hold_sessions caps §6.5's adopted-position 'a time stop never realises a loss' exemption: after this many sessions of the adopted clock the exemption ends and an underwater inherited name can time-stop out, so stranded capital is eventually freed. atr_secondary_stop_multiple and the average_down_* floor are DEPRECATED — the loss-sell news-hold and the average-down offer were removed; the keys are kept so an old runlog or a re-enable path still parses.",
+  "atr_stop_multiple": 3.0,
+  "atr_trail_multiple": 3.5,
+  "protection_replace_min_pct": 0.005,
+  "protection_rest_kind": "target",
+  "entry_price_divergence_pct": 0.01,
+  "fractional_exit_market_ok": true,
+  "max_adopted_hold_sessions": 30,
+  "atr_secondary_stop_multiple": 3.5,
+  "average_down_min_drop_pct": 2.5,
+  "average_down_min_sessions_since_fill": 1,
+  "average_down_max_open_lots": 4,
+
+  "_5_full_send": "§6.4a / §17's SURGE all-in switch is NOT here. It moved to `edge_control` so it is flippable at runtime (`surge_on`/`surge_off`) with no deploy — it is an account-wide risk switch like `trading_enabled`, not a git-checkout tuning value. When on, a name in a clean stacked-MA uptrend lets the cycle commit the ENTIRE available settled cash across up to 3 such names, ignoring §4.4's caps. See docs/TUNING.md §2.",
+
+  "_6_pre_trade_checks": "§6.0 and §6b. SOFT GATES IN FRONT OF THE HARD ONES. crowding_penalty docks a candidate's rank for each existing position in its sector — the gradient before §4.4's sector cap. mc_stop_probability_max / mc_drawdown_p95_max are the Monte Carlo pre-trade denials (opt-in — only bite when the routine wires ctx[\"mc_check\"]): deny a buy whose simulated path hits its stop >35% of the time before target, or whose worst-5% drawdown exceeds 15%. Starting points, not yet validated against live simulation.",
+  "crowding_penalty": 0.10,
+  "mc_stop_probability_max": 0.35,
+  "mc_drawdown_p95_max": 0.15,
+
+  "_7_event_windows": "§6.5, §9. HANDS OFF AROUND EVENTS. earnings_flatten_days: no entry within N sessions of a confirmed report, and a held name is flattened as the window opens. wash_sale_days: a name closed at a LOSS is not repurchased for N days (account-level — shared with the Dip Recovery sleeve; it is a repurchase policy knob, not a tax computation — the IRS window is 61 days and this covers only the after-leg on an exact symbol). wash_sale_block_unknown_basis: whether a close the system could not price still blocks — true is §9's fail-closed fallback, set false only once the broker realized read is confirmed live.",
+  "earnings_flatten_days": 2,
+  "wash_sale_days": 31,
+  "wash_sale_block_unknown_basis": true,
+
+  "_8_overnight": "§6.6. THE 24/5 SESSION GATE. overnight_max_spread_pct: an exit only places outside regular hours if the quoted spread is within this — otherwise it waits for the open. catastrophe_multiple: what makes paying up to catastrophe_multiple x the spread legal to escape a position already far past its stop.",
+  "overnight_max_spread_pct": 0.01,
+  "catastrophe_multiple": 3.0,
+
+  "_9_plumbing": "§2.4, §5.1, §12.2. RARELY TOUCHED. settled_cash_policy: 'buying_power_is_settled' trusts buying_power as spendable; set 'conservative' if the account ever stops being a cash account. universe_max_age_days: past this many missed weekly universe fetches the cycle trades held positions only and places no entries. reconcile_epsilon_*: the quantity and notional tolerances that stop six-decimal fractional rounding reading as a divergence. monitor_cadence_minutes: how far apart the 10:00-15:30 ET monitor slots the daily schedule producer publishes are (services/core/core/schedule.py). It is a COST knob, not a rule about what a monitor may do — at 30 the band is 12 slots, at 60 it is 6, and edge_should_run's state-change gate already turns most of them into a free `run: false`.",
+  "settled_cash_policy": "buying_power_is_settled",
+  "universe_max_age_days": 14,
+  "reconcile_epsilon_quantity": 1e-6,
+  "reconcile_epsilon_notional": 0.01,
+  "monitor_cadence_minutes": 30,
+  "hold_days": 10,
+
+  "_9b_cycle_budget": "HOW LONG A CYCLE MAY RUN, IN MINUTES OF WALL CLOCK, PER CYCLE TYPE. One number does two jobs. (1) Every edge_cycle_await and every edge_cycle_beat the runner makes returns elapsed_min and budget_left_min; when budget_left_min is negative the runner stops fetching earnings and fundamentals, posts what it has and goes straight to decide. Quotes and tradability are never cut — a held position with no quote cannot have its exit priced. A candidate whose earnings never arrived is simply not entered (entries fail closed on a missing earnings date); exits and protection are untouched, and a cycle is never aborted for time alone. (2) Past the same number edge_step_watchdog raises 'Cycle over budget'. The numbers are published to edge_control by the 04:30 ET schedule job (Postgres cannot read this file), so a change here takes effect the next morning, not the next cycle; the SQL carries the same defaults when nothing is published. A cycle type not named here gets 30. dip-monitor does not call edge_cycle_await, so for it only the alert applies — and its recent runs take 8-13 minutes against 15, so expect that alert occasionally. Full 9 min, monitor 5, postclose 4. docs/TUNING.md §1.9b.",
+  "cycle_budget_min": {
+    "full": 40,
+    "monitor": 20,
+    "dip-monitor": 15,
+    "postclose": 10,
+    "overnight": 20
+  },
+
+  "_10_regime": "§6.0, deterministic. WHAT KIND OF TAPE WILL THE SYSTEM TRADE. `src/regime.py` reads SPY and the eleven sector ETFs and replaces the `regime_fit` number a premarket session used to write by hand. regime_vol_max is the second leg of the no-entry condition: SPY below its 200-day AND 20-day annualized realized vol above this reads risk_off, which darks every play for the day — raise it to keep trading through volatile corrections, lower it to stand down sooner. sector_rsi_peak and sector_breakdown_pct decide which sectors are skipped before their names are even fetched: a sector ETF over the RSI ceiling is 'at a peak' and one more than sector_breakdown_pct below its own 200-day is a 'breakdown'. SURGE additionally requires risk_on (SPY above both its 50- and 200-day) — the only gate that play has ever had.",
+  "regime_vol_max": 0.35,
+  "sector_rsi_peak": 70.0,
+  "sector_breakdown_pct": 0.05,
+
+  "_10b_regime_v2": "BREADTH, FIVE POSTURES AND DIP'S SECTOR RULE — COMPUTED EVERY CYCLE, ENFORCED ONLY WHEN regime_v2_enabled IS true. It ships false: with it off the plan is exactly the plan the rule above produces, and `decide` records what this rule WOULD have done as shadow_posture / shadow_dip_would_block / shadow_entries so the two can be compared before the switch is flipped. Flipping it is an operator decision. What it does when on, to NEW ENTRIES ONLY (exits, the resting take-profit, the per-cycle stop check and top-ups of working positions are untouched): (1) DIP buys a name only if its sector ETF is at or above its own 200-day — `oversold_ok` stays a displayed state but stops being a buy permission. (2) breadth = the fraction of sector ETFs at or above their own 200-day (and 50-day); with fewer than regime_breadth_min_sectors readable it is 'unavailable' and no breadth rule fires. (3) The posture, most restrictive first: HOLD_CASH = the risk_off tape above. NO_NEW_POSITIONS = SPY below its 200-day, or breadth below posture_no_new_breadth_200, or SPY more than posture_no_new_drawdown_52w off its 52-week high with realized vol over posture_no_new_drawdown_rv20. HIGH_CONVICTION_ONLY = breadth below posture_high_conviction_breadth_200, or SPY under its 50-day with 50-day breadth below posture_high_conviction_breadth_50, or equal-weight lagging SPY by more than posture_high_conviction_rsp_lag_1m over a month; DIP then also needs its sector in the upper half on 1M/3M strength vs SPY. REDUCED_SIZE = breadth below posture_normal_breadth_200, or realized vol at or over posture_reduced_rv20, or a macro-release day, or SPY under its 50-day. Otherwise TRADE_NORMALLY. SURGE runs only in TRADE_NORMALLY. posture_size_multiplier scales each new entry; posture_target_invested_pct is recorded for P3 and caps nothing yet. The 52-week drawdown (signed: -0.08 is 8% off the high) and RSP-vs-SPY (RSP's 1-month return minus SPY's; negative is equal-weight lagging) are derived by the pre-market job from bars it already fetches, RSP being the one added symbol. THE DIP RECOVERY SLEEVE READS THIS SAME GROUP under this same switch, through the same functions, with one extra leg: in REDUCED_SIZE it also refuses the weakest third of sectors on relative strength. docs/TUNING.md §1.10b.",
+  "regime_v2_enabled": false,
+  "regime_breadth_min_sectors": 8,
+  "posture_normal_breadth_200": 0.60,
+  "posture_high_conviction_breadth_200": 0.45,
+  "posture_high_conviction_breadth_50": 0.40,
+  "posture_no_new_breadth_200": 0.30,
+  "posture_reduced_rv20": 0.20,
+  "posture_high_conviction_rsp_lag_1m": 0.02,
+  "posture_no_new_drawdown_52w": 0.08,
+  "posture_no_new_drawdown_rv20": 0.25,
+  "posture_size_multiplier": {
+    "TRADE_NORMALLY": 1.0,
+    "REDUCED_SIZE": 0.5,
+    "HIGH_CONVICTION_ONLY": 0.5,
+    "NO_NEW_POSITIONS": 0.0,
+    "HOLD_CASH": 0.0
+  },
+  "posture_target_invested_pct": {
+    "TRADE_NORMALLY": 0.80,
+    "REDUCED_SIZE": 0.50,
+    "HIGH_CONVICTION_ONLY": 0.30,
+    "NO_NEW_POSITIONS": 0.0,
+    "HOLD_CASH": 0.0
+  },
+
+  "_10c_dip_regime_table": "WHAT DIP MAY DO IN EACH POSTURE, AS A TABLE - OFF BY DEFAULT, AND AS SHIPPED EVERY ROW IS EXACTLY THE P1 RULE ABOVE, so switching it on changes nothing until a row is edited. It exists so that the answer to 'should DIP buy in this posture, at what size, under which sector tests' is a config edit and not a deploy. It is read only when regime_v2_enabled AND dip_regime_table_enabled are both true, and only for NEW core DIP entries: exits, the resting take-profit, the per-cycle stop check, top-ups, every other play and the Dip Recovery sleeve never read it. Per posture: dip_allowed (false = SKIP_REGIME); dip_size_multiplier (multiplies the entry's size; clamped to 0..1, so a row can lower a size and never raise one); require_sector_above_200d (P1's sector rule: the name's sector ETF must be trend_ok, i.e. at or above its own 200-day and not at a peak); require_sector_rs_upper_half (the sector must rank in the upper half on 1M/3M strength vs SPY; no reading refuses, as in HIGH_CONVICTION_ONLY today); max_rsi (null = no ceiling; a number refuses a dip whose RSI is above it, SKIP_DIP_TABLE_RSI). HOLD_CASH cannot be opened: the risk-off tape darks every play before the table is read, and the loader refuses a row that says otherwise. If sizing_v2_enabled is also on, posture_target_invested_pct still caps total deployment, so opening NO_NEW_POSITIONS here does nothing while that posture's target is 0. Whichever way the switches are set, decide records the day's row and every DIP candidate the table would treat differently from P1 as shadow_dip_table. Read the verdict before editing a row. docs/TUNING.md 1.10c.",
+  "dip_regime_table_enabled": false,
+  "dip_regime_table": {
+    "TRADE_NORMALLY": {"dip_allowed": true, "dip_size_multiplier": 1.0, "require_sector_above_200d": true, "require_sector_rs_upper_half": false, "max_rsi": null},
+    "REDUCED_SIZE": {"dip_allowed": true, "dip_size_multiplier": 0.5, "require_sector_above_200d": true, "require_sector_rs_upper_half": false, "max_rsi": null},
+    "HIGH_CONVICTION_ONLY": {"dip_allowed": true, "dip_size_multiplier": 0.5, "require_sector_above_200d": true, "require_sector_rs_upper_half": true, "max_rsi": null},
+    "NO_NEW_POSITIONS": {"dip_allowed": false, "dip_size_multiplier": 0.0, "require_sector_above_200d": true, "require_sector_rs_upper_half": false, "max_rsi": null},
+    "HOLD_CASH": {"dip_allowed": false, "dip_size_multiplier": 0.0, "require_sector_above_200d": true, "require_sector_rs_upper_half": false, "max_rsi": null}
+  },
+
+  "_11_entry_funnel": "§6.2, §4.3. GETTING PROPOSED AND GETTING FILLED. dip_trend_band_pct widens DIP's 200-day gate: a name qualifies at price >= SMA200 x (1 - band), so an ordinary 2-3% pullback reads as a dip rather than a 'falling knife' reject (0.03 = up to 3% under the 200-day). It is a play-shape number that lives here by exception — widen it for more DIP candidates on a soft tape, take it to 0.0 for the old strict 'price > SMA200' rule. entry_limit_offset_atr marks a WHOLE entry's limit up from the ask by N x ATR(14), rounded to the cent, so the limit is marketable and actually fills (0.10). entry_resubmit_after_min: an unfilled entry order older than this many minutes that is still inside the entry window is cancelled at the next reconcile and its symbol re-enters the candidate set for the following cycle.",
+  "dip_trend_band_pct": 0.03,
+  "entry_limit_offset_atr": 0.10,
+  "entry_resubmit_after_min": 30,
+
+  "_11d_catalyst_rvol": "CATALYST'S VOLUME TEST, TIME-NORMALISED — OFF BY DEFAULT. §6.3 confirms an event with a 3% move on 1.5x volume, and the volume leg divides today's volume SO FAR by a FULL DAY's average, so at the 09:40 cycle it cannot reach 1.5x (HPE, refused). With catalyst_rvol_time_normalised true the multiple is scaled to a full session — rvol_tnorm = (volume / average_volume) x (session_minutes / minutes_elapsed), session 390 or 210 on a half-day, minutes counted from 09:30 ET to the cycle's clock and clamped to the session — and the same 1.5x is applied to that. Before catalyst_min_minutes of the session the play refuses outright (SKIP_TOO_EARLY_FOR_RVOL): a 14-minute print scaled 28x is noise, not a reading. CONSEQUENCE: at 30 the 09:40 full cycle still cannot fire CATALYST; the monitor cycles can. The 3% move is unchanged. Both figures (rvol_raw, rvol_tnorm) and what each rule would have said are recorded on every CATALYST verdict whichever way the switch is, and the shadow ledger runs it as variant H_catalyst_rvol_tnorm. This is one of two play-shape values that live in config (see _11_play_dip): the multiple and the move stay module constants. docs/TUNING.md §1.11d.",
+  "catalyst_rvol_time_normalised": false,
+  "catalyst_min_minutes": 30,
+
+  "_11e_dip_recovery_relvol": "THE DIP RECOVERY SLEEVE'S RELATIVE-VOLUME GATE, TIME-NORMALISED — OFF BY DEFAULT. The sleeve requires relative volume >= relvol_min (1.2x, in the dip_recovery_config table) and measured it the way CATALYST did: volume so far against a full-day average, at the 11:47 and 12:47 ET ticks, where 1.2x means more than three times normal volume by late morning. With dip_recovery_relvol_time_normalised true the multiple is scaled to a full session before relvol_min is applied, and refused as SKIP_TOO_EARLY_FOR_RVOL before dip_recovery_relvol_min_minutes. TURNING THIS ON IS WHAT WOULD LET THE SLEEVE TRADE FOR THE FIRST TIME — an operator decision, not a default. Whichever way it is set, every relvol rejection carries both figures and every proposal's factors carry relvol_tnorm. The flag lives here rather than in dip_recovery_config because it changes how a threshold is MEASURED, not the threshold. docs/TUNING.md §1.11d.",
+  "dip_recovery_relvol_time_normalised": false,
+  "dip_recovery_relvol_min_minutes": 30,
+
+  "_11c_scope_caps": "HOW MANY NAMES ONE CYCLE MAY PULL LIVE DATA FOR. It is deliberately NOT the Dip Recovery sleeve's max_scan_survivors: this list feeds the core DIP play, a different strategy. resolve_max_symbols is the ceiling on everything `resolve` hands the runner: held positions and sector ETFs are never trimmed, only discovery names, DIP-scan-only names first and event triggers (least recent first) after; an alert fires whenever anything is trimmed. Lower either to make cycles cheaper; raise to scan wider. docs/TUNING.md.",
+  "dip_survivor_cap": 30,
+  "resolve_max_symbols": 50,
+
+  "_11_play_dip": "THE PULLBACK-IN-UPTREND RESHAPE OF DIP, OFF BY DEFAULT — and THE ONE PLACE A PLAY'S SHAPE LIVES IN CONFIG. §17 makes a play's trigger the play's own property and every other play's thresholds are module constants; this group is an explicit, documented exception (docs/TUNING.md §4) because the owner's goal is a UI that tunes a strategy without a deploy, and A is the first strategy shaped for it. The exception is scoped to these keys and buys nothing anywhere else. With play_dip_pullback_enabled true, DIP stops being §6.2 (RSI <= 30 + the 200-day band) and becomes A: RSI <= dip_pullback_rsi_max, price inside -dip_pullback_sma50_band_pct..0% of the 50-day (a SHALLOW give-back — a name far under its 50-day has already broken), still within dip_trend_band_pct of the 200-day, a sector today's regime is not refusing, average dollar volume >= dip_pullback_min_adv_usd, and a quoted spread inside dip_pullback_max_spread_pct. Its target stops being the flat 6% DIP_TARGET_PCT and becomes dip_pullback_target_stop_multiple x the stop distance. Leave it false until edge_shadow_trades says otherwise: the ledger runs it as variant A_dip_pullback. src/plays/dip.py.",
+  "play_dip_pullback_enabled": false,
+  "dip_pullback_rsi_max": 35.0,
+  "dip_pullback_sma50_band_pct": 0.05,
+  "dip_pullback_min_adv_usd": 20000000.0,
+  "dip_pullback_max_spread_pct": 0.002,
+  "dip_pullback_target_stop_multiple": 1.5,
+
+  "_11b_play_sector": "THE SECTOR-OVERSOLD ROTATION PLAY, OFF BY DEFAULT. One key and one key only: unlike §4.3 A above, this play keeps its shape in code per §17 (src/plays/sector.py — RSI <= 30 on the ETF, above its own 200-day, SPY RSI > 40; exit RSI >= 55 or +4%, stop 1.5xATR, time 10). With play_sector_enabled true the eleven sector ETFs in config/etfs.json are proposed on their own oscillator, and src/candidates.py adds the qualifying ones to the cycle's ETF fetch list so their quotes and ATR actually arrive. Note it is deliberately absent from regime.PLAY_IDS, so a risk-off tape does NOT dark it — §4.3 C's market condition is literally 'Any', which is the most aggressive thing about the play and part of what the ledger is measuring. Leave it false until edge_shadow_trades says otherwise: variant F_sector_play.",
+  "play_sector_enabled": false,
+
+  "_12_state_change_gate": "WHAT WAKES A 30-MINUTE MONITOR. `services/core/api/watch.py` runs every 30 min in market hours on one Twelve Data quote batch and writes `edge_control.needs_session` instead of running the full core. watch_band_pct is the only tunable: a held whole-share position's live price within this fraction of its `edge_protection` stop or target price sets needs_session, as does a whole-share position with no resting protection row at all. Narrow it to wake sessions only very close to a level (cheaper, more reaction lag); widen it to wake earlier (costlier, less lag). `edge_should_run` reads needs_session, not this file directly — it never becomes stale between deploys the way a duplicated SQL constant would.",
+  "watch_band_pct": 0.01,
+
+  "_13_shadow_only": "THREE KEYS THAT ARE DELIBERATELY NOT SET HERE. `services/core/core/shadow.py` replays stored cycles against rule variants, and a variant is nothing but a config override handed to the same modules the live account runs. Each of these keys is read with a default that is exactly today's behaviour, so leaving it out of this file IS the shipped rule: `crowding_mode` ('tiebreak', the shipped §6.0 reading; 'score' is the retired one that could erase a candidate), `force_exit_items` (['4.02']), `no_trade_conditions` (false; true switches on §4.3 F's no-trade gate in `src/plays/no_trade.py`). Setting one here would move the live account onto a rule the shadow ledger exists to test first — do not, until `edge_shadow_trades` says so. docs/TUNING.md §5 is the reference.",
+
+  "_14_near_flat_exit": "ANNOTATION ONLY — changes no decision. A closing trade is near-flat when abs(realized_gain) < near_flat_max_dollars AND abs(realized_gain) / cost_basis < near_flat_max_pct, cost_basis being quantity x price - realized_gain. Both, not either: on an account this size 'under $1' alone flags every modest winner. A +$0.08 close on a $155.60 basis (0.051%) is the case it exists for. Near-flat closes are counted per play (edge_play_state.near_flat_trades) and shown on the weekly scorecard as '(N near-flat)' — never subtracted, never hidden. src/reconcile.py::_realized_trades; docs/TUNING.md §1.13.",
+  "near_flat_max_dollars": 1.00,
+  "near_flat_max_pct": 0.001,
+
+  "_15_core_sleeve": "Code src/core_sleeve.py. IDLE CASH HELD IN ONE BROAD ETF. With core_sleeve_enabled true, each entry-capable cycle buys whole shares of core_symbol with the settled cash the plays did not take, keeping back the cash reserve plus core_buffer_slots position slots, until the sleeve is core_cap_pct of equity. Its one resting order is a limit SELL core_target_pct above its buy price. IT HAS NO STOP OF ANY KIND: no resting stop, no per-cycle ATR check, no time stop. It never sells to fund a play; the cap is what leaves cash for them. It takes no play slot and is outside the position and sector caps; core_cap_pct is its cap and guard enforces it (CORE_CAP_EXCEEDED). The loss re-entry window and the drawdown halt apply to it as to everything. With the switch off the same arithmetic is recorded on every decide under core_sleeve and nothing is ordered. WHAT SWITCHING IT ON CHANGES FOR THE PLAYS: they are sized from settled cash, so once the sleeve has taken its share they have the buffer and whatever a sale frees. core_symbol is listed among the broad ETFs (Broad Market) automatically while the switch is on; config/etfs.json is not edited. Read docs/TUNING.md 1.15 before changing a value.",
+  "core_sleeve_enabled": true,
+  "core_symbol": "SPYM",
+  "core_cap_pct": 0.50,
+  "core_buffer_slots": 1,
+  "core_target_pct": 0.20,
+
+  "_16_dip_entries": "Stop DIP entries with a switch, not a deletion. TRUE AS SHIPPED, WHICH IS TODAY'S BEHAVIOUR. Set dip_entries_enabled to false and DIP puts no new money to work: no new DIP position, no top-up of a held DIP position (both recorded as skipped, with this key named as the reason), and cli.candidates carries no DIP row, so the runner fetches nothing for the scanner's survivors. WHAT IT DOES NOT TOUCH: a DIP position already held keeps its exits, its resting limit sell above its buy price and its per-cycle check exactly as they are; reconcile still binds an inherited name to DIP where DIP's trigger describes it; every other play; the Dip Recovery sleeve, which has its own switch (dip_recovery_enabled, in the database). Only an explicit false stops it; an absent key reads as true. docs/TUNING.md 1.16.",
+  "dip_entries_enabled": true,
+
+  "_17_shelved_plays": "CATALYST AND MACRO ARE SHELVED: OFF, EACH BEHIND ITS OWN KEY. FALSE AS SHIPPED. While a key is not true that play proposes nothing, tops up nothing, discovers no triggers (so the runner fetches nothing for it) and is not counted as a dead play. Only an explicit true brings it back; an absent key reads as off; anything that is not true or false stops this file from loading. Bring one back only with a new test of the play behind it: CATALYST beat its sector control but not a name that moved the same amount with no filing, and MACRO could not be tested at all. A position already held under either play keeps its exit terms and its resting limit sell above its buy price. The catalyst-confirmed target exit and the restatement veto read the same events file and are not affected. PEAD AND SURGE ARE RETIRED AND HAVE NO KEY: they are off in code (plays.RETIRED in src/plays/core.py), and surge on confirm is refused (ops/verbs.json). Code: plays.play_off.",
+  "play_catalyst_enabled": false,
+  "play_macro_enabled": false
+}

@@ -1,0 +1,25 @@
+{
+  "_captured": "2026-08-20, one real Monte Carlo bootstrap call — a genuine round trip, not a hand-typed guess at the payload shape. See tests/test_guard_mc_contract.py.",
+  "request": {
+    "ticker": "F",
+    "entry": 15.00,
+    "stop": 14.10,
+    "target": 16.50,
+    "return_series": [0.012, -0.008, 0.003, -0.015, 0.021, 0.004, -0.002, 0.009, -0.011, 0.006, 0.014, -0.019, 0.002, 0.008, -0.006, 0.013, -0.004, 0.001, 0.017, -0.009, 0.005, -0.013, 0.010, 0.002, -0.007, 0.011, -0.003, 0.006, -0.010, 0.004]
+  },
+  "response": {
+    "ticker": "F",
+    "p_stop": 0.0507,
+    "p_target": 0.089,
+    "drawdown_p5": 0.013,
+    "drawdown_p50": 0.0318,
+    "drawdown_p95": 0.0704,
+    "n_paths": 3000,
+    "horizon_days": 20
+  },
+  "error_response": {
+    "_captured": "same session, a 30-value request cut to 2 to force the floor check",
+    "status": 400,
+    "body": {"error": "need at least 20 finite daily returns, got 2"}
+  }
+}

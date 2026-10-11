@@ -1,0 +1,99 @@
+{
+ "generated_at": "2026-10-06T02:50:29Z",
+ "months": [
+  {
+   "absent": {
+    "below_200_session_average": 288,
+    "no_200_session_average": 2
+   },
+   "as_of": "2026-09-30",
+   "control": [
+    {
+     "for": "SNDK",
+     "sector": "Information Technology",
+     "symbol": "PLTR"
+    },
+    {
+     "for": "MU",
+     "sector": "Information Technology",
+     "symbol": "ANET"
+    },
+    {
+     "for": "STT",
+     "sector": "Financials",
+     "symbol": "HOOD"
+    },
+    {
+     "for": "JNJ",
+     "sector": "Health Care",
+     "symbol": "CAH"
+    },
+    {
+     "for": "KO",
+     "sector": "Consumer Staples",
+     "symbol": "SJM"
+    },
+    {
+     "for": "LITE",
+     "sector": "Information Technology",
+     "symbol": "HPE"
+    },
+    {
+     "for": "ROST",
+     "sector": "Consumer Discretionary",
+     "symbol": "ABNB"
+    }
+   ],
+   "eligible": 212,
+   "members_with_bars": 502,
+   "month": "2026-10",
+   "picks": [
+    {
+     "score": 2.8042,
+     "sector": "Information Technology",
+     "symbol": "SNDK"
+    },
+    {
+     "score": 2.7685,
+     "sector": "Information Technology",
+     "symbol": "MU"
+    },
+    {
+     "score": 2.1864,
+     "sector": "Financials",
+     "symbol": "STT"
+    },
+    {
+     "score": 2.1053,
+     "sector": "Health Care",
+     "symbol": "JNJ"
+    },
+    {
+     "score": 2.0456,
+     "sector": "Consumer Staples",
+     "symbol": "KO"
+    },
+    {
+     "score": 1.9848,
+     "sector": "Information Technology",
+     "symbol": "LITE"
+    },
+    {
+     "score": 1.9544,
+     "sector": "Consumer Discretionary",
+     "symbol": "ROST"
+    }
+   ],
+   "result": null
+  }
+ ],
+ "rule": {
+  "lookback": 252,
+  "seed": 20261005,
+  "skip": 21,
+  "source": "src/leaders.py",
+  "top_n": 7,
+  "traded": false,
+  "trend_sessions": 200
+ }
+}

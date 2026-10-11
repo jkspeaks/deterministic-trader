@@ -1,0 +1,17 @@
+{
+  "candidates": [
+    {
+      "symbol": "F",
+      "play_id": "CATALYST",
+      "conviction": 0.5,
+      "conviction_raw": 0.5,
+      "regime_fit": 1.0,
+      "crowding_penalty": 0.0,
+      "expected_holding_days": 7,
+      "notional_multiplier": 0.75,
+      "detail": "event confirmed by a +5.0% move on 1.6x average volume",
+      "full_deployment": false
+    }
+  ],
+  "skipped": []
+}

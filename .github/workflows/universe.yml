@@ -1,0 +1,86 @@
+name: Universe
+
+# §5.1's weekly constituent fetch. Writes data/universe.json and commits it,
+# because a settled design decision makes the git checkout the CI→routine data
+# channel: an early probe proved the routine sandbox reaches github.com and
+# nothing else, so a commit is the only delivery mechanism that both ends can
+# see.
+#
+# This is the one job where GitHub's scheduling delay does not matter. Measured
+# on the operator's other private repo across 2026-07-30/31, every scheduled
+# run landed 57-114 minutes late. §5.1 tolerates a 14-day-old snapshot, so two
+# hours is invisible here — which is exactly why the weekly job stayed on
+# Actions while the alert relay did not.
+
+on:
+  schedule:
+    # Saturday 09:17 UTC. Deliberately not on the hour: the same measurements
+    # showed top-of-hour crons waiting 82-114 minutes against 57-84 for
+    # half-hour slots, so :17 buys real time for nothing. Saturday because the
+    # issuer file settles after Friday's close and no cycle runs on a weekend,
+    # so a delayed run still lands days before it is read.
+    - cron: "17 9 * * 6"
+
+  workflow_dispatch:
+
+concurrency:
+  # A delayed weekly run must never overlap a manual one — both commit the same
+  # file and the loser force-pushes over the winner.
+  group: universe
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  universe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history. The default depth-1 clone cannot be rebased onto a
+          # moved remote, and the events job moves it every half hour.
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Fetch constituents
+        # Non-zero means neither source was usable and the previous snapshot
+        # stands. That is the designed outcome, not a silent one: the run goes
+        # red, and the snapshot ages toward §5.1's 14-day limit where
+        # `universe.resolve` turns entries off by itself.
+        #
+        # Also mirrors the snapshot into `edge_data_files` so the runner can
+        # read it live rather than through a Vercel rebuild; best-effort, never
+        # fails this step.
+        run: uv run --group ci python -m ci.fetch_universe
+        env:
+          EDGE_SUPABASE_URL: ${{ secrets.EDGE_SUPABASE_URL }}
+          EDGE_SUPABASE_KEY: ${{ secrets.EDGE_SUPABASE_KEY }}
+
+      - name: Commit the snapshot
+        run: |
+          set -euo pipefail
+          git config user.name  "<owner>"
+          git config user.email "you@example.com"
+          if git diff --quiet -- data/universe.json; then
+            echo "constituents unchanged; nothing to commit"
+            exit 0
+          fi
+          git add data/universe.json
+          git commit -m "data: universe snapshot $(date -u +%Y-%m-%d)"
+          # Rebase before pushing: the events job commits to the same branch
+          # every half hour and will usually have moved main since checkout.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Check the sector vocabulary
+        # After the commit on purpose: a sector the operator's rotation cannot
+        # name turns the run red, but the fresh snapshot has already landed —
+        # refusing to publish over it would age the universe toward the 14-day
+        # limit that turns entries off. See ci/check_sectors.py.
+        run: uv run --group ci python -m ci.check_sectors

@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "account_number": "<your-cash-account-number>",
+      "type": "cash",
+      "unsettled_funds": "0.00",
+      "buying_power": "569.61"
+    },
+    {
+      "account_number": "<your-margin-account-number>",
+      "type": "margin",
+      "unsettled_funds": "0.00",
+      "buying_power": "0.00"
+    }
+  ]
+}

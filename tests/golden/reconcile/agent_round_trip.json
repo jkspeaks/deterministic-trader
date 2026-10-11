@@ -1,0 +1,94 @@
+{
+  "findings": [],
+  "positions": [
+    {
+      "symbol": "PFE",
+      "play_id": "PEAD",
+      "quantity": 2.0,
+      "entry_price": 25.03,
+      "sessions_held": 0,
+      "adopted": false,
+      "adopted_on": null,
+      "last_fill_on": "2026-08-03",
+      "last_fill_price": 25.03,
+      "open_lot_count": 1,
+      "high_since_entry": 25.03,
+      "shares_available_for_sells": null,
+      "shares_held_for_sells": null,
+      "entry_price_source": "tax_lots",
+      "entry_anchored_on": "2026-08-03",
+      "entry_price_disputed": false
+    }
+  ],
+  "cancels": [],
+  "control_updates": {
+    "positions_held": 1,
+    "has_whole_share_position": true,
+    "unreconciled": false,
+    "pending_events": false,
+    "high_water_mark": 249.1,
+    "high_water_mark_equity": 249.1,
+    "high_water_mark_as_of": "2026-08-03",
+    "entries_blocked": false,
+    "entries_blocked_reason": null,
+    "entries_blocked_until_cleared": false,
+    "divergence_streak": 0,
+    "open_order_cycles": {},
+    "retired_order_ids": [
+      "a1b2",
+      "c3d4"
+    ],
+    "resubmit_candidates": {
+      "trading_day": "2026-08-03",
+      "triggers": []
+    }
+  },
+  "loss_closes": [
+    {
+      "symbol": "F",
+      "close_date": "2026-08-03",
+      "loss_amount": 1.25,
+      "basis_unknown": false
+    }
+  ],
+  "play_state_updates": {
+    "DIP": {
+      "closed_trades": 5
+    }
+  },
+  "symbol_lock_claims": [
+    "PFE"
+  ],
+  "symbol_lock_releases": [],
+  "fills_quality": [
+    {
+      "symbol": "F",
+      "side": "sell",
+      "intended_qty": 1.0,
+      "filled_qty": 1.0,
+      "limit_price": null,
+      "avg_fill_price": 13.75,
+      "minutes_to_fill": null
+    },
+    {
+      "symbol": "PFE",
+      "side": "buy",
+      "intended_qty": 2.0,
+      "filled_qty": 2.0,
+      "limit_price": null,
+      "avg_fill_price": 25.03,
+      "minutes_to_fill": null
+    }
+  ],
+  "protection_plan": {
+    "place": [],
+    "replace": [],
+    "keep": [],
+    "notes": [
+      "PFE: no resting stop — entry price or ATR is missing (or the entry price is disputed between the broker's average and its tax lots), and §10.1's protection is not a number to guess at"
+    ],
+    "desired": []
+  },
+  "realized_trades": [],
+  "reason": "1 position reconciled, 0 findings, 0 cancels"
+}

@@ -1,0 +1,111 @@
+{
+  "ladder": {
+    "equity_total": 236.0,
+    "n_target": 3,
+    "open_slots": 3,
+    "cash_reserve": 4.72,
+    "deployable": 231.28,
+    "notional": 77.093333,
+    "position_cap": 94.4,
+    "sector_cap": 118.0
+  },
+  "entries": [
+    {
+      "symbol": "F",
+      "play_id": "DIP",
+      "path": "WHOLE",
+      "quantity": 5,
+      "price": 14.68,
+      "price_source": "ask",
+      "limit_price": 14.68,
+      "notional": 73.4,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "sessions_eligible": [
+        "regular_hours",
+        "extended_hours"
+      ],
+      "resting_stop_eligible": true,
+      "conviction": 0.88,
+      "rank_bonus": 0.05,
+      "rank_score": 0.93,
+      "notional_multiplier": 1.0,
+      "full_deployment": false
+    },
+    {
+      "symbol": "NVDA",
+      "play_id": "DIP",
+      "path": "FRACTIONAL",
+      "quantity": 0.387598,
+      "price": 198.9,
+      "price_source": "ask",
+      "limit_price": null,
+      "notional": 77.093242,
+      "order_type": "market",
+      "session": "regular_hours",
+      "sessions_eligible": [
+        "regular_hours"
+      ],
+      "resting_stop_eligible": false,
+      "conviction": 0.92,
+      "rank_bonus": 0.0,
+      "rank_score": 0.92,
+      "notional_multiplier": 1.0,
+      "full_deployment": false
+    },
+    {
+      "symbol": "PFE",
+      "play_id": "DIP",
+      "path": "WHOLE",
+      "quantity": 3,
+      "price": 25.03,
+      "price_source": "ask",
+      "limit_price": 25.03,
+      "notional": 75.09,
+      "order_type": "limit",
+      "session": "regular_hours",
+      "sessions_eligible": [
+        "regular_hours",
+        "extended_hours"
+      ],
+      "resting_stop_eligible": true,
+      "conviction": 0.85,
+      "rank_bonus": 0.05,
+      "rank_score": 0.9,
+      "notional_multiplier": 1.0,
+      "full_deployment": false
+    }
+  ],
+  "unsized": [
+    {
+      "symbol": "BAC",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "3 of 3 slots are held; BAC would be the n+1-th position"
+    },
+    {
+      "symbol": "AMD",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "3 of 3 slots are held; AMD would be the n+1-th position"
+    },
+    {
+      "symbol": "T",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "3 of 3 slots are held; T would be the n+1-th position"
+    },
+    {
+      "symbol": "INTC",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "3 of 3 slots are held; INTC would be the n+1-th position"
+    },
+    {
+      "symbol": "SOFI",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "3 of 3 slots are held; SOFI would be the n+1-th position"
+    },
+    {
+      "symbol": "SPY",
+      "reason": "NO_OPEN_SLOTS",
+      "message": "3 of 3 slots are held; SPY would be the n+1-th position"
+    }
+  ]
+}

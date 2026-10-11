@@ -1,0 +1,33 @@
+# The core function deploys from the repository root so `import src` resolves.
+# Everything the function does not read at runtime stays out of the upload.
+#
+# This is belt; `vercel.json`'s `excludeFiles` is braces. `.vercelignore`
+# filters what is *uploaded*, `excludeFiles` filters what goes into the
+# function *bundle* — and only the second applies to a local `vercel build`,
+# which is how `.env.local` (the Vercel OIDC token) was found sitting in a
+# bundle here. Keep the two lists agreeing.
+#
+# `config/` and `data/` are deliberately NOT here: `cli.load_config` reads the
+# first and `run.CHECKOUT_DATA` the second, both out of the deployment.
+#
+# `.git` is deliberately NOT here either: `vercel.json`'s `ignoreCommand` runs
+# `git diff HEAD^ HEAD` against the build filesystem, and `.vercelignore` is
+# applied before that command runs. Stripping `.git` here made every deploy
+# since d325890 fail with "Not a git repository". `excludeFiles` on each
+# function still keeps `.git/**` out of the deployed bundle.
+.github
+.claude
+.venv
+.pytest_cache
+.ruff_cache
+.coverage
+.env
+.env.local
+tests
+ci
+ops
+db
+docs
+services/core/tests
+uv.lock
+README.md

@@ -1,0 +1,31 @@
+{
+  "_source": "Twelve Data /eps_revisions for AAPL, fetched 2026-10-05 through the operator's Twelve Data connector (get_analyst_data, data_type eps_revisions). Pasted as it came; note the rows arrive under `eps_revision`, singular.",
+  "meta": {
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "currency": "USD",
+    "exchange_timezone": "America/New_York",
+    "exchange": "NASDAQ",
+    "mic_code": "XNGS",
+    "type": "Common Stock"
+  },
+  "eps_revision": [
+    {
+      "date": "2026-12-31",
+      "period": "next_quarter",
+      "up_last_week": 0,
+      "up_last_month": 1,
+      "down_last_week": 0,
+      "down_last_month": 2
+    },
+    {
+      "date": "2027-09-30",
+      "period": "next_year",
+      "up_last_week": 3,
+      "up_last_month": 5,
+      "down_last_week": 0,
+      "down_last_month": 4
+    }
+  ],
+  "status": "ok"
+}

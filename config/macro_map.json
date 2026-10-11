@@ -1,0 +1,27 @@
+{
+  "_comment": "Design v3 §6.4. The surprise→sector mapping for the MACRO play. §6.4 is explicit that this is 'a heuristic, not a fitted model, and it lives in a config file precisely so it can be revised or the play retired without touching code' — MACRO is named as the first play to kill if attribution is unkind, and killing it is deleting this file's contents, not editing plays.py.",
+  "_direction": "`above` is the tilt when the release printed above consensus, `below` when it printed under. A release absent from this file produces no MACRO candidate at all, which is the intended way to retire a series.",
+  "_targets_are": "Sector SPDRs only, and only the eleven in config/etfs.json `sector`. §6.4 expresses macro through the sleeve and nothing else; universe.py independently refuses a macro target outside the rotation set.",
+  "releases": {
+    "CPI": {
+      "_why": "Hot inflation lifts rates: energy is the real-asset hedge and financials earn the curve. Long-duration tech and rate-sensitive discretionary carry the cost.",
+      "above": ["XLE", "XLF"],
+      "below": ["XLK", "XLY"]
+    },
+    "PCE": {
+      "_why": "The Fed's preferred gauge, so it reads as CPI does, with staples standing in for the defensive leg.",
+      "above": ["XLE", "XLP"],
+      "below": ["XLK", "XLY"]
+    },
+    "FOMC": {
+      "above": ["XLF", "XLP"],
+      "below": ["XLK", "XLRE"],
+      "_why": "A hawkish surprise steepens funding costs — banks over borrowers. Real estate is the most rate-levered sector in the sleeve."
+    },
+    "NFP": {
+      "_why": "A strong print is a cyclical print: industrials and financials over the bond-proxy defensives.",
+      "above": ["XLI", "XLF"],
+      "below": ["XLU", "XLP"]
+    }
+  }
+}

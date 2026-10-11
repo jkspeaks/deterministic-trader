@@ -1,0 +1,562 @@
+{
+  "_comment": "Short codes for edge_control.active_sectors: the eleven GICS sectors, every GICS sub-industry in the S&P 500 (from the Wikipedia constituents table ci/fetch_universe.py already fetches weekly) and a few combined baskets. A stock passes the rotation if its sector OR its sub-industry is active. A sector ETF (XLK...) passes only when its whole sector is active. ops/verbs.json carries a copy for the web host (asserted equal by test); ci/check_sectors.py goes red when the weekly snapshot names a sub-industry this file does not, or drops one it does.",
+  "sectors": {
+    "EN": "Energy",
+    "FIN": "Financials",
+    "IT": "Information Technology",
+    "HC": "Health Care",
+    "IND": "Industrials",
+    "CD": "Consumer Discretionary",
+    "CS": "Consumer Staples",
+    "UTL": "Utilities",
+    "MAT": "Materials",
+    "RE": "Real Estate",
+    "COM": "Communication Services"
+  },
+  "sub_industries": {
+    "IOG": {
+      "name": "Integrated Oil & Gas",
+      "sector": "Energy"
+    },
+    "OFS": {
+      "name": "Oil & Gas Equipment & Services",
+      "sector": "Energy"
+    },
+    "EP": {
+      "name": "Oil & Gas Exploration & Production",
+      "sector": "Energy"
+    },
+    "REF": {
+      "name": "Oil & Gas Refining & Marketing",
+      "sector": "Energy"
+    },
+    "MID": {
+      "name": "Oil & Gas Storage & Transportation",
+      "sector": "Energy"
+    },
+    "AMGT": {
+      "name": "Asset Management & Custody Banks",
+      "sector": "Financials"
+    },
+    "CFIN": {
+      "name": "Consumer Finance",
+      "sector": "Financials"
+    },
+    "DBNK": {
+      "name": "Diversified Banks",
+      "sector": "Financials"
+    },
+    "EXCH": {
+      "name": "Financial Exchanges & Data",
+      "sector": "Financials"
+    },
+    "IBRK": {
+      "name": "Insurance Brokers",
+      "sector": "Financials"
+    },
+    "IBNK": {
+      "name": "Investment Banking & Brokerage",
+      "sector": "Financials"
+    },
+    "LIFE": {
+      "name": "Life & Health Insurance",
+      "sector": "Financials"
+    },
+    "HOLD": {
+      "name": "Multi-Sector Holdings",
+      "sector": "Financials"
+    },
+    "MINS": {
+      "name": "Multi-line Insurance",
+      "sector": "Financials"
+    },
+    "PC": {
+      "name": "Property & Casualty Insurance",
+      "sector": "Financials"
+    },
+    "RBNK": {
+      "name": "Regional Banks",
+      "sector": "Financials"
+    },
+    "REIN": {
+      "name": "Reinsurance",
+      "sector": "Financials"
+    },
+    "PAY": {
+      "name": "Transaction & Payment Processing Services",
+      "sector": "Financials"
+    },
+    "APPS": {
+      "name": "Application Software",
+      "sector": "Information Technology"
+    },
+    "CEQ": {
+      "name": "Communications Equipment",
+      "sector": "Information Technology"
+    },
+    "ECMP": {
+      "name": "Electronic Components",
+      "sector": "Information Technology"
+    },
+    "EEI": {
+      "name": "Electronic Equipment & Instruments",
+      "sector": "Information Technology"
+    },
+    "EMS": {
+      "name": "Electronic Manufacturing Services",
+      "sector": "Information Technology"
+    },
+    "ITCS": {
+      "name": "IT Consulting & Other Services",
+      "sector": "Information Technology"
+    },
+    "INET": {
+      "name": "Internet Services & Infrastructure",
+      "sector": "Information Technology"
+    },
+    "SME": {
+      "name": "Semiconductor Materials & Equipment",
+      "sector": "Information Technology"
+    },
+    "CHIP": {
+      "name": "Semiconductors",
+      "sector": "Information Technology"
+    },
+    "SYSW": {
+      "name": "Systems Software",
+      "sector": "Information Technology"
+    },
+    "TDIS": {
+      "name": "Technology Distributors",
+      "sector": "Information Technology"
+    },
+    "HW": {
+      "name": "Technology Hardware, Storage & Peripherals",
+      "sector": "Information Technology"
+    },
+    "BIO": {
+      "name": "Biotechnology",
+      "sector": "Health Care"
+    },
+    "HCD": {
+      "name": "Health Care Distributors",
+      "sector": "Health Care"
+    },
+    "MEDT": {
+      "name": "Health Care Equipment",
+      "sector": "Health Care"
+    },
+    "HCF": {
+      "name": "Health Care Facilities",
+      "sector": "Health Care"
+    },
+    "HCS": {
+      "name": "Health Care Services",
+      "sector": "Health Care"
+    },
+    "HSUP": {
+      "name": "Health Care Supplies",
+      "sector": "Health Care"
+    },
+    "HCIT": {
+      "name": "Health Care Technology",
+      "sector": "Health Care"
+    },
+    "LSTS": {
+      "name": "Life Sciences Tools & Services",
+      "sector": "Health Care"
+    },
+    "MCO": {
+      "name": "Managed Health Care",
+      "sector": "Health Care"
+    },
+    "PHRM": {
+      "name": "Pharmaceuticals",
+      "sector": "Health Care"
+    },
+    "AERO": {
+      "name": "Aerospace & Defense",
+      "sector": "Industrials"
+    },
+    "FARM": {
+      "name": "Agricultural & Farm Machinery",
+      "sector": "Industrials"
+    },
+    "FRGT": {
+      "name": "Air Freight & Logistics",
+      "sector": "Industrials"
+    },
+    "BLDG": {
+      "name": "Building Products",
+      "sector": "Industrials"
+    },
+    "TRCK": {
+      "name": "Cargo Ground Transportation",
+      "sector": "Industrials"
+    },
+    "CENG": {
+      "name": "Construction & Engineering",
+      "sector": "Industrials"
+    },
+    "HVY": {
+      "name": "Construction Machinery & Heavy Transportation Equipment",
+      "sector": "Industrials"
+    },
+    "DPOS": {
+      "name": "Data Processing & Outsourced Services",
+      "sector": "Industrials"
+    },
+    "DSS": {
+      "name": "Diversified Support Services",
+      "sector": "Industrials"
+    },
+    "ELEQ": {
+      "name": "Electrical Components & Equipment",
+      "sector": "Industrials"
+    },
+    "ENVS": {
+      "name": "Environmental & Facilities Services",
+      "sector": "Industrials"
+    },
+    "HEEQ": {
+      "name": "Heavy Electrical Equipment",
+      "sector": "Industrials"
+    },
+    "HR": {
+      "name": "Human Resource & Employment Services",
+      "sector": "Industrials"
+    },
+    "CONG": {
+      "name": "Industrial Conglomerates",
+      "sector": "Industrials"
+    },
+    "MACH": {
+      "name": "Industrial Machinery & Supplies & Components",
+      "sector": "Industrials"
+    },
+    "AIR": {
+      "name": "Passenger Airlines",
+      "sector": "Industrials"
+    },
+    "PGT": {
+      "name": "Passenger Ground Transportation",
+      "sector": "Industrials"
+    },
+    "RAIL": {
+      "name": "Rail Transportation",
+      "sector": "Industrials"
+    },
+    "RCS": {
+      "name": "Research & Consulting Services",
+      "sector": "Industrials"
+    },
+    "TCD": {
+      "name": "Trading Companies & Distributors",
+      "sector": "Industrials"
+    },
+    "APRL": {
+      "name": "Apparel Retail",
+      "sector": "Consumer Discretionary"
+    },
+    "LUX": {
+      "name": "Apparel, Accessories & Luxury Goods",
+      "sector": "Consumer Discretionary"
+    },
+    "AUTO": {
+      "name": "Automobile Manufacturers",
+      "sector": "Consumer Discretionary"
+    },
+    "APTS": {
+      "name": "Automotive Parts & Equipment",
+      "sector": "Consumer Discretionary"
+    },
+    "ARTL": {
+      "name": "Automotive Retail",
+      "sector": "Consumer Discretionary"
+    },
+    "BRTL": {
+      "name": "Broadline Retail",
+      "sector": "Consumer Discretionary"
+    },
+    "CASI": {
+      "name": "Casinos & Gaming",
+      "sector": "Consumer Discretionary"
+    },
+    "ERTL": {
+      "name": "Computer & Electronics Retail",
+      "sector": "Consumer Discretionary"
+    },
+    "CELE": {
+      "name": "Consumer Electronics",
+      "sector": "Consumer Discretionary"
+    },
+    "DIST": {
+      "name": "Distributors",
+      "sector": "Consumer Discretionary"
+    },
+    "SHOE": {
+      "name": "Footwear",
+      "sector": "Consumer Discretionary"
+    },
+    "HIRT": {
+      "name": "Home Improvement Retail",
+      "sector": "Consumer Discretionary"
+    },
+    "HOME": {
+      "name": "Homebuilding",
+      "sector": "Consumer Discretionary"
+    },
+    "HFRT": {
+      "name": "Homefurnishing Retail",
+      "sector": "Consumer Discretionary"
+    },
+    "HOTL": {
+      "name": "Hotels, Resorts & Cruise Lines",
+      "sector": "Consumer Discretionary"
+    },
+    "LEIS": {
+      "name": "Leisure Products",
+      "sector": "Consumer Discretionary"
+    },
+    "SRTL": {
+      "name": "Other Specialty Retail",
+      "sector": "Consumer Discretionary"
+    },
+    "REST": {
+      "name": "Restaurants",
+      "sector": "Consumer Discretionary"
+    },
+    "SVCS": {
+      "name": "Specialized Consumer Services",
+      "sector": "Consumer Discretionary"
+    },
+    "AGRI": {
+      "name": "Agricultural Products & Services",
+      "sector": "Consumer Staples"
+    },
+    "CSRT": {
+      "name": "Consumer Staples Merchandise Retail",
+      "sector": "Consumer Staples"
+    },
+    "ALC": {
+      "name": "Distillers & Vintners",
+      "sector": "Consumer Staples"
+    },
+    "FDIS": {
+      "name": "Food Distributors",
+      "sector": "Consumer Staples"
+    },
+    "FRTL": {
+      "name": "Food Retail",
+      "sector": "Consumer Staples"
+    },
+    "HHP": {
+      "name": "Household Products",
+      "sector": "Consumer Staples"
+    },
+    "FOOD": {
+      "name": "Packaged Foods & Meats",
+      "sector": "Consumer Staples"
+    },
+    "PCP": {
+      "name": "Personal Care Products",
+      "sector": "Consumer Staples"
+    },
+    "BEV": {
+      "name": "Soft Drinks & Non-alcoholic Beverages",
+      "sector": "Consumer Staples"
+    },
+    "TOB": {
+      "name": "Tobacco",
+      "sector": "Consumer Staples"
+    },
+    "ELEC": {
+      "name": "Electric Utilities",
+      "sector": "Utilities"
+    },
+    "GUTL": {
+      "name": "Gas Utilities",
+      "sector": "Utilities"
+    },
+    "IPP": {
+      "name": "Independent Power Producers & Energy Traders",
+      "sector": "Utilities"
+    },
+    "MULT": {
+      "name": "Multi-Utilities",
+      "sector": "Utilities"
+    },
+    "WATR": {
+      "name": "Water Utilities",
+      "sector": "Utilities"
+    },
+    "CCHM": {
+      "name": "Commodity Chemicals",
+      "sector": "Materials"
+    },
+    "CMAT": {
+      "name": "Construction Materials",
+      "sector": "Materials"
+    },
+    "CU": {
+      "name": "Copper",
+      "sector": "Materials"
+    },
+    "FERT": {
+      "name": "Fertilizers & Agricultural Chemicals",
+      "sector": "Materials"
+    },
+    "GOLD": {
+      "name": "Gold",
+      "sector": "Materials"
+    },
+    "IGAS": {
+      "name": "Industrial Gases",
+      "sector": "Materials"
+    },
+    "CONT": {
+      "name": "Metal, Glass & Plastic Containers",
+      "sector": "Materials"
+    },
+    "PACK": {
+      "name": "Paper & Plastic Packaging Products & Materials",
+      "sector": "Materials"
+    },
+    "SCHM": {
+      "name": "Specialty Chemicals",
+      "sector": "Materials"
+    },
+    "STL": {
+      "name": "Steel",
+      "sector": "Materials"
+    },
+    "DC": {
+      "name": "Data Center REITs",
+      "sector": "Real Estate"
+    },
+    "HCRE": {
+      "name": "Health Care REITs",
+      "sector": "Real Estate"
+    },
+    "HTRE": {
+      "name": "Hotel & Resort REITs",
+      "sector": "Real Estate"
+    },
+    "INRE": {
+      "name": "Industrial REITs",
+      "sector": "Real Estate"
+    },
+    "MFR": {
+      "name": "Multi-Family Residential REITs",
+      "sector": "Real Estate"
+    },
+    "OFFC": {
+      "name": "Office REITs",
+      "sector": "Real Estate"
+    },
+    "SPRE": {
+      "name": "Other Specialized REITs",
+      "sector": "Real Estate"
+    },
+    "RESV": {
+      "name": "Real Estate Services",
+      "sector": "Real Estate"
+    },
+    "RTRE": {
+      "name": "Retail REITs",
+      "sector": "Real Estate"
+    },
+    "STOR": {
+      "name": "Self-Storage REITs",
+      "sector": "Real Estate"
+    },
+    "SFR": {
+      "name": "Single-Family Residential REITs",
+      "sector": "Real Estate"
+    },
+    "TOWR": {
+      "name": "Telecom Tower REITs",
+      "sector": "Real Estate"
+    },
+    "TIMB": {
+      "name": "Timber REITs",
+      "sector": "Real Estate"
+    },
+    "ADV": {
+      "name": "Advertising",
+      "sector": "Communication Services"
+    },
+    "BCST": {
+      "name": "Broadcasting",
+      "sector": "Communication Services"
+    },
+    "CABL": {
+      "name": "Cable & Satellite",
+      "sector": "Communication Services"
+    },
+    "TELC": {
+      "name": "Integrated Telecommunication Services",
+      "sector": "Communication Services"
+    },
+    "GAME": {
+      "name": "Interactive Home Entertainment",
+      "sector": "Communication Services"
+    },
+    "IMED": {
+      "name": "Interactive Media & Services",
+      "sector": "Communication Services"
+    },
+    "FILM": {
+      "name": "Movies & Entertainment",
+      "sector": "Communication Services"
+    },
+    "PUB": {
+      "name": "Publishing",
+      "sector": "Communication Services"
+    },
+    "WIRE": {
+      "name": "Wireless Telecommunication Services",
+      "sector": "Communication Services"
+    }
+  },
+  "baskets": {
+    "SEMI": {
+      "name": "Semiconductors + equipment",
+      "includes": [
+        "CHIP",
+        "SME"
+      ]
+    },
+    "SOFT": {
+      "name": "Software",
+      "includes": [
+        "APPS",
+        "SYSW"
+      ]
+    },
+    "BANK": {
+      "name": "Banks",
+      "includes": [
+        "DBNK",
+        "RBNK"
+      ]
+    },
+    "INS": {
+      "name": "Insurance",
+      "includes": [
+        "LIFE",
+        "MINS",
+        "PC",
+        "REIN",
+        "IBRK"
+      ]
+    },
+    "RESI": {
+      "name": "Residential REITs",
+      "includes": [
+        "MFR",
+        "SFR"
+      ]
+    }
+  }
+}

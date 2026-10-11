@@ -1,0 +1,2324 @@
+{
+  "as_of": "2026-10-10",
+  "events": {
+    "ABBV": [
+      {
+        "accession": "0001551152-26-000030",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "ACN": [
+      {
+        "accession": "0001467373-26-000037",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "AEE": [
+      {
+        "accession": "0001104659-26-111420",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "AEP": [
+      {
+        "accession": "0000004904-26-000063",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "AKAM": [
+      {
+        "accession": "0001086222-26-000089",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "5.05",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "AMD": [
+      {
+        "accession": "0000002488-26-000182",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "3.02"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "APA": [
+      {
+        "accession": "0001841666-26-000058",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      }
+    ],
+    "APH": [
+      {
+        "accession": "0001104659-26-114035",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "APO": [
+      {
+        "accession": "0001858681-26-000054",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "7.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "ARES": [
+      {
+        "accession": "0001628280-26-063870",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "7.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "ATO": [
+      {
+        "accession": "0001193125-26-418579",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-419084",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      }
+    ],
+    "AVY": [
+      {
+        "accession": "0000008818-26-000154",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "AXP": [
+      {
+        "accession": "0000004962-26-000376",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "7.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "AZO": [
+      {
+        "accession": "0001171843-26-006565",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      }
+    ],
+    "BG": [
+      {
+        "accession": "0001628280-26-064933",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "BKR": [
+      {
+        "accession": "0001701605-26-000029",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "BSX": [
+      {
+        "accession": "0000885725-26-000064",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      }
+    ],
+    "CAH": [
+      {
+        "accession": "0000721371-26-000041",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "CCL": [
+      {
+        "accession": "0000815097-26-000104",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "CFG": [
+      {
+        "accession": "0000759944-26-000192",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "5.03",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "CHRW": [
+      {
+        "accession": "0001193125-26-413203",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "CI": [
+      {
+        "accession": "0001140361-26-039271",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001140361-26-038056",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "CINF": [
+      {
+        "accession": "0000020286-26-000052",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "CME": [
+      {
+        "accession": "0001156375-26-000060",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "5.03"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "CNC": [
+      {
+        "accession": "0001071739-26-000186",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "CNP": [
+      {
+        "accession": "0001104659-26-112565",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "2.01",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "COIN": [
+      {
+        "accession": "0001679788-26-000113",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      }
+    ],
+    "COR": [
+      {
+        "accession": "0001104659-26-110624",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "CSCO": [
+      {
+        "accession": "0000858877-26-000156",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      }
+    ],
+    "CTAS": [
+      {
+        "accession": "0000950103-26-015293",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "CTSH": [
+      {
+        "accession": "0001058290-26-000033",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "CTVA": [
+      {
+        "accession": "0001193125-26-417062",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "3.03",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-417064",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-414490",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-409549",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-409840",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-409895",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001755672-26-000028",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-408740",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-401618",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "CVX": [
+      {
+        "accession": "0000093410-26-000192",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      },
+      {
+        "accession": "0000093410-26-000188",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "DAL": [
+      {
+        "accession": "0000027904-26-000035",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      }
+    ],
+    "DGX": [
+      {
+        "accession": "0000947871-26-000922",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "DLR": [
+      {
+        "accession": "0001193125-26-419168",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-414921",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-415814",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-415815",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "DLTR": [
+      {
+        "accession": "0000935703-26-000116",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "5.03",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "DPZ": [
+      {
+        "accession": "0001193125-26-417912",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "DTE": [
+      {
+        "accession": "0000936340-26-000159",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "DUK": [
+      {
+        "accession": "0001104659-26-110588",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "DVN": [
+      {
+        "accession": "0001193125-26-417944",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "ECHO": [
+      {
+        "accession": "0001415404-26-000048",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.01",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      }
+    ],
+    "EOG": [
+      {
+        "accession": "0000821189-26-000202",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "2.02"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "EQT": [
+      {
+        "accession": "0001104659-26-114364",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      }
+    ],
+    "ESS": [
+      {
+        "accession": "0000920522-26-000027",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "ETN": [
+      {
+        "accession": "0001140361-26-038523",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "EXE": [
+      {
+        "accession": "0001104659-26-114046",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "F": [
+      {
+        "accession": "0000037996-26-000184",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      }
+    ],
+    "FANG": [
+      {
+        "accession": "0001539838-26-000177",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "2.02"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-112325",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "FCX": [
+      {
+        "accession": "0000831259-26-000043",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      }
+    ],
+    "FDS": [
+      {
+        "accession": "0001628280-26-063888",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "5.03",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001628280-26-063495",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "FDX": [
+      {
+        "accession": "0001104659-26-111970",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "5.07",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "FDXF": [
+      {
+        "accession": "0001104659-26-113295",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "5.08",
+          "8.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      }
+    ],
+    "FICO": [
+      {
+        "accession": "0001193125-26-415732",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "2.05"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "FLEX": [
+      {
+        "accession": "0001193125-26-413173",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "3.02",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-113282",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      }
+    ],
+    "FOXA": [
+      {
+        "accession": "0001193125-26-415558",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "GD": [
+      {
+        "accession": "0001193125-26-417188",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "GEN": [
+      {
+        "accession": "0000849399-26-000079",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      },
+      {
+        "accession": "0000849399-26-000071",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "GIS": [
+      {
+        "accession": "0001628280-26-064413",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "5.03",
+          "5.07",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001628280-26-063892",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "HIG": [
+      {
+        "accession": "0000874766-26-000067",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      },
+      {
+        "accession": "0000874766-26-000064",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "1.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "HPE": [
+      {
+        "accession": "0001645590-26-000084",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "HRL": [
+      {
+        "accession": "0001104659-26-112101",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "HSIC": [
+      {
+        "accession": "0001193125-26-417409",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "HUM": [
+      {
+        "accession": "0000049071-26-000057",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "7.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      }
+    ],
+    "IBM": [
+      {
+        "accession": "0000051143-26-000086",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "5.03",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "IP": [
+      {
+        "accession": "0000051434-26-000140",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "IT": [
+      {
+        "accession": "0001193125-26-417937",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "IVZ": [
+      {
+        "accession": "0000914208-26-000353",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      },
+      {
+        "accession": "0000914208-26-000360",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      }
+    ],
+    "JBL": [
+      {
+        "accession": "0001628280-26-063890",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "JCI": [
+      {
+        "accession": "0000833444-26-000098",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "KDP": [
+      {
+        "accession": "0001193125-26-409799",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001418135-26-000060",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "KEY": [
+      {
+        "accession": "0001628280-26-063618",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "KHC": [
+      {
+        "accession": "0001637459-26-000069",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001637459-26-000067",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "KMB": [
+      {
+        "accession": "0001104659-26-112571",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-111354",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "KMI": [
+      {
+        "accession": "0001506307-26-000123",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "7.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "KR": [
+      {
+        "accession": "0001104659-26-113599",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "LDOS": [
+      {
+        "accession": "0001193125-26-413208",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001336920-26-000265",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "LH": [
+      {
+        "accession": "0000920148-26-000207",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "LULU": [
+      {
+        "accession": "0001397187-26-000131",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      }
+    ],
+    "LYV": [
+      {
+        "accession": "0001335258-26-000046",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001335258-26-000041",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001335258-26-000038",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "MCK": [
+      {
+        "accession": "0000927653-26-000253",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "MKC": [
+      {
+        "accession": "0000063754-26-000326",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      },
+      {
+        "accession": "0000063754-26-000322",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "4.01",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "MNST": [
+      {
+        "accession": "0001104659-26-110965",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "MO": [
+      {
+        "accession": "0000764180-26-000105",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      }
+    ],
+    "MRNA": [
+      {
+        "accession": "0001193125-26-408289",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "MRVL": [
+      {
+        "accession": "0001628280-26-063592",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "MTB": [
+      {
+        "accession": "0000036270-26-000054",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "MU": [
+      {
+        "accession": "0000723125-26-000018",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "NCLH": [
+      {
+        "accession": "0001104659-26-112116",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "7.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "NEE": [
+      {
+        "accession": "0000753308-26-000074",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "NKE": [
+      {
+        "accession": "0000320187-26-000184",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "2.05",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "NTRS": [
+      {
+        "accession": "0000073124-26-000057",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "NWSA": [
+      {
+        "accession": "0001564708-26-000218",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000219",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000217",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000215",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000216",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000214",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000213",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000212",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000210",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000211",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001564708-26-000209",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "OMC": [
+      {
+        "accession": "0001213900-26-107282",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "ON": [
+      {
+        "accession": "0001140361-26-038294",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "ORLY": [
+      {
+        "accession": "0000898173-26-000048",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "PEP": [
+      {
+        "accession": "0000077476-26-000050",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      }
+    ],
+    "PNC": [
+      {
+        "accession": "0001628280-26-063770",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "PNW": [
+      {
+        "accession": "0000764622-26-000049",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "PRU": [
+      {
+        "accession": "0001193125-26-418407",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001193125-26-417354",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "PSKY": [
+      {
+        "accession": "0001104659-26-113913",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "1.02",
+          "2.01",
+          "2.03",
+          "3.02",
+          "5.02",
+          "5.03",
+          "5.07",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-114113",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-113076",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "7.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-112829",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "7.01",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-112347",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-111174",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-111034",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "3.01",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "PSX": [
+      {
+        "accession": "0001193125-26-413219",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "PTC": [
+      {
+        "accession": "0001193125-26-413124",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "REGN": [
+      {
+        "accession": "0001104659-26-113895",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.02",
+          "8.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-112340",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "ROP": [
+      {
+        "accession": "0000882835-26-000039",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "SBAC": [
+      {
+        "accession": "0001193125-26-402918",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "2.03"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "SHW": [
+      {
+        "accession": "0001193125-26-405960",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "1.02",
+          "2.03",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "SLB": [
+      {
+        "accession": "0001193125-26-415617",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "SMCI": [
+      {
+        "accession": "0001375365-26-000023",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "SNPS": [
+      {
+        "accession": "0001193125-26-413359",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      }
+    ],
+    "STZ": [
+      {
+        "accession": "0000016918-26-000039",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "SWKS": [
+      {
+        "accession": "0001104659-26-114359",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-113538",
+        "filed_day": "2026-10-05",
+        "headline_count": 0,
+        "items": [
+          "2.01",
+          "5.02",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 4,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-112129",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "SYK": [
+      {
+        "accession": "0001193125-26-414956",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "SYY": [
+      {
+        "accession": "0001104659-26-114079",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001104659-26-110977",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "TDG": [
+      {
+        "accession": "0001193125-26-406037",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001260221-26-000064",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "TDY": [
+      {
+        "accession": "0001094285-26-000053",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001094285-26-000050",
+        "filed_day": "2026-09-28",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "9.01"
+        ],
+        "sessions_ago": 9,
+        "type": "8-K"
+      }
+    ],
+    "TEL": [
+      {
+        "accession": "0001104659-26-114188",
+        "filed_day": "2026-10-07",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 2,
+        "type": "8-K"
+      }
+    ],
+    "TPL": [
+      {
+        "accession": "0001104659-26-111009",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "5.02",
+          "5.08"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "TRMB": [
+      {
+        "accession": "0000864749-26-000111",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      }
+    ],
+    "TSLA": [
+      {
+        "accession": "0001628280-26-064366",
+        "filed_day": "2026-10-02",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001628280-26-063820",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "1.02",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "TTWO": [
+      {
+        "accession": "0001628280-26-064001",
+        "filed_day": "2026-09-30",
+        "headline_count": 0,
+        "items": [
+          "1.01"
+        ],
+        "sessions_ago": 7,
+        "type": "8-K"
+      }
+    ],
+    "VST": [
+      {
+        "accession": "0001140361-26-038468",
+        "filed_day": "2026-10-03",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 5,
+        "type": "8-K"
+      }
+    ],
+    "VTRS": [
+      {
+        "accession": "0001140361-26-039024",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ],
+    "VZ": [
+      {
+        "accession": "0001193125-26-407520",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "5.02"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "WAB": [
+      {
+        "accession": "0000943452-26-000013",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "2.03"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      }
+    ],
+    "WBD": [
+      {
+        "accession": "0001193125-26-415055",
+        "filed_day": "2026-10-06",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "1.02",
+          "2.01",
+          "2.03",
+          "3.01",
+          "3.03",
+          "5.01",
+          "5.02",
+          "5.03",
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 3,
+        "type": "8-K"
+      }
+    ],
+    "WDAY": [
+      {
+        "accession": "0001104659-26-112898",
+        "filed_day": "2026-10-01",
+        "headline_count": 0,
+        "items": [
+          "1.01",
+          "1.02",
+          "2.03",
+          "9.01"
+        ],
+        "sessions_ago": 6,
+        "type": "8-K"
+      },
+      {
+        "accession": "0001327811-26-000048",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "2.02",
+          "2.05"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "XEL": [
+      {
+        "accession": "0000072903-26-000175",
+        "filed_day": "2026-10-09",
+        "headline_count": 0,
+        "items": [
+          "8.01"
+        ],
+        "sessions_ago": 0,
+        "type": "8-K"
+      }
+    ],
+    "XOM": [
+      {
+        "accession": "0001193125-26-402986",
+        "filed_day": "2026-09-25",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 10,
+        "type": "8-K"
+      }
+    ],
+    "XYL": [
+      {
+        "accession": "0001524472-26-000134",
+        "filed_day": "2026-09-29",
+        "headline_count": 0,
+        "items": [
+          "8.01",
+          "9.01"
+        ],
+        "sessions_ago": 8,
+        "type": "8-K"
+      }
+    ],
+    "ZTS": [
+      {
+        "accession": "0001555280-26-000042",
+        "filed_day": "2026-10-08",
+        "headline_count": 0,
+        "items": [
+          "7.01",
+          "9.01"
+        ],
+        "sessions_ago": 1,
+        "type": "8-K"
+      }
+    ]
+  },
+  "generated_at": "2026-10-10T01:40:44-04:00",
+  "retention_sessions": 10
+}

@@ -1,0 +1,24 @@
+{
+  "_comment": "Design v3 §5.2. The ETF sleeve, maintained by hand because it changes on the order of once a decade — a refresh cadence would be ceremony. `sector` is the MACRO rotation set (§6.4) and is the §5.3 '≤ 11' bound; `broad` names are universe members reachable only by a play trigger, never by rotation.",
+  "_values_are": "The concentration bucket the symbol counts against, not a label. Sector SPDRs carry the GICS names the SSGA holdings file publishes, so XLE and XOM share one Energy cap without a translation table. The broad four share a single bucket because SPY, QQQ, IWM and DIA are close enough to the same bet that giving each its own cap headroom would be a fiction.",
+  "_source": "https://www.sectorspdrs.com — State Street sector SPDR family",
+  "sector": {
+    "XLE": "Energy",
+    "XLF": "Financials",
+    "XLK": "Information Technology",
+    "XLV": "Health Care",
+    "XLI": "Industrials",
+    "XLY": "Consumer Discretionary",
+    "XLP": "Consumer Staples",
+    "XLU": "Utilities",
+    "XLB": "Materials",
+    "XLRE": "Real Estate",
+    "XLC": "Communication Services"
+  },
+  "broad": {
+    "SPY": "Broad Market",
+    "QQQ": "Broad Market",
+    "IWM": "Broad Market",
+    "DIA": "Broad Market"
+  }
+}
