@@ -8,6 +8,7 @@
 ![Tests: 3,400+ offline](https://img.shields.io/badge/tests-3%2C400%2B%20offline-brightgreen)
 ![Core: no network access](https://img.shields.io/badge/core-no%20network%20access-informational)
 ![Runs on free tiers](https://img.shields.io/badge/infra-free%20tiers-orange)
+[![M8ven Score](https://m8ven.ai/badge/mcp/jkspeaks-deterministic-trader-h3y34a)](https://m8ven.ai/mcp/jkspeaks-deterministic-trader-h3y34a?s=readme)
 
 A complete, unattended swing-trading system for one cash brokerage account. A deterministic Python core holds every rule: what to buy, how much, when to sell, and every reason to refuse. A scheduled Claude session is only the hands. It fetches broker data, hands it to the core, and places exactly the orders the plan names, at the prices the plan gives.
 
