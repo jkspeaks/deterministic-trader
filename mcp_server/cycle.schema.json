@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cycle document",
+  "description": "One routine invocation's input to the deterministic core. Only `now` is required. Every other key is optional and defaults to empty when absent, so an omitted `positions` means no positions, not an error. Config and calendar are never part of the payload; they come from the config directory. Unknown keys are allowed.",
+  "type": "object",
+  "required": [
+    "now"
+  ],
+  "properties": {
+    "account": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "control": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "cycle_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Identifier for this cycle, e.g. 2026-08-03T13:40:00Z-full."
+    },
+    "earnings": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "events": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "failure": {
+      "type": [
+        "object",
+        "string",
+        "null"
+      ],
+      "description": "Set when the routine already hit a failure this cycle."
+    },
+    "fills": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "intent": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "loss_closes": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "macro": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "now": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The cycle's clock, ISO 8601 UTC, e.g. 2026-08-03T13:40:00Z. The only key every command requires; cadence is derived from it."
+    },
+    "open_orders": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "orders": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "play_state": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "positions": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "prior_play_state": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "prior_positions": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "quotes": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "reconcile": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "rejections": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "sectors": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "signals": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "snapshot": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "tax_lots": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "tradability": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "triggers": {
+      "type": [
+        "array",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

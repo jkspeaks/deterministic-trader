@@ -20,5 +20,5 @@ jobs:
 
       - name: Run the suite
         run: |
-          uv sync --group dev
+          uv sync --group dev --group mcp
           uv run pytest

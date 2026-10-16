@@ -17,9 +17,18 @@ from __future__ import annotations
 import io
 import json
 import os
-from typing import Any
+from pathlib import Path
+from typing import Annotated, Any
+
+import jsonschema
+from pydantic import WithJsonSchema
 
 from src import cli
+
+CYCLE_SCHEMA = json.loads(
+    (Path(__file__).with_name("cycle.schema.json")).read_text(encoding="utf-8")
+)
+Cycle = Annotated[dict[str, Any], WithJsonSchema(CYCLE_SCHEMA)]
 
 NOTICE = (
     "Not financial advice. Returns a plan only; this tool never places orders."
@@ -43,10 +52,18 @@ TOOLS: dict[str, str] = {
 def run_command(command: str, cycle: dict[str, Any]) -> dict[str, Any]:
     """Run one core command in-process; the result is exactly what the CLI prints.
 
-    The CLI answers malformed JSON with a refusal but lets a cycle that is
+    The cycle is checked against ``cycle.schema.json`` first, so a missing ``now``
+    or a wrongly typed key is named up front. The CLI answers malformed JSON with a refusal but lets a cycle that is
     missing a required key raise. Over MCP that would surface as a transport
     error, so it is returned as the same refusal shape instead.
     """
+    problem = next(iter(jsonschema.Draft202012Validator(CYCLE_SCHEMA).iter_errors(cycle)), None)
+    if problem is not None:
+        where = "/".join(str(part) for part in problem.absolute_path) or "(cycle)"
+        return {
+            "command": command,
+            "error": {"code": cli.BAD_INPUT, "detail": f"{where}: {problem.message}"},
+        }
     out = io.StringIO()
     try:
         cli.main(
@@ -72,7 +89,7 @@ def build_server():
     server = FastMCP("deterministic-trader")
 
     def register(command: str, summary: str) -> None:
-        def tool(cycle: dict[str, Any]) -> dict[str, Any]:
+        def tool(cycle: Cycle) -> dict[str, Any]:
             return run_command(command, cycle)
 
         tool.__name__ = command.replace("-", "_")

@@ -618,7 +618,7 @@ claude mcp add deterministic-trader -- uv run --group mcp python -m mcp_server.s
 | `report`, `candidates`, `settled_cash` | The matching CLI command's output |
 | `dip_recovery_decide`, `manual_check_decide` | The matching strategy decisions |
 
-Each tool takes one argument, `cycle`: the same cycle document the CLI reads on stdin.
+Each tool takes one argument, `cycle`: the same cycle document the CLI reads on stdin. Its JSON Schema ships in [`mcp_server/cycle.schema.json`](mcp_server/cycle.schema.json) and is advertised to the client. Only `now` (ISO 8601 UTC) is required; every other key is optional and defaults to empty, so an omitted `positions` means no positions, not an error. Keys that are present must have the right type (object or array), and a violation is named by path before the core runs.
 
 - **It never trades.** The server holds no broker credentials, fetches nothing and places no orders. You supply the broker data and you execute the plan.
 - **Bad input is a refusal, not a crash.** A cycle missing required keys returns `{"command": ..., "error": {"code": "BAD_INPUT", "detail": ...}}`.
