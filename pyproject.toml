@@ -26,6 +26,13 @@ control = [
 ]
 
 
+# Optional MCP wrapper (`mcp_server/`). Lives outside `src/`, so the core still
+# cannot import it.
+mcp = [
+    "mcp>=1.2,<2",
+]
+
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"

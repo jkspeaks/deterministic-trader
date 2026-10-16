@@ -94,6 +94,7 @@ When you are ready to run it for real, go to [Install and run](#install-and-run)
 - [Install and run](#install-and-run)
 - [Customization](#customization)
 - [Build on it](#build-on-it)
+- [Use it as an MCP server](#use-it-as-an-mcp-server)
 - [The daily schedule](#the-daily-schedule)
 - [Repository map](#repository-map)
 - [Documentation](#documentation)
@@ -600,6 +601,34 @@ Two rules will save you time. Keep `src/` free of network access, because the bu
 
 ---
 
+## Use it as an MCP server
+
+`mcp_server/` exposes the core's read-only commands as [MCP](https://modelcontextprotocol.io) tools, so any MCP client can ask it for a plan. It is a thin wrapper: each tool calls `src.cli` in-process and returns the same JSON the command line prints.
+
+```bash
+uv run --group mcp python -m mcp_server.server                                   # stdio
+claude mcp add deterministic-trader -- uv run --group mcp python -m mcp_server.server
+```
+
+| Tool | Returns |
+|---|---|
+| `plan_fetch` | What broker data the cycle must fetch next |
+| `decide` | The full plan: orders, protection, cancels |
+| `reconcile` | Broker positions and orders compared with the book |
+| `report`, `candidates`, `settled_cash` | The matching CLI command's output |
+| `dip_recovery_decide`, `manual_check_decide` | The matching strategy decisions |
+
+Each tool takes one argument, `cycle`: the same cycle document the CLI reads on stdin.
+
+- **It never trades.** The server holds no broker credentials, fetches nothing and places no orders. You supply the broker data and you execute the plan.
+- **Bad input is a refusal, not a crash.** A cycle missing required keys returns `{"command": ..., "error": {"code": "BAD_INPUT", "detail": ...}}`.
+- **Your numbers, not mine.** By default the server uses the repo's checked-in `config/`. Set `DT_CONFIG_DIR` to point at your own.
+- **Glue commands are left out.** `merge-fetch`, `shape-*`, `day-context-*` and the dip-recovery pool and pick steps exist for the scheduled agent's own loop.
+
+The server lives outside `src/`, so the core still cannot import a network library. The same not-financial-advice notice applies as everywhere else in this repo.
+
+---
+
 ## The daily schedule
 
 All times Eastern, trading days only. Every time is a setting, not a rule: move a routine and `cadence.py` classifies the firing by the clock it actually ran at.
@@ -639,6 +668,7 @@ src/                 the deterministic core (no network, enforced by test)
   reconcile.py       broker truth against the book
   report.py          benchmark, scorecard, alerts
   cli.py             the command-line surface
+mcp_server/          optional MCP wrapper over the read-only commands
 services/core/       the core as Vercel functions, plus pre-market, watch,
                      schedule, shadow and evidence jobs
 api/                 thin Vercel entry points
